@@ -6,6 +6,13 @@ MOCK_CSV_PATH = "./appliance/appliances.csv"
 
 
 def create_appliances() -> list[Appliance]:
+    """Legge da un file csv tutte le informazioni di un elettrodomestico,
+    restituendo una lista di istanze della classe Appliance
+
+    Returns:
+        list[Appliance]: Lista di istanze di Appliance
+    """
+
     appliances = []
 
     with open(MOCK_CSV_PATH, newline='') as file:
