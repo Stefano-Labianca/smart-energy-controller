@@ -1,17 +1,13 @@
-from typing import Literal, Self
-
-type Size = Literal["small", "medium", "large"]
-type EnergyClass = Literal["A", "B", "C", "D", "E", "F"]
-type Category = Literal["multimedia", "kitchen", "washing", "cooling", "other"]
+from typing import Self
 
 
 class Appliance:
     def __init__(self) -> None:
         self._name: str = ""
         self._energy_consumption: int = 0  # kWh/anno
-        self._energy_class: EnergyClass | Literal[""] = ""
-        self._size: Size | Literal[""] = ""
-        self._category: Category | Literal[""] = ""
+        self._energy_class: str = ""
+        self._size: str = ""
+        self._category: str = ""
 
     def name(self, name: str) -> Self:
         self._name = name
@@ -23,17 +19,17 @@ class Appliance:
 
         return self
 
-    def energy_class(self, energy_class: EnergyClass) -> Self:
+    def energy_class(self, energy_class: str) -> Self:
         self._energy_class = energy_class
 
         return self
 
-    def size(self, size: Size) -> Self:
+    def size(self, size: str) -> Self:
         self._size = size
 
         return self
 
-    def category(self, category: Category) -> Self:
+    def category(self, category: str) -> Self:
         self._category = category
 
         return self
