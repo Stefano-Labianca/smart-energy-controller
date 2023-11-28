@@ -8,7 +8,7 @@ type Category = Literal["multimedia", "kitchen", "washing", "cooling", "other"]
 class Appliance:
     def __init__(self) -> None:
         self._name: str = ""
-        self._energy_consumption: float = 0  # kWh
+        self._energy_consumption: int = 0  # kWh/anno
         self._energy_class: EnergyClass | Literal[""] = ""
         self._size: Size | Literal[""] = ""
         self._category: Category | Literal[""] = ""
@@ -18,7 +18,7 @@ class Appliance:
 
         return self
 
-    def energy_consumption(self, energy_consumption: float) -> Self:
+    def energy_consumption(self, energy_consumption: int) -> Self:
         self._energy_consumption = energy_consumption
 
         return self
