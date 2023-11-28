@@ -1,0 +1,4 @@
+experta==1.9.4
+frozendict==1.2
+owlready2==0.45
+schema==0.6.7
