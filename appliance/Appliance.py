@@ -26,13 +26,13 @@ class Appliance:
         return self
 
     def energy_consumption(self, energy_consumption: int) -> Self:
-        """Imposta il livello di consumo annuno in kWh
+        """Imposta il consumo energetico del dispositivo in watt
 
         Args:
-            energy_consumption (int): Consumo annuo in kWh
+            energy_consumption (int): Consumo energetico espresso in watt
 
         Returns:
-            Self: Istanza della classe con consumo energetico annuo aggiornato
+            Self: Istanza della classe con consumo energetico aggiornato
         """
 
         self._energy_consumption = energy_consumption
