@@ -1,12 +1,11 @@
+from csp_problem.Constraint import Constraint
 from csp_problem.resolver import Resolver
+from csp_problem.Variable import Variable
 
 
 class GenerateAndTest(Resolver):
 
-    def __init__(self, domain: list[int], amount: int) -> None:
-        super().__init__(domain, amount)
-
-    def solve(self) -> list:
+    def solve(self, variables: list[Variable], constraints: list[Constraint]) -> list:
         valid_appliances = []
 
         return []

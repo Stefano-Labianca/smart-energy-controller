@@ -1,11 +1,11 @@
 from abc import ABC, abstractmethod
 
+from csp_problem.Constraint import Constraint
+from csp_problem.Variable import Variable
+
 
 class Resolver(ABC):
-    def __init__(self, domain: list[int], amount: int) -> None:
-        self.domain = domain
-        self.amount = amount
 
     @abstractmethod
-    def solve(self) -> list:
+    def solve(self, variables: list[Variable], constraints: list[Constraint]) -> list:
         raise NotImplementedError
