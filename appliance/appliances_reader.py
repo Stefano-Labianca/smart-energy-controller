@@ -19,11 +19,11 @@ def create_appliances() -> list[Appliance]:
         iterator = DictReader(file, delimiter=',')
 
         for row in iterator:
-            name, category, energy_consumption, energy_class, size = row.values()
+            name, category, energy_consumption,  size = row.values()
 
             appliance = Appliance().name(name).category(
                 category).energy_consumption(
-                int(energy_consumption)).energy_class(energy_class).size(size)
+                    int(energy_consumption)).size(size)
 
             appliances.append(appliance)
 

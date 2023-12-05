@@ -8,7 +8,6 @@ class Appliance:
     def __init__(self) -> None:
         self._name: str = ""
         self._energy_consumption: int = 0  # kWh/anno
-        self._energy_class: str = ""
         self._size: str = ""
         self._category: str = ""
 
@@ -40,20 +39,6 @@ class Appliance:
 
         return self
 
-    def energy_class(self, energy_class: str) -> Self:
-        """Imposta la classe energetica dell'elettrodomestico
-
-        Args:
-            energy_class (str): Classe energetica dell'elettrodomestico
-
-        Returns:
-            Self: Istanza della classe con classe energetica aggiornata
-        """
-
-        self._energy_class = energy_class
-
-        return self
-
     def size(self, size: str) -> Self:
         """Imposta le dimensioni dell'elettrodomestico
 
@@ -82,8 +67,8 @@ class Appliance:
 
     def __str__(self) -> str:
         return (
-            f'(Name: {self._name}, '
+            f'Appliance => (Name: {self._name}, '
             f'Energy Consumption: {self._energy_consumption} kWh, '
-            f'Energy Class: {self._energy_class}, Size: {self._size}, '
+            f'Size: {self._size}, '
             f'Category: {self._category})'
         )
