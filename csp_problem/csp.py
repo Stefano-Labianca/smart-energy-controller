@@ -1,4 +1,4 @@
-from csp.resolver import Resolver
+from csp_problem.resolver import Resolver
 
 
 class CSP:
