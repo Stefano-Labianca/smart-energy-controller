@@ -68,7 +68,7 @@ class Appliance:
     def __str__(self) -> str:
         return (
             f'Appliance => (Name: {self._name}, '
-            f'Energy Consumption: {self._energy_consumption} kWh, '
+            f'Energy Consumption: {self._energy_consumption} W, '
             f'Size: {self._size}, '
             f'Category: {self._category})'
         )
