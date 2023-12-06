@@ -20,8 +20,8 @@ variables = [
 ]
 
 constraints = [
-    Constraint(less_than_five),
-    Constraint(greater_than_two),
+    Constraint(less_than_five, ["A", "B", "C"]),
+    Constraint(greater_than_two, ["A", "B", "C"]),
 ]
 
 csp_problem = CSP(variables, constraints)
