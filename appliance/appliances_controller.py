@@ -1,6 +1,7 @@
 from csv import DictReader
 
 from appliance.Appliance import Appliance
+from csp_problem.Variable import Variable
 
 MOCK_CSV_PATH = "./appliance/appliances.csv"
 
@@ -28,3 +29,22 @@ def create_appliances() -> list[Appliance]:
             appliances.append(appliance)
 
     return appliances
+
+
+def create_variables(appliances: list[Appliance]) -> list[Variable]:
+    variables: list[Variable] = []
+
+    for a in appliances:
+        variable = Variable(a._name, [a._energy_consumption])
+        variables.append(variable)
+
+    return variables
+
+
+def get_variables_name(variables: list[Variable]) -> list[str]:
+    variables_name: list[str] = []
+
+    for v in variables:
+        variables_name.append(v.name)
+
+    return variables_name
