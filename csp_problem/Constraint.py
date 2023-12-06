@@ -9,5 +9,15 @@ class Constraint:
             f'Scope: {self.scope})'
         )
 
-    def evaluate(self, assignment: tuple | list) -> bool:
-        return self.condition(*assignment)
+    def evaluate(self, assignment: dict) -> bool:
+
+        # Controllo se posso valutare il mio assegnamento 
+        if all(v in assignment for v in self.scope):
+            for v in self.scope:
+                if not self.condition(assignment[v]):
+                    return False
+        
+        return True
+
+
+
