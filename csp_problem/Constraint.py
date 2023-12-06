@@ -8,5 +8,5 @@ class Constraint:
     def __str__(self) -> str:
         return f'Constraint => (Name: {self.condition.__name__})'
 
-    def evaluate(self, assignment: int) -> bool:
-        return self.condition(assignment)
+    def evaluate(self, assignment: tuple | list) -> bool:
+        return self.condition(*assignment)
