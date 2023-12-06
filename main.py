@@ -3,7 +3,6 @@
 from appliance.appliances_controller import (create_appliances,
                                              create_variables,
                                              get_variables_name)
-from csp_problem.algorithm.generate_and_test import GenerateAndTest
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
 from csp_problem.Variable import Variable
@@ -22,8 +21,3 @@ constraints = [
 ]
 
 csp_problem = CSP(variables, constraints)
-
-gnt = GenerateAndTest()
-solution = csp_problem.solve(gnt)
-
-print(solution)
