@@ -1,5 +1,5 @@
 class Constraint:
-    def __init__(self, condition, scope: list) -> None:
+    def __init__(self, condition, scope: list[str]) -> None:
         self.condition = condition  # funzione booleana
         self.scope = scope
 
