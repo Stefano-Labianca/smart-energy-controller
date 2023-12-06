@@ -1,5 +1,6 @@
-from types import FunctionType
 
+# TODO: Va aggiunto lo scope, cioè le variabili che vengono
+# controllate da un vincolo
 
 class Constraint:
     def __init__(self, condition) -> None:
