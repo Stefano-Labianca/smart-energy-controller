@@ -1,4 +1,8 @@
 experta==1.9.4
 frozendict==1.2
+markdown-it-py==3.0.0
+mdurl==0.1.2
 owlready2==0.45
+Pygments==2.17.2
+rich==13.7.0
 schema==0.6.7
