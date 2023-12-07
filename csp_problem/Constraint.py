@@ -9,15 +9,22 @@ class Constraint:
             f'Scope: {self.scope})'
         )
 
-    def evaluate(self, assignment: dict) -> bool:
-
-        # Controllo se posso valutare il mio assegnamento 
-        if all(v in assignment for v in self.scope):
-            for v in self.scope:
-                if not self.condition(assignment[v]):
-                    return False
-        
+    def can_evaluate(self, assignment: dict[str, int]) -> bool:
+        for v in self.scope:
+            if v not in assignment:
+                return False
         return True
 
+        # return all(v in assignment for v in self.scope)
 
+    def evaluate(self, assignment: dict) -> bool:
 
+        restricted_assignment = {}
+
+        for v in self.scope:
+            restricted_assignment[v] = assignment[v]
+
+        if len(restricted_assignment) == 0:
+            return False
+
+        return self.condition(restricted_assignment)
