@@ -1,9 +1,9 @@
 name,category,energy_consumption,size
-computer,multimedia,400,large
-3D_printer,multimedia,430,medium
-internet_router,multimedia,10,small
-laptop,multimedia,105,medium
-phone_charger,multimedia,6,small
+computer,multimedia,"400, 500",large
+3D_printer,multimedia,"430, 780",medium
+internet_router,multimedia,"10, 30, 50",small
+laptop,multimedia,"105, 300, 200",medium
+phone_charger,multimedia,"6, 4",small
 printer,multimedia,30,medium
 monitor,multimedia,70,medium
 tv,multimedia,150,large

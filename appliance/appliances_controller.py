@@ -22,9 +22,13 @@ def create_appliances() -> list[Appliance]:
         for row in iterator:
             name, category, energy_consumption,  size = row.values()
 
+            energy_consumption_range = list(
+                map(lambda energy: int(energy), energy_consumption.split(", "))
+            )
+
             appliance = Appliance().name(name).category(
                 category).energy_consumption(
-                    int(energy_consumption)).size(size)
+                    energy_consumption_range).size(size)
 
             appliances.append(appliance)
 
@@ -35,7 +39,7 @@ def create_variables(appliances: list[Appliance]) -> list[Variable]:
     variables: list[Variable] = []
 
     for a in appliances:
-        variable = Variable(a._name, [a._energy_consumption])
+        variable = Variable(a._name, a._energy_consumption)
         variables.append(variable)
 
     return variables

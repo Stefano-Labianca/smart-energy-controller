@@ -7,7 +7,7 @@ class Appliance:
 
     def __init__(self) -> None:
         self._name: str = ""
-        self._energy_consumption: int = 0  # kWh/anno
+        self._energy_consumption: list[int] = []  # Watt
         self._size: str = ""
         self._category: str = ""
 
@@ -25,7 +25,7 @@ class Appliance:
 
         return self
 
-    def energy_consumption(self, energy_consumption: int) -> Self:
+    def energy_consumption(self, energy_consumption: list[int]) -> Self:
         """Imposta il consumo energetico del dispositivo in watt
 
         Args:
