@@ -15,8 +15,6 @@ class Constraint:
                 return False
         return True
 
-        # return all(v in assignment for v in self.scope)
-
     def evaluate(self, assignment: dict) -> bool:
 
         restricted_assignment = {}
