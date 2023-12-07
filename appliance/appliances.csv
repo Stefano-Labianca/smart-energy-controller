@@ -17,7 +17,7 @@ oven,kitchen,248,medium
 dishwasher,washing,170,medium
 dryer,washing,201,large
 washing_machine,washing,120,medium
-air_conditioner,cooling,300,large
+air_conditioner,cooling,"300, 500",large
 fan,cooling,30,small
 air_purifier,cooling,130,small
 dehumidifier,other,300,small
