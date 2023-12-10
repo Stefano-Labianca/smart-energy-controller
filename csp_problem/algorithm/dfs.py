@@ -1,12 +1,17 @@
 from csp_problem.Constraint import Constraint
+from csp_problem.csp import CSP
 from csp_problem.resolver import Resolver
 from csp_problem.Variable import Variable
 
 
-class DFS(Resolver):
+class DFS:
 
-    def solve(self, variables: list[Variable], constraints: list[Constraint]):
-        return list(self.__dfs(variables, constraints))
+    def __init__(self, csp: CSP) -> None:
+        self.variables = csp.variables
+        self.constraints = csp.constraints
+
+    def solve(self):
+        return list(self.__dfs(self.variables, self.constraints))
 
     def __dfs(self, variables: list[Variable], constraints: list[Constraint], context={}):
         eval_cons = {c for c in constraints if c.can_evaluate(context)}

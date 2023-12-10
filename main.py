@@ -59,56 +59,15 @@ constraints = [
     ]),
 ]
 
-""" TEST CSP
-
-def a_lt_b(assignment: dict[str, int]):
-    a = assignment['A']
-    b = assignment['B']
-
-    return a < b
-
-
-def b_lt_c(assignment: dict[str, int]):
-    b = assignment['B']
-    c = assignment['C']
-
-    return b < c
-
-
-variables = [
-    Variable('A', [1, 2, 3, 4]),
-    Variable('B', [1, 2, 3, 4]),
-    Variable('C', [1, 2, 3, 4]),
-]
-
-constraints = [
-    Constraint(a_lt_b, ['A', 'B']),
-    Constraint(b_lt_c, ['B', 'C']),
-]"""
-
-
-# # printer(variables)
-
-# for v in variables:
-#     new_domain = new_domains.get(v.name)
-
-#     if new_domain:
-#         v.update_domain(new_domain)
-
-# console.log("------------------------")
-
-# printer(variables)
-
 
 csp_problem = CSP(variables, constraints)
-# dfs = DFS()
-gac = GAC(variables, constraints)
+dfs = DFS(csp_problem)
+gac = GAC(csp_problem)
+
+start = time()
+solutions = dfs.solve()
 solutions = gac.solve()
+end = time()
 
-console.log(solutions)
-# Uso del DFS
-# start = time()
-# solutions = csp_problem.solve(dfs)
-# end = time()
-
-# print("Time: ", end - start, "s")
+console.log(gac.solve())
+console.log(f"Time: {round((end - start) * 1000, 3)}ms", highlight=True)

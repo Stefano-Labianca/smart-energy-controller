@@ -1,11 +1,12 @@
 from csp_problem.Constraint import Constraint
+from csp_problem.csp import CSP
 from csp_problem.Variable import Variable
 
 
 class GAC:
-    def __init__(self, variables: list[Variable], constraints: list[Constraint]) -> None:
-        self.variables = variables
-        self.constraints = constraints
+    def __init__(self, csp: CSP) -> None:
+        self.variables = csp.variables
+        self.constraints = csp.constraints
         self.var_to_const = {var.name: set() for var in self.variables}
 
     def make_arc_consistent(self, domains=None, to_do=None):
