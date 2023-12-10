@@ -4,6 +4,9 @@ class Variable:
         self.name = name
         self.domain = domain
 
+    def update_domain(self, new_domain: list[int]) -> None:
+        self.domain = new_domain
+
     def __str__(self) -> str:
         return (
             f'Variable => (Name: {self.name}, '
