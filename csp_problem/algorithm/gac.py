@@ -3,13 +3,13 @@ from csp_problem.Variable import Variable
 
 
 class GAC:
-    def __init__(self, variables: list[Variable], constraints: list[Constraint], domains=None, to_do=None) -> None:
+    def __init__(self, variables: list[Variable], constraints: list[Constraint]) -> None:
         self.variables = variables
         self.constraints = constraints
-
         self.var_to_const = {var.name: set() for var in self.variables}
 
-        for con in constraints:
+    def make_arc_consistent(self, domains=None, to_do=None):
+        for con in self.constraints:
             for var in con.scope:
                 self.var_to_const[var].add(con)
 
@@ -28,7 +28,6 @@ class GAC:
         else:
             self.to_do = to_do.copy()
 
-    def make_arc_consistent(self):
         while self.to_do:
             var, const = self.select_arc()
             other_vars = [ov for ov in const.scope if ov != var]
@@ -54,7 +53,7 @@ class GAC:
         """
         return self.to_do.pop()
 
-    def any_holds(self, domains: dict[str, list[int]], const: Constraint, env: dict[str, int], other_vars: list[str], ind=0):
+    def any_holds(self, domains: dict[str, list[int]], const: Constraint, env: dict[str, int], other_vars: list[str], ind: int = 0):
         """Restituisce True se il vincolo `const` è valido per un assegnamento
         che estende `env` con le variabili di `other_vars`, contenute da `ind` a len(other_vars)
 
@@ -78,10 +77,68 @@ class GAC:
                 return True
         return False
 
-    def new_to_do(self, var: str, const: Constraint):
+    def new_to_do(self, var: str, const: Constraint | None):
+        """_summary_
+
+        Args:
+            var (str): _description_
+            const (Constraint | None): Se è None, allora aggiungi tutti
+
+        Returns:
+            _type_: _description_
+        """
         return {
             (nvar, nconst) for nconst in self.var_to_const[var]
             if nconst != const
             for nvar in nconst.scope
             if nvar != var
         }
+
+    def solve(self):
+        return list(self.generate_solutions())
+
+    def generate_solutions(self, domains=None, to_do=None, context={}):
+        new_domains = self.make_arc_consistent(domains, to_do)
+
+        if any(len(new_domains[var]) == 0 for var in new_domains):
+            print("Nessuna soluzione")
+
+            return False
+
+        if all(len(new_domains[var]) == 1 for var in new_domains):
+            s = []
+            for variable in new_domains:
+                s.append({variable: new_domains[variable][0]})
+
+            yield s
+        else:
+            variable = self.select_variable(new_domains)
+
+            if variable:
+                d1, d2 = self.split_domain(new_domains[variable.name])
+
+                new_d1 = new_domains | {variable.name: d1}
+                new_d2 = new_domains | {variable.name: d2}
+
+                self.to_do = self.new_to_do(variable.name, None)
+
+                yield from self.generate_solutions(new_d1, to_do, context | {variable.name: d1})
+                yield from self.generate_solutions(new_d2, to_do, context | {variable.name: d2})
+
+    def select_variable(self, new_domains: dict[str, list[int]]):
+        """Seleziono la prima variabile che ha cardinalità del 
+        dominio maggiore di 1
+
+        Args:
+            new_domains (dict[str, list[int]]): Domini consistenti
+
+        Returns:
+            Variable: Variabile v tale che `|dom(v)| > 1`
+        """
+        for v in self.variables:
+            if len(new_domains[v.name]) > 1:
+                return v
+
+    def split_domain(self, domain: list[int]) -> tuple[list[int], list[int]]:
+        half = len(domain) // 2
+        return domain[:half], domain[half:]

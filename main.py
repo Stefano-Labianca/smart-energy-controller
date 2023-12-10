@@ -4,7 +4,7 @@ from rich.console import Console
 
 from appliance.appliances_controller import (create_appliances,
                                              create_variables,
-                                             get_variables_name)
+                                             get_variables_name, printer)
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
 from csp_problem.Constraint import Constraint
@@ -37,6 +37,7 @@ console = Console()
 appliances = create_appliances()
 variables = create_variables(appliances)
 variables_name = get_variables_name(variables)
+
 
 # columns = [
 #     "computer", "3D_printer", "internet_router", "laptop",
@@ -86,32 +87,28 @@ constraints = [
 ]"""
 
 
+# # printer(variables)
+
+# for v in variables:
+#     new_domain = new_domains.get(v.name)
+
+#     if new_domain:
+#         v.update_domain(new_domain)
+
+# console.log("------------------------")
+
+# printer(variables)
+
+
 csp_problem = CSP(variables, constraints)
-dfs = DFS()
+# dfs = DFS()
 gac = GAC(variables, constraints)
+solutions = gac.solve()
 
-variables = gac.make_arc_consistent()
-console.log(variables)
-
-
-# TODO: Creare la classe che permette di risolvere il CSP tramite GAC
-# TODO: Continuare l'implementazione del GAC
-# TODO: Fare i test con il dfs
-
-
+console.log(solutions)
 # Uso del DFS
 # start = time()
 # solutions = csp_problem.solve(dfs)
 # end = time()
 
 # print("Time: ", end - start, "s")
-
-# for s in solutions:
-#     row = dict([
-#         (k, str(v)) for k, v in s.items() if k in columns
-#     ])
-
-#     table.add_row(*row.values(), style="cyan")
-
-
-# console.log(table)
