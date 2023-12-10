@@ -1,9 +1,12 @@
 from csv import DictReader
 
+from rich.console import Console
+
 from appliance.Appliance import Appliance
 from csp_problem.Variable import Variable
 
 MOCK_CSV_PATH = "./appliance/appliances.csv"
+console = Console()
 
 
 def create_appliances() -> list[Appliance]:
@@ -52,3 +55,8 @@ def get_variables_name(variables: list[Variable]) -> list[str]:
         variables_name.append(v.name)
 
     return variables_name
+
+
+def printer(variables: list[Variable]) -> None:
+    for v in variables:
+        console.log(v)
