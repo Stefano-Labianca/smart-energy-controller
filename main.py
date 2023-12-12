@@ -57,9 +57,10 @@ gac = GAC(csp_problem)
 solutions = []
 
 start = time()
-solutions = dfs.solve()
-# solutions = gac.solve()
+# solutions = dfs.solve()
+solutions = gac.solve()
 end = time()
 
-assignments_printer(solutions)
+console.print(solutions)
+# assignments_printer(solutions)
 console.print(f"Time: {round((end - start) * 1000, 3)}ms", style="i")
