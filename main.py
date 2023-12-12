@@ -4,17 +4,17 @@ from rich.console import Console
 
 from appliance.appliances_controller import (create_appliances,
                                              create_variables,
-                                             get_variables_name, printer)
+                                             get_variables_name)
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
 from csp_problem.Variable import Variable
+from utils.printer import (assignments_printer, constraints_printer,
+                           variables_printer)
 
-# from rich.table import Table
 
-
-def limit_multimedia(assignment: dict[Variable, int]) -> bool:
+def limit_multimedia(assignment: dict[str, int]) -> bool:
     accumulator = 0
 
     for v in assignment:
@@ -22,7 +22,7 @@ def limit_multimedia(assignment: dict[Variable, int]) -> bool:
     return accumulator < 35_000
 
 
-def limit_cooling(assignment: dict[Variable, int]) -> bool:
+def limit_cooling(assignment: dict[str, int]) -> bool:
     accumulator = 0
 
     for v in assignment:
@@ -30,7 +30,6 @@ def limit_cooling(assignment: dict[Variable, int]) -> bool:
     return accumulator < 15_000
 
 
-# table = Table(title="Info", highlight=True)
 console = Console()
 
 
@@ -38,16 +37,6 @@ appliances = create_appliances()
 variables = create_variables(appliances)
 variables_name = get_variables_name(variables)
 
-
-# columns = [
-#     "computer", "3D_printer", "internet_router", "laptop",
-#     "phone_charger", "printer", "monitor", "tv", "sound_system",
-#     "air_conditioner", "fan", "air_purifier"
-# ]
-
-
-# for c in columns:
-#     table.add_column(c)
 
 constraints = [
     Constraint(limit_multimedia, [
@@ -61,13 +50,16 @@ constraints = [
 
 
 csp_problem = CSP(variables, constraints)
+
 dfs = DFS(csp_problem)
 gac = GAC(csp_problem)
 
+solutions = []
+
 start = time()
 solutions = dfs.solve()
-solutions = gac.solve()
+# solutions = gac.solve()
 end = time()
 
-console.log(gac.solve())
-console.log(f"Time: {round((end - start) * 1000, 3)}ms", highlight=True)
+assignments_printer(solutions)
+console.print(f"Time: {round((end - start) * 1000, 3)}ms", style="i")
