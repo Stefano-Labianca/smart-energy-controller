@@ -107,11 +107,13 @@ class GAC:
             return False
 
         if all(len(new_domains[var]) == 1 for var in new_domains):
-            s = []
-            for variable in new_domains:
-                s.append({variable: new_domains[variable][0]})
+            assigment = {}
 
-            yield s
+            for variable in new_domains:
+                assigment |= {variable: new_domains[variable][0]}
+
+            yield assigment
+
         else:
             variable = self.select_variable(new_domains)
 
