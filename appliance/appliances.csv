@@ -4,7 +4,7 @@ computer,multimedia,"400, 500",large
 internet_router,multimedia,"10, 30, 50",small
 laptop,multimedia,"105, 300, 200",medium
 phone_charger,multimedia,"6, 4",small
-printer,multimedia,30,medium
+printer,multimedia,"30, 70",medium
 monitor,multimedia,70,medium
 tv,multimedia,150,large
 sound_system,multimedia,137,large
@@ -16,10 +16,10 @@ micro_wave_oven,kitchen,207,medium
 oven,kitchen,248,medium
 dishwasher,washing,170,medium
 dryer,washing,201,large
-washing_machine,washing,120,medium
+washing_machine,washing,"120, 300",medium
 air_conditioner,cooling,"300, 500",large
-fan,cooling,30,small
+fan,cooling,"30, 50",small
 air_purifier,cooling,130,small
 dehumidifier,other,300,small
-radiator,other,266,medium
-vacuum_cleaner,other,40,medium
+radiator,other,"266, 400",medium
+vacuum_cleaner,other,"40, 60",medium
