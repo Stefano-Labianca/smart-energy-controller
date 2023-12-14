@@ -79,14 +79,15 @@ class GAC:
         return False
 
     def new_to_do(self, var: str, const: Constraint | None):
-        """_summary_
+        """Aggiorna la to_do, escludendo `var` e `const`
 
         Args:
-            var (str): _description_
-            const (Constraint | None): Se è None, allora aggiungi tutti
+            var (str): Nome della variabile da escludere
+            const (Constraint | None): Vincolo da escludere.
+            Se è None, allora aggiungi tutti.
 
         Returns:
-            _type_: _description_
+            set: Insieme con variabili e vincoli aggiornati
         """
         return {
             (nvar, nconst) for nconst in self.var_to_const[var]
