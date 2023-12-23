@@ -32,11 +32,43 @@ def constraints_printer(constraints: list[Constraint]) -> None:
     console.print(table)
 
 
+def partial_assignments_printer(assignments: list[dict[str, int]], variables_name: list[str]) -> None:
+    table = Table(title="Partials Assignments")
+    rows: list[set] = []
+
+    for name in variables_name:
+        table.add_column(name, style="cyan")
+
+    for a in assignments:
+        p_assignmet_value = set()
+        
+        for name in variables_name:
+            p_assignmet_value.add(str(a[name]))
+
+        if len(rows) == 0:
+            rows.append(p_assignmet_value)
+
+            table.add_row(*rows[0], style="green")
+            table.add_section()
+
+        for r in rows:
+            if r != p_assignmet_value:
+                rows.append(set(p_assignmet_value))
+                
+                table.add_row(*r, style="green")
+                table.add_section()
+
+                break
+    
+    console.print(table)
+        
+
 def assignments_printer(assignments: list[dict[str, int]]) -> None:
     table = Table(title="Total Assignments")
+    names =  assignments[0].keys()
 
-    for v_name in assignments[0]:
-        table.add_column(v_name, style="cyan")
+    for name in names:
+        table.add_column(name, style="cyan")
 
     for a in assignments:
         values = tuple(

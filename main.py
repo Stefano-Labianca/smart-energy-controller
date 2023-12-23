@@ -9,7 +9,7 @@ from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
-from utils.printer import assignments_printer
+from utils.printer import assignments_printer, partial_assignments_printer
 
 
 def limit_multimedia(assignment: dict[str, int]) -> bool:
@@ -47,6 +47,13 @@ constraints = [
 ]
 
 
+names = [
+        "computer", "3D_printer", "internet_router", "laptop",
+        "phone_charger", "printer", "monitor", "tv", "sound_system"
+] + [
+        "air_conditioner", "fan", "air_purifier"
+]
+
 csp_problem = CSP(variables, constraints)
 
 dfs = DFS(csp_problem)
@@ -59,5 +66,6 @@ start = time()
 solutions = gac.solve()
 end = time()
 
-assignments_printer(solutions)
+partial_assignments_printer(solutions, names)
+# assignments_printer(solutions)
 console.print(f"Time: {round((end - start) * 1000, 3)}ms", style="i")
