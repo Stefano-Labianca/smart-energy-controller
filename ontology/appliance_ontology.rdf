@@ -1,0 +1,412 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/utente/ontologies/2023/11/appliances/"
+     xml:base="http://www.semanticweb.org/utente/ontologies/2023/11/appliances/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:appliances="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#energyConsumption -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#energyConsumption">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#size -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#size">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Appliance"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#airConditioner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#airConditioner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling"/>
+        <appliances:energyConsumption>300, 500</appliances:energyConsumption>
+        <appliances:name>air_purifier</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#airPurifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#airPurifier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling"/>
+        <appliances:energyConsumption>130</appliances:energyConsumption>
+        <appliances:name>air_purifier</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#boiler -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#boiler">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>200</appliances:energyConsumption>
+        <appliances:name>boiler</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#coffeePot -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#coffeePot">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>70</appliances:energyConsumption>
+        <appliances:name>cooffee_pot</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#computer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#computer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>400, 500</appliances:energyConsumption>
+        <appliances:name>computer</appliances:name>
+        <appliances:size>large</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dehumidifier -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dehumidifier">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other"/>
+        <appliances:energyConsumption>300</appliances:energyConsumption>
+        <appliances:name>dehumidifier</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dishwasher -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dishwasher">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing"/>
+        <appliances:energyConsumption>170</appliances:energyConsumption>
+        <appliances:name>dishwasher</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dryer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#dryer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing"/>
+        <appliances:energyConsumption>201</appliances:energyConsumption>
+        <appliances:name>dryer</appliances:name>
+        <appliances:size>large</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#fan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#fan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling"/>
+        <appliances:energyConsumption>30, 50</appliances:energyConsumption>
+        <appliances:name>fan</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#freezer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#freezer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>250</appliances:energyConsumption>
+        <appliances:name>freezer</appliances:name>
+        <appliances:size>large</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#fridge -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#fridge">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>400</appliances:energyConsumption>
+        <appliances:name>fridge</appliances:name>
+        <appliances:size>large</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#internetRouter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#internetRouter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>10, 30, 50</appliances:energyConsumption>
+        <appliances:name>internet_router</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#laptop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#laptop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>105, 300, 200</appliances:energyConsumption>
+        <appliances:name>laptop</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#microWaveOven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#microWaveOven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>207</appliances:energyConsumption>
+        <appliances:name>micro_wave_oven</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#monitor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#monitor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>70</appliances:energyConsumption>
+        <appliances:name>monitor</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#oven -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#oven">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+        <appliances:energyConsumption>248</appliances:energyConsumption>
+        <appliances:name>oven</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#phoneCharger -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#phoneCharger">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>6, 4</appliances:energyConsumption>
+        <appliances:name>phone_charger</appliances:name>
+        <appliances:size>small</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#printer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#printer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>30, 70</appliances:energyConsumption>
+        <appliances:name>printer</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#radiator -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#radiator">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other"/>
+        <appliances:energyConsumption>266, 300</appliances:energyConsumption>
+        <appliances:name>radiator</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#soundSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#soundSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>137</appliances:energyConsumption>
+        <appliances:name>sound_system</appliances:name>
+        <appliances:size>large</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#tv -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#tv">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>150</appliances:energyConsumption>
+        <appliances:name>tv</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#vacuumCleaner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#vacuumCleaner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other"/>
+        <appliances:energyConsumption>40, 60</appliances:energyConsumption>
+        <appliances:name>vacuum_cleaner</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#washingMachine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#washingMachine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing"/>
+        <appliances:energyConsumption>120, 300</appliances:energyConsumption>
+        <appliances:name>washing_machine</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/utente/ontologies/2023/11/appliances#3DPrinter -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#3DPrinter">
+        <rdf:type rdf:resource="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+        <appliances:energyConsumption>430, 780</appliances:energyConsumption>
+        <appliances:name>3D_printer</appliances:name>
+        <appliances:size>medium</appliances:size>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Cooling"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Kitchen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Multimedia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Other"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/utente/ontologies/2023/11/appliances#Washing"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
