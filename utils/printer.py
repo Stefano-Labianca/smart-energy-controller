@@ -1,3 +1,5 @@
+from operator import truediv
+
 from rich.console import Console
 from rich.table import Table
 
@@ -33,39 +35,37 @@ def constraints_printer(constraints: list[Constraint]) -> None:
 
 
 def partial_assignments_printer(assignments: list[dict[str, int]], variables_name: list[str]) -> None:
+    print("\n")
     table = Table(title="Partials Assignments")
-    rows: list[set] = []
+    rows: list[dict[str, str]] = []
+    can_insert = False
 
     for name in variables_name:
         table.add_column(name, style="cyan")
 
-    for a in assignments:
-        p_assignmet_value = set()
-        
-        for name in variables_name:
-            p_assignmet_value.add(str(a[name]))
+    for assignment in assignments:
+        p_assignment: dict[str, str] = {}
 
-        if len(rows) == 0:
-            rows.append(p_assignmet_value)
+        for name in assignment:
+            if name in variables_name:
+                p_assignment[name] = str(assignment[name])
 
-            table.add_row(*rows[0], style="green")
+        if len(rows) > 0:
+            can_insert = all(p_assignment != r for r in rows)
+
+        if can_insert or len(rows) == 0:
+            table.add_row(*p_assignment.values(), style="green")
             table.add_section()
 
-        for r in rows:
-            if r != p_assignmet_value:
-                rows.append(set(p_assignmet_value))
-                
-                table.add_row(*r, style="green")
-                table.add_section()
+            rows.append(p_assignment)
 
-                break
-    
     console.print(table)
-        
+
 
 def assignments_printer(assignments: list[dict[str, int]]) -> None:
+    print("\n")
     table = Table(title="Total Assignments")
-    names =  assignments[0].keys()
+    names = assignments[0].keys()
 
     for name in names:
         table.add_column(name, style="cyan")

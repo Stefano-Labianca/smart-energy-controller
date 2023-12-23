@@ -48,10 +48,9 @@ constraints = [
 
 
 names = [
-        "computer", "3D_printer", "internet_router", "laptop",
-        "phone_charger", "printer", "monitor", "tv", "sound_system"
-] + [
-        "air_conditioner", "fan", "air_purifier"
+    "computer", "3D_printer", "internet_router", "laptop",
+    "phone_charger", "printer", "monitor", "tv", "sound_system",
+    "air_conditioner", "fan", "air_purifier"
 ]
 
 csp_problem = CSP(variables, constraints)
