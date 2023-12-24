@@ -1,6 +1,6 @@
 import os
 
-from owlready2 import ThingClass, get_ontology, onto_path
+from owlready2 import get_ontology, onto_path
 from owlready2.individual import NamedIndividual
 
 from appliance.Appliance import Appliance
@@ -23,6 +23,16 @@ class ApplianceOntology:
                 subclass_of=self.ontology["Appliance"]
             )
         )
+
+    def get_all_classes(self) -> list:
+        classes = list(
+            map(
+                lambda c: c.name,
+                list(self.ontology.classes())
+            )
+        )
+
+        return classes
 
     def get_all_individuals(self) -> list[Appliance]:
         individuals: list[NamedIndividual] = list(self.ontology.individuals())
