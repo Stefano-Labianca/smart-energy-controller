@@ -1,6 +1,5 @@
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
-from csp_problem.resolver import Resolver
 from csp_problem.Variable import Variable
 
 
