@@ -25,14 +25,12 @@ class ApplianceOntology:
         )
 
     def get_all_classes(self) -> list:
-        classes = list(
+        return list(
             map(
                 lambda c: c.name,
                 list(self.ontology.classes())
             )
         )
-
-        return classes
 
     def get_all_individuals(self) -> list[Appliance]:
         individuals: list[NamedIndividual] = list(self.ontology.individuals())
