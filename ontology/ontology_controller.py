@@ -1,9 +1,15 @@
 import os
+from typing import Literal
 
-from owlready2 import get_ontology, onto_path
+from owlready2 import ThingClass, get_ontology, onto_path
 from owlready2.individual import NamedIndividual
 
 from appliance.Appliance import Appliance
+
+type ClassName = Literal[
+    "Appliance", "Washing", "Kitchen",
+    "Other", "Multimedia", "Cooling"
+]
 
 
 class ApplianceOntology:
@@ -13,15 +19,47 @@ class ApplianceOntology:
         self.ontology = get_ontology("./ontology/appliance_ontology.rdf")
         self.ontology.load()
 
-    def search(self):
-        """Cerca qualcosa
-        TODO: Si può fate un API molto carina
+    def search_by_type(self, class_name: ClassName) -> list[NamedIndividual]:
+        """Restituisce una lista di individui di una classe
+
+        Args:
+            class_name (ClassName): Nome della classe da cui cercare gli
+            individui
+
+        Returns:
+            list[NamedIndividual]: Lista di individui
         """
 
-        print(
-            self.ontology.search(
-                subclass_of=self.ontology["Appliance"]
-            )
+        return self.ontology.search(
+            type=self.ontology[class_name]
+        )
+
+    def search_by_subclass(self, class_name: ClassName) -> list[ThingClass]:
+        """Restituisce una lista contenente le sottoclassi di una classe
+
+        Args:
+            class_name (ClassName): Nome della classe
+
+        Returns:
+            list[ThingClass]: Lista di sottoclassi
+        """
+
+        return self.ontology.search(
+            subclass_of=self.ontology[class_name]
+        )
+
+    def search_all(self, class_name: ClassName) -> list:
+        """Restituisce le sottoclassi e gli individui di una classe
+
+        Args:
+            class_name (ClassName): Nome della classe
+
+        Returns:
+            list: Contiene classi e individui
+        """
+
+        return self.ontology.search(
+            is_a=self.ontology[class_name]
         )
 
     def get_all_classes(self) -> list:
