@@ -1,7 +1,7 @@
 import os
 from typing import Literal
 
-from owlready2 import ThingClass, get_ontology, onto_path
+from owlready2 import Ontology, ThingClass, get_ontology, onto_path
 from owlready2.individual import NamedIndividual
 
 from appliance.Appliance import Appliance
@@ -11,12 +11,16 @@ type ClassName = Literal[
     "Other", "Multimedia", "Cooling"
 ]
 
+ONTOLOGY_PATH = "./ontology/appliance_ontology.rdf"
+
 
 class ApplianceOntology:
     def __init__(self) -> None:
         onto_path.append(".")
 
-        self.ontology = get_ontology("./ontology/appliance_ontology.rdf")
+        self.ontology: Ontology = get_ontology(
+            ONTOLOGY_PATH
+        )
         self.ontology.load()
 
     def search_by_type(self, class_name: ClassName) -> list[NamedIndividual]:
@@ -95,3 +99,6 @@ class ApplianceOntology:
             appliances.append(a)
 
         return appliances
+
+    # TODO: Aggiungere altri metodi per
+    # la manipolazione dell'ontologia
