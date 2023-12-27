@@ -1,32 +1,29 @@
+from rdflib import URIRef
+
+from appliance.Appliance import Appliance
+from appliance.appliances_controller import create_appliances
 from ontology.ontology_controller import ApplianceOntology
-from ontology.sparql import SPARQL, OWLType
 
 ontology = ApplianceOntology()
-query_manager = SPARQL()
-
-query_manager.select(['x']).where(
-    [OWLType.NAMED_INDIVIDUAL]
-).execute()
-
-# print(ontology.get_all_classes())
-# appliances = ontology.get_all_individuals()
-
-# print(
-#     ontology.search_by_type("Appliance")
-# )
 
 
-# print(
-#     ontology.search_by_subclass("Appliance")
-# )
+def test_add():
+    a = Appliance().name("fryer").category(
+        "Kitchen").size("medium").energy_consumption([200])
+
+    ontology.add(a)
+    ontology.save()
 
 
-# print(
-#     ontology.search_all("Appliance"),
-#     ontology.search_all("Cooling"),
-#     ontology.search_all("Kitchen"),
-#     ontology.search_all("Washing"),
-#     ontology.search_all("Multimedia"),
-#     ontology.search_all("Other"),
-#     sep="\n\n"
-# )
+def test_remove():
+    ontology.remove(
+        URIRef('http://www.semanticweb.org/utente/ontologies/2023/11/appliances#fryer')
+    )
+
+    ontology.save()
+
+
+# test_add()
+# test_remove()
+
+ontology.show()
