@@ -80,17 +80,3 @@ def assignments_printer(assignments: list[dict[str, int]]) -> None:
         table.add_section()
 
     console.print(table)
-
-
-def query_result_printer(result: list[list], variables: list[str]) -> None:
-    print("\n")
-    table = Table(title="Query Result", )
-
-    for column in variables:
-        table.add_column(column, justify="center")
-
-    for row in result:
-        table.add_row(row[0].name, style='blue')
-        table.add_section()
-
-    console.print(table)
