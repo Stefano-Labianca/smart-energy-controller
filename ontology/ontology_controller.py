@@ -1,7 +1,4 @@
-
-from rdflib import Graph, Literal
-from rdflib.namespace import FOAF, RDF
-from rdflib.serializer import Serializer
+from rdflib import Graph, Literal, URIRef
 from rich.console import Console
 from rich.table import Table
 
@@ -25,6 +22,9 @@ class ApplianceOntology:
         """Mostra le informazioni dell'ontologia, 
         nella forma (Soggetto, Predicato, Oggetto).
         """
+
+        # TODO: Può essere utile mostrare solo gli individui
+
         table = Table(title="Triples")
         console = Console()
 
@@ -33,7 +33,6 @@ class ApplianceOntology:
         table.add_column("Object", style='blue')
 
         for s, p, o in self.g:
-
             table.add_row(
                 *(s.__str__(), p.__str__(), o.__str__()), style="green"
             )
@@ -49,7 +48,7 @@ class ApplianceOntology:
         Args:
             individual (Appliance): Individuo da aggiungere
         """
-        subject = Literal(URI_BASE + individual._name)
+        subject = URIRef(URI_BASE + individual._name)
 
         p_energy_consumption = Literal(URI_BASE + 'energy_consumption')
         p_size = Literal(URI_BASE + 'size')
@@ -81,6 +80,16 @@ class ApplianceOntology:
         )
 
         self.g.add((subject, Literal(URI_TYPE), obj_subclass))
+
+    def remove(self, uri: URIRef) -> None:
+        """Rimuove un individuo dall'ontologia.
+        Per salvare in maniera consistente gli aggiornamenti fatti, è 
+        necessario richiamare il metodo `save`.
+
+        Args:
+            uri (URIRef): Identificativo dell'individuo
+        """
+        self.g.remove((uri, None, None))
 
     def save(self) -> None:
         """Salva permanentemente le modifiche apportate 
