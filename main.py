@@ -1,8 +1,7 @@
 from rdflib import URIRef
 
 from appliance.Appliance import Appliance
-from appliance.appliances_controller import create_appliances
-from ontology.ontology_controller import ApplianceOntology
+from ontology.appliance_ontology import ApplianceOntology
 
 ontology = ApplianceOntology()
 
