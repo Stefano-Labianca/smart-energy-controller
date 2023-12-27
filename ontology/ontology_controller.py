@@ -1,104 +1,92 @@
-import os
-from typing import Literal
 
-from owlready2 import Ontology, ThingClass, get_ontology, onto_path
-from owlready2.individual import NamedIndividual
+from rdflib import Graph, Literal
+from rdflib.namespace import FOAF, RDF
+from rdflib.serializer import Serializer
+from rich.console import Console
+from rich.table import Table
 
 from appliance.Appliance import Appliance
 
-type ClassName = Literal[
-    "Appliance", "Washing", "Kitchen",
-    "Other", "Multimedia", "Cooling"
-]
-
 ONTOLOGY_PATH = "./ontology/appliance_ontology.rdf"
+URI_BASE = "http://www.semanticweb.org/utente/ontologies/2023/11/appliances#"
+URI_TYPE = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+OBJECT_INDIVIDUA_TYPE = "http://www.w3.org/2002/07/owl#NamedIndividual"
 
 
 class ApplianceOntology:
+    """Permette la lavorazione delle ontologie
+    """
+
     def __init__(self) -> None:
-        onto_path.append(".")
+        self.g = Graph()
+        self.g.parse(ONTOLOGY_PATH)
 
-        self.ontology: Ontology = get_ontology(
-            ONTOLOGY_PATH
-        )
-        self.ontology.load()
+    def show(self) -> None:
+        """Mostra le informazioni dell'ontologia, 
+        nella forma (Soggetto, Predicato, Oggetto).
+        """
+        table = Table(title="Triples")
+        console = Console()
 
-    def search_by_type(self, class_name: ClassName) -> list[NamedIndividual]:
-        """Restituisce una lista di individui di una classe
+        table.add_column("Subject", style='blue')
+        table.add_column("Predicate", style='blue')
+        table.add_column("Object", style='blue')
+
+        for s, p, o in self.g:
+
+            table.add_row(
+                *(s.__str__(), p.__str__(), o.__str__()), style="green"
+            )
+            table.add_section()
+
+        console.print(table)
+
+    def add(self, individual: Appliance) -> None:
+        """Aggiunge un nuovo individuo all'interno dell'ontologia.
+        Per salvare in maniera consistente gli aggiornamenti fatti, è 
+        necessario richiamare il metodo `save`.
 
         Args:
-            class_name (ClassName): Nome della classe da cui cercare gli
-            individui
-
-        Returns:
-            list[NamedIndividual]: Lista di individui
+            individual (Appliance): Individuo da aggiungere
         """
+        subject = Literal(URI_BASE + individual._name)
 
-        return self.ontology.search(
-            type=self.ontology[class_name]
-        )
+        p_energy_consumption = Literal(URI_BASE + 'energy_consumption')
+        p_size = Literal(URI_BASE + 'size')
+        p_name = Literal(URI_BASE + 'name')
 
-    def search_by_subclass(self, class_name: ClassName) -> list[ThingClass]:
-        """Restituisce una lista contenente le sottoclassi di una classe
-
-        Args:
-            class_name (ClassName): Nome della classe
-
-        Returns:
-            list[ThingClass]: Lista di sottoclassi
-        """
-
-        return self.ontology.search(
-            subclass_of=self.ontology[class_name]
-        )
-
-    def search_all(self, class_name: ClassName) -> list:
-        """Restituisce le sottoclassi e gli individui di una classe
-
-        Args:
-            class_name (ClassName): Nome della classe
-
-        Returns:
-            list: Contiene classi e individui
-        """
-
-        return self.ontology.search(
-            is_a=self.ontology[class_name]
-        )
-
-    def get_all_classes(self) -> list:
-        return list(
+        energy_consumption_list = list(
             map(
-                lambda c: c.name,
-                list(self.ontology.classes())
+                lambda e: str(e),
+                individual._energy_consumption
             )
         )
 
-    def get_all_individuals(self) -> list[Appliance]:
-        individuals: list[NamedIndividual] = list(self.ontology.individuals())
-        appliances: list[Appliance] = []
+        obj_energy_consumption = Literal(
+            ", ".join(energy_consumption_list)
+        )
+        obj_size = Literal(individual._size)
+        obj_name = Literal(individual._name)
 
-        for i in individuals:
-            energy_consumption = list(
-                map(
-                    lambda w: int(w),
-                    i.energy_consumption[0].split(", ")
-                )
+        self.g.add((subject, p_energy_consumption, obj_energy_consumption))
+        self.g.add((subject, p_size, obj_size))
+        self.g.add((subject, p_name, obj_name))
+
+        obj_subclass = Literal(URI_BASE + individual._category)
+
+        self.g.add(
+            (
+                subject, Literal(URI_TYPE), Literal(OBJECT_INDIVIDUA_TYPE)
             )
+        )
 
-            a = Appliance().category(
-                i.is_instance_of[0].name.lower()
-            ).name(
-                i.appliance_name[0]
-            ).energy_consumption(
-                energy_consumption
-            ).size(
-                i.size[0]
-            )
+        self.g.add((subject, Literal(URI_TYPE), obj_subclass))
 
-            appliances.append(a)
-
-        return appliances
-
-    # TODO: Aggiungere altri metodi per
-    # la manipolazione dell'ontologia
+    def save(self) -> None:
+        """Salva permanentemente le modifiche apportate 
+        all'ontologia
+        """
+        self.g.serialize(
+            destination=ONTOLOGY_PATH,
+            format="pretty-xml"
+        )
