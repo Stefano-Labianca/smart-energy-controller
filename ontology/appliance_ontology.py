@@ -188,7 +188,7 @@ class ApplianceOntology:
         """
         return list(self.g.triples((uri, None, None)))
 
-    def create_appliance(self) -> list[Appliance]:
+    def create_appliances(self) -> list[Appliance]:
         """Restituisce una lista di instanze di Appliance, che rappresenteranno
         gli elettrodomestici contenuti nell'ontologia
 
