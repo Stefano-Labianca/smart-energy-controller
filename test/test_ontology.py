@@ -8,7 +8,7 @@ ontology = ApplianceOntology()
 console = Console()
 
 
-appliances = ontology.create_appliance()
+appliances = ontology.create_appliances()
 
 for a in appliances:
     console.print(a)
