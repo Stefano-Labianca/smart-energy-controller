@@ -11,6 +11,7 @@ from rich.table import Table
 from appliance.Appliance import Appliance
 
 ONTOLOGY_PATH = "./ontology/appliance_ontology.rdf"
+console = Console()
 
 
 class SingletonMeta(type):
@@ -55,9 +56,6 @@ class SizeEnum(StrEnum):
     LARGE = "large"
 
 
-console = Console()
-
-
 class ApplianceOntology(metaclass=SingletonMeta):
     """Permette la lavorazione delle ontologie
     """
@@ -86,6 +84,13 @@ class ApplianceOntology(metaclass=SingletonMeta):
         console.print(table)
 
     def show_triple(self, tiple) -> None:
+        """Mostra in formato tabellare una tripla, nel formato
+        (Soggetto, Predicato, Oggetto)
+
+        Args:
+            triples (list): Tripla da mostrare
+        """
+
         table = Table(title="Triple")
 
         table.add_column("Subject", style='blue')
@@ -101,6 +106,13 @@ class ApplianceOntology(metaclass=SingletonMeta):
         console.print(table)
 
     def show_triples(self, triples: list) -> None:
+        """Mostra in formato tabellare delle triple, nel formato
+        (Soggetto, Predicato, Oggetto)
+
+        Args:
+            triples (list): Lista di triple
+        """
+
         table = Table(title="Triples")
 
         table.add_column("Subject", style='blue')
@@ -203,6 +215,7 @@ class ApplianceOntology(metaclass=SingletonMeta):
         Returns:
             list[tuple]: Lista di tuple che contengono come soggetto l'uri dato
         """
+
         return list(self.g.triples((uri, None, None)))
 
     def create_appliances(self) -> list[Appliance]:
