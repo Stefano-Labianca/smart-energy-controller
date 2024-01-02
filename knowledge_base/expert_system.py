@@ -59,6 +59,7 @@ class ExpertSystem(KnowledgeEngine):
     def start_system(self):
         """Avvia il sistema esperto
         """
+
         self.selected_appliances = UserCLI.choose_appliances()
         output_status = self.check_power()
 
@@ -127,7 +128,7 @@ class ExpertSystem(KnowledgeEngine):
         in uso
         """
 
-        console.print("\nIl contatore non salterà!\n", style="green")
+        console.print("\nTutto sotto controllo!\n", style="green")
 
     def check_power(self) -> str:
         """Verifica se i dispositivi che si vogliono avviare
