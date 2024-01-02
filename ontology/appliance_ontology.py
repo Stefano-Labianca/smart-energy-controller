@@ -1,6 +1,7 @@
 
 import re
 from enum import StrEnum
+from importlib import metadata
 from unicodedata import category
 
 from rdflib import Graph, Literal, URIRef
@@ -10,6 +11,22 @@ from rich.table import Table
 from appliance.Appliance import Appliance
 
 ONTOLOGY_PATH = "./ontology/appliance_ontology.rdf"
+
+
+class SingletonMeta(type):
+    """
+    Classe si supporto per la creazione del Singleton Design Pattern in Python
+    """
+
+    _instances = {}
+
+    def __call__(cls, *args, **kwargs):
+
+        if cls not in cls._instances:
+            instance = super().__call__(*args, **kwargs)
+            cls._instances[cls] = instance
+
+        return cls._instances[cls]
 
 
 class URIEnum(StrEnum):
@@ -41,7 +58,7 @@ class SizeEnum(StrEnum):
 console = Console()
 
 
-class ApplianceOntology:
+class ApplianceOntology(metaclass=SingletonMeta):
     """Permette la lavorazione delle ontologie
     """
 

@@ -155,6 +155,7 @@ class ExpertSystem(KnowledgeEngine):
 def run_expert_system(ontology: ApplianceOntology, max_usage: float):
     """Permette l'avvio del sistema esperto dall'esterno
     """
+
     expert_system = ExpertSystem(ontology, max_usage)
 
     expert_system.reset()
