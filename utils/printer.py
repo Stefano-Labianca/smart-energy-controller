@@ -60,9 +60,6 @@ def partial_assignments_printer(assignments: list[dict[str, int]], variables_nam
     console.print(table)
 
 
-# TODO: Nella stampa degli assegnamenti, potremmo fare della paginazione,
-# ovvero limitare a 20 o 50 il numero delle righe e andare avanti e indietro
-
 def assignments_printer(assignments: list[dict[str, int]]) -> None:
     print("\n")
     table = Table(title="Total Assignments")
