@@ -48,17 +48,31 @@ csp = CSP(variables, constraints)
 dfs = DFS(csp)
 solutions = dfs.solve()
 
+names = [
+    "computer", "3D_printer", "internet_router", "laptop",
+    "phone_charger", "printer", "monitor", "tv", "sound_system",
+    "air_conditioner", "fan", "air_purifier"
+]
 
 # run_expert_system(ontology, 1.5)
 
 
-pagination = Pagination(solutions, 100)
+pagination = Pagination(solutions)
 
-pagination.next_page()
-pagination.next_page()
-pagination.next_page()
+# pagination.next_page()
+# pagination.next_page()
+# pagination.next_page()
 # pagination.next_page()
 # pagination.previous_page()
 # pagination.previous_page()
 
-pagination.show_current_page()
+while True:
+    pagination.show_partial(names)
+    user_input = input("\n> ")
+
+    match user_input:
+        case '1': pagination.next_page()
+        case '0': pagination.previous_page()
+        case _: break
+
+# assignments_printer(solutions)
