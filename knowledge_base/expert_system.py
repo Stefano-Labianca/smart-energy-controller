@@ -24,10 +24,10 @@ class ExpertSystem(KnowledgeEngine):
     contatore elettrico.
     """
 
-    def __init__(self, ontology: ApplianceOntology, max_usage: float) -> None:
+    def __init__(self, max_usage: float) -> None:
         super().__init__()
 
-        self.ontology = ontology
+        self.ontology = ApplianceOntology()
         self.max_usage = max_usage
         self.selected_appliances: list[dict[str, list[int]]] = []
 
@@ -72,7 +72,7 @@ class ExpertSystem(KnowledgeEngine):
         """
 
         console.print(
-            "\nAttenzione!, accendendo i dispositivi scelti rischi di far saltare il salvavita\n",
+            "\nAttenzione!, accendendo i dispositivi scelti rischi di far saltare il salvavita!\n",
             style="red"
         )
 
@@ -153,11 +153,11 @@ class ExpertSystem(KnowledgeEngine):
         return StatusEnum.UP
 
 
-def run_expert_system(ontology: ApplianceOntology, max_usage: float):
+def run_expert_system(max_usage: float):
     """Permette l'avvio del sistema esperto dall'esterno
     """
 
-    expert_system = ExpertSystem(ontology, max_usage)
+    expert_system = ExpertSystem(max_usage)
 
     expert_system.reset()
     expert_system.run()
