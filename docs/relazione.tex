@@ -1,5 +1,7 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage{graphicx} %LaTeX package to import graphics
+\usepackage[obeyspaces]{url}
+
 \graphicspath{{images/}} %configuring the graphicx package
 
 \title{
@@ -63,7 +65,43 @@ i seguenti task:
     \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico.
 \end{enumerate}
 
+\section{Progetto}
 
+\subsection{Struttura del progetto}
+
+All'intero del progetto, possiamo trovare le seguenti cartelle:
+\begin{itemize}
+    \item \path{/appliance}: Qui è possibile trovare la classe Appliance, che definisce
+          un elettrodomestico, insieme ad una serie di metodi di suppporto,
+          contenuti in \path{appliances_controller.py}
+
+    \item \path{/cli}: Troviamo una classe che incapsula tutta la logica legata agli input
+          e all'output del terminale
+
+    \item \path{/csp_problem}: Questa cartella contiene tutti i file legati all'argomento del
+          CSP. \\
+          Infatti è possibile trovare la rappresentazione delle variabili e dei vincoli, fatta
+          rispettivamente usando le classi Variable e Constraint. \\
+          Inoltre è presente anche la classe CSP usata come wrapper per rappresentare un generico
+          problema di questa categoria. \\
+          Infine è presenta la cartella \path{/algorithm} che contiene le realizzazioni degli
+          algoritmi DFS e GAC usati per risolvere i problemi legati al CSP.
+
+    \item \path{/knowledge_base}: Contiene una classe usata per rappresentare un Sistema Esperto.
+
+    \item \path{/ontology}: Questa cartella contiene una classe che permette di manipolare
+          l'ontologia contenuta all'intero del file \path{appliance_ontology.rdf}.
+
+    \item \path{/test}: Contiene tutti quei file contenente vari test fatti al programma.
+
+    \item \path{/utils}: Contiene file di utilità che facilitano alcune operazioni interne al programma.
+          Per esempio, il file \path{pagination.py} viene usato per impaginare l'output del programma.
+\end{itemize}
+
+\subsection{Inizializzare il progetto}
+
+
+\subsection{Avviare il progetto}
 
 
 
