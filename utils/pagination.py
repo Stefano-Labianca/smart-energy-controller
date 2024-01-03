@@ -2,7 +2,7 @@ from itertools import batched
 
 from rich.console import Console
 
-from utils.printer import assignments_printer
+from utils.printer import assignments_printer, partial_assignments_printer
 
 console = Console()
 
@@ -23,8 +23,9 @@ class Pagination:
         self.current_page = 0
         self.content = list(batched(elements, size))
 
-    def show_current_page(self):
-        """Mostra gli elementi della pagina corrente
+    def show_total(self):
+        """Mostra gli elementi della pagina corrente, in termini di 
+        assegnamenti totali
         """
 
         assignments_printer(
@@ -37,6 +38,25 @@ class Pagination:
         )
 
         console.print(f'Premi 1 per andare alla pagina successiva')
+        console.print(f'Premi 0 per andare alla pagina precedente')
+
+    def show_partial(self, variables_names: list[str]):
+        """Mostra gli elementi della pagina corrente, in termini di 
+        assegnamenti parziali
+        """
+
+        partial_assignments_printer(
+            list(self.content[self.current_page]),
+            variables_names
+        )
+
+        console.print(
+            f'Pagina corrente: {self.current_page + 1}',
+            justify="center"
+        )
+
+        console.print(f'Premi 1 per andare alla pagina successiva')
+        console.print(f'Premi 0 per andare alla pagina precedente')
 
     def next_page(self) -> None:
         """Porta alla pagina successiva
