@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  2 JAN 2024 18:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  3 JAN 2024 17:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -48,20 +48,20 @@ File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 ) (./relazione.aux)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count196
@@ -81,35 +81,72 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
+<images/unibalogo.jpg, id=1, 227.4096pt x 227.4096pt>
+File: images/unibalogo.jpg Graphic file (type jpg)
+<use images/unibalogo.jpg>
+Package pdftex.def Info: images/unibalogo.jpg  used on input line 17.
+(pdftex.def)             Requested size: 113.70451pt x 113.70451pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 15.
+(Font)              <14.4> on input line 17.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 15.
- (./relazione.toc)
+(Font)              <7> on input line 17.
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+(./relazione.toc [1
+
+{d:/TeXLive/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/unibalogo.jpg>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
 \tf@toc=\write3
 \openout3 = `relazione.toc'.
 
- [1
 
-{d:/TeXLive/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./relazione.aux)
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--36
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--46
+
+ []
+
+<images/interruttore-diff.jpg, id=9, 752.8125pt x 752.8125pt>
+File: images/interruttore-diff.jpg Graphic file (type jpg)
+<use images/interruttore-diff.jpg>
+Package pdftex.def Info: images/interruttore-diff.jpg  used on input line 49.
+(pdftex.def)             Requested size: 150.55983pt x 150.55983pt.
+[2] [3 <./images/interruttore-diff.jpg>] (./relazione.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1287 strings out of 474174
- 21323 string characters out of 5745652
- 1926460 words of memory out of 5000000
- 23629 multiletter control sequences out of 15000+600000
- 560799 words of font info for 45 fonts, out of 8000000 for 9000
+ 1329 strings out of 474174
+ 22181 string characters out of 5745652
+ 1929460 words of memory out of 5000000
+ 23665 multiletter control sequences out of 15000+600000
+ 563544 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,65p,281b,199s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,7n,65p,281b,235s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on relazione.pdf (1 page, 25955 bytes).
+Output written on relazione.pdf (3 pages, 593382 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 26 PDF objects out of 1000 (max. 8388607)
+ 14 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
