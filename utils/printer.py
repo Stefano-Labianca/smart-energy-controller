@@ -8,7 +8,7 @@ console = Console()
 
 
 def variables_printer(variables: list[Variable]) -> None:
-    table = Table(title="Variables")
+    table = Table(title="Variabili")
     table.add_column("Name", style="green")
     table.add_column("Domain", style="cyan")
 
@@ -20,7 +20,7 @@ def variables_printer(variables: list[Variable]) -> None:
 
 
 def constraints_printer(constraints: list[Constraint]) -> None:
-    table = Table(title="Constraints")
+    table = Table(title="Vincoli")
 
     table.add_column("Condition", style="green")
     table.add_column("Scope", style="cyan")
@@ -34,7 +34,8 @@ def constraints_printer(constraints: list[Constraint]) -> None:
 
 def partial_assignments_printer(assignments: list[dict[str, int]], variables_name: list[str]) -> None:
     print("\n")
-    table = Table(title="Partials Assignments")
+
+    table = Table(title="Assegnamenti Parziali")
     rows: list[dict[str, str]] = []
     can_insert = False
 
@@ -44,15 +45,15 @@ def partial_assignments_printer(assignments: list[dict[str, int]], variables_nam
     for assignment in assignments:
         p_assignment: dict[str, str] = {}
 
-        for name in assignment:
-            if name in variables_name:
-                p_assignment[name] = str(assignment[name])
+        p_assignment = {
+            name: str(assignment[name]) for name in variables_name
+        }
 
         if len(rows) > 0:
             can_insert = all(p_assignment != r for r in rows)
 
         if can_insert or len(rows) == 0:
-            table.add_row(*p_assignment.values(), style="green")
+            table.add_row(*list(p_assignment.values()), style="green")
             table.add_section()
 
             rows.append(p_assignment)
@@ -62,8 +63,8 @@ def partial_assignments_printer(assignments: list[dict[str, int]], variables_nam
 
 def assignments_printer(assignments: list[dict[str, int]]) -> None:
     print("\n")
-    table = Table(title="Total Assignments")
-    names = assignments[0].keys()
+    table = Table(title="Assegnamenti Totali")
+    names = list(assignments[0].keys())
 
     for name in names:
         table.add_column(name, style="cyan")
