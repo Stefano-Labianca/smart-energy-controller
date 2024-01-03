@@ -1,12 +1,12 @@
 from appliance.Appliance import Appliance
 from appliance.appliances_controller import create_variables
+from cli.user_cli import UserCLI
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
 from knowledge_base.expert_system import run_expert_system
 from ontology.appliance_ontology import ApplianceOntology
 from utils.pagination import Pagination
-from utils.printer import assignments_printer, partial_assignments_printer
 
 
 def limit_multimedia(assignment: dict[str, int]) -> bool:
@@ -26,14 +26,9 @@ def limit_cooling(assignment: dict[str, int]) -> bool:
 
 
 ontology = ApplianceOntology()
-
-# Creare la GUI per il terminale
-# https://github.com/Textualize/textual
-
 appliances = ontology.create_appliances()
+
 variables = create_variables(appliances)
-
-
 constraints = [
     Constraint(limit_multimedia, [
         "computer", "3D_printer", "internet_router", "laptop",
@@ -54,25 +49,9 @@ names = [
     "air_conditioner", "fan", "air_purifier"
 ]
 
-# run_expert_system(ontology, 1.5)
-
-
+run_expert_system(1.5)
 pagination = Pagination(solutions)
 
-# pagination.next_page()
-# pagination.next_page()
-# pagination.next_page()
-# pagination.next_page()
-# pagination.previous_page()
-# pagination.previous_page()
 
-while True:
-    pagination.show_partial(names)
-    user_input = input("\n> ")
-
-    match user_input:
-        case '1': pagination.next_page()
-        case '0': pagination.previous_page()
-        case _: break
-
-# assignments_printer(solutions)
+UserCLI.paginated_partial(pagination, names)
+UserCLI.paginated_total(pagination)
