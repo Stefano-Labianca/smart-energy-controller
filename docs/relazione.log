@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  4 JAN 2024 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  4 JAN 2024 20:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -195,7 +195,7 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+Package hyperref Info: Option `colorlinks' set `true' on input line 18.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count285
@@ -203,24 +203,24 @@ File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 ) (./relazione.aux)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count286
@@ -246,7 +246,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 30.
+Package hyperref Info: Link coloring ON on input line 32.
  (./relazione.out) (./relazione.out)
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
@@ -255,17 +255,17 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count292
-<images/unibalogo.jpg, id=52, 227.4096pt x 227.4096pt>
+<images/unibalogo.jpg, id=56, 227.4096pt x 227.4096pt>
 File: images/unibalogo.jpg Graphic file (type jpg)
 <use images/unibalogo.jpg>
-Package pdftex.def Info: images/unibalogo.jpg  used on input line 33.
+Package pdftex.def Info: images/unibalogo.jpg  used on input line 35.
 (pdftex.def)             Requested size: 113.70451pt x 113.70451pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 33.
+(Font)              <14.4> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 33.
+(Font)              <7> on input line 35.
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
 
  []
 
@@ -283,201 +283,210 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `relazione.toc'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--51
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--61
+Underfull \hbox (badness 10000) in paragraph at lines 47--53
 
  []
 
 [2]
-<images/interruttore-diff.jpg, id=77, 752.8125pt x 752.8125pt>
+Underfull \hbox (badness 10000) in paragraph at lines 56--63
+
+ []
+
+<images/interruttore-diff.jpg, id=82, 752.8125pt x 752.8125pt>
 File: images/interruttore-diff.jpg Graphic file (type jpg)
 <use images/interruttore-diff.jpg>
-Package pdftex.def Info: images/interruttore-diff.jpg  used on input line 64.
+Package pdftex.def Info: images/interruttore-diff.jpg  used on input line 66.
 (pdftex.def)             Requested size: 150.55983pt x 150.55983pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--89
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
 [3 <./images/interruttore-diff.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 92--95
+Overfull \hbox (8.33429pt too wide) in paragraph at lines 94--97
+\OT1/cmr/m/n/12 Va cre-ato suc-ces-si-va-mente un am-bi-ente vir-tuale [[]]. In questo modo l'interprete
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--107
+Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--133
+Underfull \hbox (badness 10000) in paragraph at lines 133--135
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 134--136
+Underfull \hbox (badness 10000) in paragraph at lines 136--138
 
  []
 
-<images/terminale-bash.png, id=93, 176.15813pt x 66.2475pt>
+<images/terminale-bash.png, id=100, 176.15813pt x 66.2475pt>
 File: images/terminale-bash.png Graphic file (type png)
 <use images/terminale-bash.png>
-Package pdftex.def Info: images/terminale-bash.png  used on input line 142.
+Package pdftex.def Info: images/terminale-bash.png  used on input line 144.
 (pdftex.def)             Requested size: 176.15768pt x 66.24733pt.
-<images/terminale-cmd.png, id=95, 441.14813pt x 106.14656pt>
+<images/terminale-cmd.png, id=102, 441.14813pt x 106.14656pt>
 File: images/terminale-cmd.png Graphic file (type png)
 <use images/terminale-cmd.png>
-Package pdftex.def Info: images/terminale-cmd.png  used on input line 149.
+Package pdftex.def Info: images/terminale-cmd.png  used on input line 151.
 (pdftex.def)             Requested size: 441.14705pt x 106.1463pt.
 
-Overfull \hbox (51.14705pt too wide) in paragraph at lines 149--150
+Overfull \hbox (51.14705pt too wide) in paragraph at lines 151--152
 [][] 
  []
 
-<images/terminale-powershell.png, id=96, 397.485pt x 37.64063pt>
+<images/terminale-powershell.png, id=103, 397.485pt x 37.64063pt>
 File: images/terminale-powershell.png Graphic file (type png)
 <use images/terminale-powershell.png>
-Package pdftex.def Info: images/terminale-powershell.png  used on input line 156.
+Package pdftex.def Info: images/terminale-powershell.png  used on input line 158.
 (pdftex.def)             Requested size: 397.48402pt x 37.64052pt.
 
-Overfull \hbox (7.48402pt too wide) in paragraph at lines 156--157
+Overfull \hbox (7.48402pt too wide) in paragraph at lines 158--159
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--172
+Underfull \hbox (badness 10000) in paragraph at lines 172--174
 
  []
 
 [5 <./images/terminale-bash.png> <./images/terminale-cmd.png> <./images/terminale-powershell.png>]
-Overfull \hbox (55.48883pt too wide) in paragraph at lines 191--193
+Overfull \hbox (55.48883pt too wide) in paragraph at lines 193--195
 []$\OT1/cmtt/m/n/12 / . vevn$\OT1/cmr/m/n/12 : Cartella con-te-nente tutto il nec-es-sario per la-vo-rare con l'ambientevirtuale. 
  []
 
 [6{d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 236--238
+Overfull \hbox (11.15417pt too wide) in paragraph at lines 238--240
+\OT1/cmr/m/n/12 In caso non si ri-esca ad es-eguire con la Pow-er-Shell [[]], l'attivazione dell'ambiente
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--248
+Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
-<images/powershell-error.png, id=113, 403.5075pt x 79.04532pt>
+<images/powershell-error.png, id=121, 403.5075pt x 79.04532pt>
 File: images/powershell-error.png Graphic file (type png)
 <use images/powershell-error.png>
-Package pdftex.def Info: images/powershell-error.png  used on input line 251.
+Package pdftex.def Info: images/powershell-error.png  used on input line 253.
 (pdftex.def)             Requested size: 403.50652pt x 79.0451pt.
 
-Overfull \hbox (13.50652pt too wide) in paragraph at lines 251--252
+Overfull \hbox (13.50652pt too wide) in paragraph at lines 253--254
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+Underfull \hbox (badness 10000) in paragraph at lines 257--260
 
  []
 
 
-Overfull \hbox (7.8566pt too wide) in paragraph at lines 263--265
+Overfull \hbox (7.8566pt too wide) in paragraph at lines 265--267
 []\OT1/cmr/m/n/12 Una volta es-e-guito questo co-mando, an-dare nella cartella $\OT1/cmtt/m/n/12 / . venv / Scripts/$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 270--271
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 [7 <./images/powershell-error.png>]
-<images/terminal-message.png, id=121, 550.30594pt x 154.32657pt>
+<images/terminal-message.png, id=130, 550.30594pt x 154.32657pt>
 File: images/terminal-message.png Graphic file (type png)
 <use images/terminal-message.png>
-Package pdftex.def Info: images/terminal-message.png  used on input line 274.
+Package pdftex.def Info: images/terminal-message.png  used on input line 276.
 (pdftex.def)             Requested size: 330.18611pt x 92.59663pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
 
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 286--286
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 288--288
 []      \OT1/cmtt/m/n/12 Set-ExecutionPolicy -ExecutionPolicy <PolicyNamePrecedente>[] 
  []
 
 
-Overfull \hbox (7.63208pt too wide) in paragraph at lines 291--293
+Overfull \hbox (7.63208pt too wide) in paragraph at lines 293--295
 \OT1/cmr/m/n/12 E' pos-si-bile che, du-rante l'esecuzione del pro-gramma, possa ap-parire il seguente
  []
 
 [8 <./images/terminal-message.png>]
-<images/errore-python.png, id=128, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=139, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
-Package pdftex.def Info: images/errore-python.png  used on input line 296.
+Package pdftex.def Info: images/errore-python.png  used on input line 298.
 (pdftex.def)             Requested size: 432.81834pt x 189.35802pt.
 
-Overfull \hbox (42.81834pt too wide) in paragraph at lines 296--297
+Overfull \hbox (42.81834pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--302
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--305
+Underfull \hbox (badness 10000) in paragraph at lines 305--307
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--310
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
-) [9 <./images/errore-python.png>] (./relazione.aux)
+) [9 <./images/errore-python.png>] [10] (./relazione.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
  ***********
 Package rerunfilecheck Info: File `relazione.out' has not changed.
-(rerunfilecheck)             Checksum: F0BCED3AE5E78FDED37330C2BE698351;2256.
+(rerunfilecheck)             Checksum: 416205FB7530A1AD5D7DE4E1B9C46AE3;2428.
  ) 
 Here is how much of TeX's memory you used:
- 11775 strings out of 474174
- 186288 string characters out of 5745652
+ 11787 strings out of 474174
+ 186530 string characters out of 5745652
  1932460 words of memory out of 5000000
- 33936 multiletter control sequences out of 15000+600000
+ 33942 multiletter control sequences out of 15000+600000
  564350 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,8n,79p,456b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (9 pages, 698839 bytes).
+Output written on relazione.pdf (10 pages, 701392 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 37 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 200 PDF objects out of 1000 (max. 8388607)
+ 162 compressed objects within 2 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

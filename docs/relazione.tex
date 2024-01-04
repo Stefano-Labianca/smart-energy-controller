@@ -5,6 +5,7 @@
 \usepackage{subcaption}
 \usepackage{listings}
 
+
 \graphicspath{{images/}} %configuring the graphicx package
 
 \hypersetup{
@@ -26,6 +27,7 @@
 \date{22 Gennaio 2024}
 \renewcommand*\contentsname{Tabella dei contenuti}
 \renewcommand{\figurename}{Figura}
+\renewcommand*\refname{}
 
 \begin{document}
 
@@ -89,7 +91,7 @@ Il primo passaggio è quello di clonare la repository cliccando al seguente
 
 \subsubsection{Impostare l'ambiente virtuale}
 
-\noindent Va creato successivamente un ambiente virtuale. In questo modo l'interprete Python,
+\noindent Va creato successivamente un ambiente virtuale \cite{create-venv}. In questo modo l'interprete Python,
 le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
 virtuali e da qualsiasi libreria installata sul proprio sistema. \\
 
@@ -233,8 +235,8 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
 \subsection{Risolvere il problema di esecuzione con la PowerShell}
 \label{sec:powershell-error}
 
-In caso non si riesca ad eseguire con la PowerShell l'attivazione dell'ambiente
-virtuale, provate a svolgere i seguenti passi. \\
+In caso non si riesca ad eseguire con la PowerShell \cite{power-shell-resolution},
+l'attivazione dell'ambiente virtuale, provate a svolgere i seguenti passi. \\
 
 \noindent Aprire innanzitutto la PowerShell come amministratore nella cartella del progetto.
 Una volta aperta la PowerShell, digitare il comando:
@@ -289,7 +291,7 @@ la execution policy al suo stato orinario, usando il comando:
 \label{sec:python-error}
 
 E' possibile che, durante l'esecuzione del programma, possa apparire il seguente
-messaggio di errore: \\ \pagebreak
+messaggio di errore \cite{python-mapping-problem}: \\ \pagebreak
 
 \begin{figure}[h]
       \centering
@@ -322,6 +324,24 @@ Nella seguente:
 
 % \section{Conclusioni e Sviluppi Futuri}
 
-% \section{Riferimenti Bibliografici}
+\section{Riferimenti Bibliografici}
+
+\begin{thebibliography}{100}
+      \bibitem{create-venv}
+      freeCodeCamp (2022):  \href{https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/}{
+            Creazione di un ambiente virtuale in Python
+      }
+
+      \bibitem{power-shell-resolution}
+      PowerShell Documentation (2022):
+      \href{https://learn.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4}{
+            Documentazione sul funzionamento delle execution policy della PowerShell Windows
+      }
+
+      \bibitem{python-mapping-problem}
+      Attribute Error (2023): \href{https://stackoverflow.com/questions/70749690/attributeerror-module-collections-has-no-attribute-mapping}{
+            Risoluzione problema legato alle dipendenze datate
+      }
+\end{thebibliography}
 
 \end{document}
