@@ -288,24 +288,25 @@ la execution policy al suo stato orinario, usando il comando:
 \subsection{Errore di esecuzione del programma Python}
 \label{sec:python-error}
 
-E' possibile che, durante l'esecuzione del programma, possa apparire questo
-messaggio di errore: \\
+E' possibile che, durante l'esecuzione del programma, possa apparire il seguente
+messaggio di errore: \\ \pagebreak
 
-\begin{figure}[h]
+\begin{figure}
       \centering
       \includegraphics[scale=0.55]{errore-python.png}
       \caption{Errore di esecuzione}
 \end{figure}
 
-\noindent Questo errore è dovuto ad una versione datata della
-libreria \texttt{frozendict} usata come dipendenza della libreria \texttt{experta}. \\
-Fare l'upgrade della libreria \texttt{frozendict} alla versione più recente, andrebbe a
+\noindent Questo errore è dovuto ad una versione datata della libreria \texttt{frozendict}
+usata come dipendenza della libreria \texttt{experta}. \\
+
+\noindent Fare l'upgrade della libreria \texttt{frozendict} alla versione più recente, andrebbe a
 creare dei conflitti di dipendenza tra le due versioni della librerie. \\
 
 \noindent Per risolvere questo problema, bisogna andare nella cartella
-\path{/.venv/Lib/site-packages/frozendict} e aprire il file \path{__init__.py}. \\
+\path{/.venv/Lib/site-packages/frozendict} e aprire il file \path{__init__.py}.
 
-\noindent Una volta aperto, bisogna cambiare la seguente linea di codice:
+\noindent Una volta aperto, bisogna cambiare la seguente linea di codice: \\
 
 \begin{lstlisting}[language=Python]
       class frozendict(collections.Mapping):
