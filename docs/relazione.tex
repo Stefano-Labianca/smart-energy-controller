@@ -1,8 +1,21 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage{graphicx} %LaTeX package to import graphics
 \usepackage[obeyspaces]{url}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{listings}
 
 \graphicspath{{images/}} %configuring the graphicx package
+
+\hypersetup{
+      colorlinks=true,
+      linkcolor=blue,
+      filecolor=magenta,      
+      urlcolor=cyan,
+      pdftitle={Sviluppo di un contatore elettrico intelligente},
+      pdfpagemode=FullScreen,
+}
+
 
 \title{
     \includegraphics[scale=0.5]{unibalogo.jpg}~\\[1cm]
@@ -47,9 +60,9 @@ uscita supera una certa soglia, allora l'interruttore scatta togliendo l'aliment
 al circuito.
 
 \begin{figure}
-    \centering
-    \includegraphics[scale=0.2]{interruttore-diff.jpg}
-    \caption{Esempio di contatore differenziale}
+      \centering
+      \includegraphics[scale=0.2]{interruttore-diff.jpg}
+      \caption{Esempio di contatore differenziale}
 \end{figure}
 
 
@@ -59,49 +72,152 @@ Il progetto si pone l'obiettivo di sviluppare un programma in grado di svolgere
 i seguenti task:
 
 \begin{enumerate}
-    \item Determinare da una lista di dispositivi, quali possono tenere accesi contemporaneamente
-          senza che salti il salvavita.
-    \item Tenere traccia dei dispositivi elettronici e del loro consumo in Watt.
-    \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico.
+      \item Determinare da una lista di dispositivi, quali possono tenere accesi contemporaneamente
+            senza che salti il salvavita.
+      \item Tenere traccia dei dispositivi elettronici e del loro consumo in Watt.
+      \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico.
 \end{enumerate}
 
 \section{Progetto}
+
+\subsection{Inizializzare il progetto}
+
+\subsubsection{Scaricare da GitHub}
+
+Il primo passaggio è quello di clonare la repository cliccando al seguente
+\href{https://github.com/Stefano-Labianca/smart-energy-controller}{link}. \\
+
+\subsubsection{Impostare l'ambiente virtuale}
+
+\noindent Va creato successivamente un ambiente virtuale. In questo modo l'interprete Python,
+le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
+virtuali e da qualsiasi libreria installata sul proprio sistema. \\
+
+\noindent Per creare l'ambiente virtuale, entrate nella cartella del progetto e
+digitate il seguente comando:
+
+\begin{verbatim}
+      python -m venv .venv
+\end{verbatim}
+
+% Mettere citazione nella bibbliografia
+
+\noindent Grazie a questo comando, verrà creata una cartella \path{/.venv} che conterrà tutto il
+necessario per lavorare con l'ambiente virtuale. \\
+
+\noindent Una volta creato, è necessario attivare l'ambiente virtuale.
+Se siente in ambiente MacOS o Linux, digitate il comando
+
+\begin{verbatim}
+      source .venv/bin/activate
+\end{verbatim}
+
+\noindent Il file \path{activate} serve per "accendere" l'ambiente virtuale. \\
+
+\noindent Se invece siete in ambiente Windows, allora posizionatevi prima dentro la cartella
+\path{./venv/Scripts/} per poi  digitare uno dei seguenti comandi, in base al tipo di terminale in uso:
+
+\begin{verbatim}
+      activate.bat // Se usi il CMD
+      .\Activate.ps1 // Se usi la PowerShell
+\end{verbatim}
+
+\noindent Se invece si sta usando il GitBash, in ambiente Windows, allora il comando da appliace è il seguente:
+
+\begin{verbatim}
+      source .venv/Scripts/activate
+\end{verbatim}
+
+\noindent L'ambiente virtuale sarà attivato con successo quando sul vostro terminale avrete
+qualcosa di simile alla figura 2. \\
+
+\noindent In caso di problemi nell'uso della PowerShell, è possibile andare alla
+sezione: \hyperref[sec:powershell-error]{Risolvere il problema di esecuzione con la PowerShell}. \\
+
+
+\begin{figure}[h]
+      \centering
+
+      \begin{subfigure}[h]{1\textwidth}
+            \includegraphics{terminale-bash.png}
+            \caption{Uso di GitBash}
+      \end{subfigure}
+
+      \vspace{0.5cm}
+
+      \begin{subfigure}[h]{1\textwidth}
+            \includegraphics{terminale-cmd.png}
+            \caption{Uso del CMD}
+      \end{subfigure}
+
+      \vspace{0.5cm}
+
+      \begin{subfigure}[h]{1\textwidth}
+            \includegraphics{terminale-powershell.png}
+            \caption{Uso della PowerShell}
+      \end{subfigure}
+
+      \caption{
+            Risultato dell'attivazione dell'ambiente virtuale. In figura (a) abbiamo
+            l'uso del GitBash, in figura (b) del CMD mentre infine, nella figura
+            (c), abbiamo l'uso della PowerShell.
+      }
+\end{figure}
+
+
+\subsubsection{Avviare il progetto}
+
+Per avviare il progetto, bisogna tornare alla directory principale del progetto e installare
+le dipendenze con il comando: \\
+
+\begin{verbatim}
+      pip install -r requirements.txt
+\end{verbatim}
+
+\noindent Una volta installate, digitare il seguente comando per avviare il programma
+
+\begin{verbatim}
+      python main.py
+\end{verbatim}
+
+\noindent In caso di errore, vedere la sezione:
+\hyperref[sec:python-error]{Risolvere il problema di esecuzione con la PowerShell}.
+
 
 \subsection{Struttura del progetto}
 
 All'intero del progetto, possiamo trovare le seguenti cartelle:
 \begin{itemize}
-    \item \path{/appliance}: Qui è possibile trovare la classe Appliance, che definisce
-          un elettrodomestico, insieme ad una serie di metodi di suppporto,
-          contenuti in \path{appliances_controller.py}
+      \item \path{/.vevn}: Cartella contenente tutto il necessario per lavorare con
+            l'ambientevirtuale.
+      \item \path{/appliance}: Qui è possibile trovare la classe Appliance, che definisce
+            un elettrodomestico, insieme ad una serie di metodi di suppporto,
+            contenuti in \path{appliances_controller.py}
 
-    \item \path{/cli}: Troviamo una classe che incapsula tutta la logica legata agli input
-          e all'output del terminale
+      \item \path{/cli}: Troviamo una classe che incapsula tutta la logica legata agli input
+            e all'output del terminale
 
-    \item \path{/csp_problem}: Questa cartella contiene tutti i file legati all'argomento del
-          CSP. \\
-          Infatti è possibile trovare la rappresentazione delle variabili e dei vincoli, fatta
-          rispettivamente usando le classi Variable e Constraint. \\
-          Inoltre è presente anche la classe CSP usata come wrapper per rappresentare un generico
-          problema di questa categoria. \\
-          Infine è presenta la cartella \path{/algorithm} che contiene le realizzazioni degli
-          algoritmi DFS e GAC usati per risolvere i problemi legati al CSP.
+      \item \path{/csp_problem}: Questa cartella contiene tutti i file legati all'argomento del
+            CSP. \\
+            Infatti è possibile trovare la rappresentazione delle variabili e dei vincoli, fatta
+            rispettivamente usando le classi Variable e Constraint. \\
+            Inoltre è presente anche la classe CSP usata come wrapper per rappresentare un generico
+            problema di questa categoria. \\
+            Infine è presenta la cartella \path{/algorithm} che contiene le realizzazioni degli
+            algoritmi DFS e GAC usati per risolvere i problemi legati al CSP.
 
-    \item \path{/knowledge_base}: Contiene una classe usata per rappresentare un Sistema Esperto.
+      \item \path{/knowledge_base}: Contiene una classe usata per rappresentare il Sistema Esperto
+            realizzato.
 
-    \item \path{/ontology}: Questa cartella contiene una classe che permette di manipolare
-          l'ontologia contenuta all'intero del file \path{appliance_ontology.rdf}.
+      \item \path{/ontology}: Questa cartella contiene una classe che permette di manipolare
+            l'ontologia contenuta all'intero del file \path{appliance_ontology.rdf}.
 
-    \item \path{/test}: Contiene tutti quei file contenente vari test fatti al programma.
+      \item \path{/test}: Contiene tutti quei file contenente vari test fatti al programma.
 
-    \item \path{/utils}: Contiene file di utilità che facilitano alcune operazioni interne al programma.
-          Per esempio, il file \path{pagination.py} viene usato per impaginare l'output del programma.
+      \item \path{/utils}: Contiene file di utilità che facilitano alcune operazioni interne al programma.
+            Per esempio, il file \path{pagination.py} viene usato per impaginare l'output del programma.
 \end{itemize}
 
-\subsection{Inizializzare il progetto}
-
-
-\subsection{Avviare il progetto}
 
 
 
@@ -112,6 +228,99 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
 
 % \section{Sistema esperto}
 
-% \section{Sviluppi futuri}
+\section{Troubleshooting}
+
+\subsection{Risolvere il problema di esecuzione con la PowerShell}
+\label{sec:powershell-error}
+
+In caso non si riesca ad eseguire con la PowerShell l'attivazione dell'ambiente
+virtuale, provate a svolgere i seguenti passi. \\
+
+\noindent Aprire innanzitutto la PowerShell come amministratore nella cartella del progetto.
+Una volta aperta la PowerShell, digitare il comando:
+
+\begin{verbatim}
+      Get-ExecutionPolicy
+\end{verbatim}
+
+Grazie a questo comando, possiamo sapere quale execution policy è impostata per la PowerShell.
+In figura 3, è mostrato una possibile execution policy impostata nella PowerShell. \\
+
+\begin{figure}[h]
+      \centering
+      \includegraphics{powershell-error.png}
+      \caption{Possibile execution policy}
+\end{figure}
+
+\noindent Per permettere l'esecuzione degli script \texttt{.ps1}, allora bisogna impostare
+su \texttt{AllSigned} la execution policy. \\
+\noindent Per farlo si usa il comando: \\
+
+\begin{verbatim}
+      Set-ExecutionPolicy -ExecutionPolicy AllSigned
+\end{verbatim}
+
+Una volta eseguito questo comando, andare nella cartella \path{/.venv/Scripts/} e digitare il
+comando:
+
+\begin{verbatim}
+      .\Activate.ps1
+\end{verbatim}
+
+Apparirà sul terminale il seguente output: \\
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.6]{terminal-message.png}
+      \caption{Messaggio di conferma}
+\end{figure}
+
+Per eseguire lo script di attivazione, allora inserite \texttt{V} e
+premete invio. \\ \break
+
+\noindent Una volta che avete finito l'esecuzione del programma, potete anche reimpostare
+la execution policy al suo stato orinario, usando il comando:
+
+\begin{verbatim}
+      Set-ExecutionPolicy -ExecutionPolicy <PolicyNamePrecedente>
+\end{verbatim}
+
+\subsection{Errore di esecuzione del programma Python}
+\label{sec:python-error}
+
+E' possibile che, durante l'esecuzione del programma, possa apparire questo
+messaggio di errore: \\
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.55]{errore-python.png}
+      \caption{Errore di esecuzione}
+\end{figure}
+
+\noindent Questo errore è dovuto ad una versione datata della
+libreria \texttt{frozendict} usata come dipendenza della libreria \texttt{experta}. \\
+Fare l'upgrade della libreria \texttt{frozendict} alla versione più recente, andrebbe a
+creare dei conflitti di dipendenza tra le due versioni della librerie. \\
+
+\noindent Per risolvere questo problema, bisogna andare nella cartella
+\path{/.venv/Lib/site-packages/frozendict} e aprire il file \path{__init__.py}. \\
+
+\noindent Una volta aperto, bisogna cambiare la seguente linea di codice:
+
+\begin{lstlisting}[language=Python]
+      class frozendict(collections.Mapping):
+            ...
+\end{lstlisting}
+
+Nella seguente:
+
+\begin{lstlisting}[language=Python]
+      class frozendict(collections.abc.Mapping):
+            ...
+\end{lstlisting}
+
+% \section{Conclusioni e Sviluppi Futuri}
+
+% \section{Riferimenti Bibliografici}
 
 \end{document}
