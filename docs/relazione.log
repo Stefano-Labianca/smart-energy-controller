@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  5 JAN 2024 17:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  5 JAN 2024 17:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -396,96 +396,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 240--243
  []
 
 
-Overfull \hbox (11.15417pt too wide) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 244--247
+
+ []
+
+
+Overfull \hbox (11.15417pt too wide) in paragraph at lines 269--271
 \OT1/cmr/m/n/12 In caso non si ri-esca ad es-eguire con la Pow-er-Shell [[]], l'attivazione dell'ambiente
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 265--267
+Underfull \hbox (badness 10000) in paragraph at lines 269--271
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 275--277
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
-<images/powershell-error.png, id=139, 403.5075pt x 79.04532pt>
+<images/powershell-error.png, id=141, 403.5075pt x 79.04532pt>
 File: images/powershell-error.png Graphic file (type png)
 <use images/powershell-error.png>
-Package pdftex.def Info: images/powershell-error.png  used on input line 280.
+Package pdftex.def Info: images/powershell-error.png  used on input line 284.
 (pdftex.def)             Requested size: 403.50652pt x 79.0451pt.
 
-Overfull \hbox (13.50652pt too wide) in paragraph at lines 280--281
+Overfull \hbox (13.50652pt too wide) in paragraph at lines 284--285
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+Underfull \hbox (badness 10000) in paragraph at lines 288--291
 
  []
 
 
-Overfull \hbox (7.8566pt too wide) in paragraph at lines 292--294
+Overfull \hbox (7.8566pt too wide) in paragraph at lines 296--298
 []\OT1/cmr/m/n/12 Una volta es-e-guito questo co-mando, an-dare nella cartella $\OT1/cmtt/m/n/12 / . venv / Scripts/$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
 
-<images/terminal-message.png, id=140, 550.30594pt x 154.32657pt>
+<images/terminal-message.png, id=142, 550.30594pt x 154.32657pt>
 File: images/terminal-message.png Graphic file (type png)
 <use images/terminal-message.png>
-Package pdftex.def Info: images/terminal-message.png  used on input line 303.
+Package pdftex.def Info: images/terminal-message.png  used on input line 307.
 (pdftex.def)             Requested size: 330.18611pt x 92.59663pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 311--313
 
  []
 
 [8 <./images/powershell-error.png>]
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 315--315
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 319--319
 []      \OT1/cmtt/m/n/12 Set-ExecutionPolicy -ExecutionPolicy <PolicyNamePrecedente>[] 
  []
 
 
-Overfull \hbox (7.63208pt too wide) in paragraph at lines 320--322
+Overfull \hbox (7.63208pt too wide) in paragraph at lines 324--326
 \OT1/cmr/m/n/12 E' pos-si-bile che, du-rante l'esecuzione del pro-gramma, possa ap-parire il seguente
  []
 
 [9 <./images/terminal-message.png>]
-<images/errore-python.png, id=157, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=159, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
-Package pdftex.def Info: images/errore-python.png  used on input line 325.
+Package pdftex.def Info: images/errore-python.png  used on input line 329.
 (pdftex.def)             Requested size: 432.81834pt x 189.35802pt.
 
-Overfull \hbox (42.81834pt too wide) in paragraph at lines 325--326
+Overfull \hbox (42.81834pt too wide) in paragraph at lines 329--330
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 333--335
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--334
+Underfull \hbox (badness 10000) in paragraph at lines 336--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--339
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
@@ -500,18 +505,18 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D17297DA6A0EB4CC7E96626234FA8B46;2658.
  ) 
 Here is how much of TeX's memory you used:
- 11796 strings out of 474174
- 186641 string characters out of 5745652
+ 11798 strings out of 474174
+ 186668 string characters out of 5745652
  1933460 words of memory out of 5000000
- 33946 multiletter control sequences out of 15000+600000
+ 33947 multiletter control sequences out of 15000+600000
  564697 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,8n,79p,456b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (11 pages, 715853 bytes).
+Output written on relazione.pdf (11 pages, 716246 bytes).
 PDF statistics:
- 222 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 47 named destinations out of 1000 (max. 500000)
+ 225 PDF objects out of 1000 (max. 8388607)
+ 184 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 

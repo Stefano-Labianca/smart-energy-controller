@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1704472128.82371 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1704472130.81799 0
-  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1704472127 13678 d8f5156cad12af769a78284b4d791364 ""
+["pdflatex"] 1704472742.75609 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1704472744.60371 0
+  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1704472741 14115 bba74e923356e505f66eb28e4cb51ab4 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1704034504 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704036583 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1704035784 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -87,10 +87,10 @@
   "images/terminale-cmd.png" 1704381450 10438 0d01ccbb0e0411f68f60502a7ae186ae ""
   "images/terminale-powershell.png" 1704381922 6633 3336b214575a72b664a8c29182cbe8d5 ""
   "images/unibalogo.jpg" 1704298313 437618 8f995df018e1da495cd4abc02fc6c46e ""
-  "relazione.aux" 1704472130 3430 36ef994bab0bd05a9eb02cbe06b7d927 "pdflatex"
-  "relazione.out" 1704472130 2658 d17297da6a0eb4cc7e96626234fa8b46 "pdflatex"
-  "relazione.tex" 1704472127 13678 d8f5156cad12af769a78284b4d791364 ""
-  "relazione.toc" 1704472130 1321 cb1fded86616b88c4950721674039220 "pdflatex"
+  "relazione.aux" 1704472744 3476 e303115f11464fd5c754a70e913a9bb2 "pdflatex"
+  "relazione.out" 1704472744 2658 d17297da6a0eb4cc7e96626234fa8b46 "pdflatex"
+  "relazione.tex" 1704472741 14115 bba74e923356e505f66eb28e4cb51ab4 ""
+  "relazione.toc" 1704472744 1321 cb1fded86616b88c4950721674039220 "pdflatex"
   (generated)
   "relazione.aux"
   "relazione.log"
