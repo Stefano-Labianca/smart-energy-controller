@@ -12,4 +12,5 @@
 \contentsline {section}{\numberline {4}Troubleshooting}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Risolvere il problema di esecuzione con la PowerShell}{8}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Errore di esecuzione del programma Python}{9}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Riferimenti Bibliografici}{11}{section.5}%
+\contentsline {section}{\numberline {5}Conclusioni e Sviluppi Futuri}{10}{section.5}%
+\contentsline {section}{\numberline {6}Riferimenti Bibliografici}{11}{section.6}%

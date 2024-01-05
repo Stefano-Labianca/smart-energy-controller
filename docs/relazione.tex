@@ -314,9 +314,11 @@ premete invio. \\ \break
 \noindent Una volta che avete finito l'esecuzione del programma, potete anche reimpostare
 la execution policy al suo stato orinario, usando il comando:
 
+
 \begin{verbatim}
       Set-ExecutionPolicy -ExecutionPolicy <PolicyNamePrecedente>
 \end{verbatim}
+
 
 \subsection{Errore di esecuzione del programma Python}
 \label{sec:python-error}
@@ -353,7 +355,24 @@ Nella seguente:
             ...
 \end{lstlisting}
 
-% \section{Conclusioni e Sviluppi Futuri}
+\section{Conclusioni e Sviluppi Futuri}
+
+L'applicativo realizzato, è riuscito nell'intendo di poter tenere traccia degli elettrodomestici
+presenti, di poter fornire feedback all'utente su quale dispositivo rischia di far saltare il salvavita
+e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. \\
+
+\noindent Possiamo estendere e migliorare l'applicativo in vari modi:
+\begin{itemize}
+      \item Migliorare l'interazione con l'utente tramite una GUI;
+      \item Avviare una simulazione dell'uso di un sottogruppo di elettrodomestici
+            nell'arco di una giornata per un individuo;
+      \item Poter considerare, insieme al consumo energetico, anche i costi della bolletta;
+      \item Uso di dataset che prendano in considerazione consumi e tempi di utilizzo reali;
+      \item Espandere la base di conoscenza, con il costo energetico di ogni dispositivo elettronico;
+\end{itemize}
+
+
+
 
 \section{Riferimenti Bibliografici}
 
