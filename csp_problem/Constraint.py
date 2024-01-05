@@ -1,6 +1,6 @@
 class Constraint:
     def __init__(self, condition, scope: list[str]) -> None:
-        self.condition = condition  # funzione booleana
+        self.condition = condition
         self.scope = scope
 
     def __str__(self) -> str:

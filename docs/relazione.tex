@@ -24,7 +24,7 @@
 }
 \author{Stefano Antonio Labianca}
 
-\date{22 Gennaio 2024}
+\date{22 Gennaio 2024 \\[0.125cm] a.a 2023/2024}
 \renewcommand*\contentsname{Tabella dei contenuti}
 \renewcommand{\figurename}{Figura}
 \renewcommand*\refname{}
@@ -37,6 +37,11 @@
 \textbf{matricola: } 758364
 \hfill
 \textbf{email: } s.labianca10@studenti.uniba.it
+\hfill \\
+\begin{center}
+      \textit{Caso di Studio per l'esame di Ingegneria della Conoscenza}
+\end{center}
+
 
 \par\noindent\rule{\textwidth}{0.4pt}~\\[5cm]
 
@@ -80,7 +85,7 @@ i seguenti task:
       \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico.
 \end{enumerate}
 
-\section{Creazione del progetto}
+\section{Il progetto}
 
 \subsection{Inizializzare il progetto}
 
@@ -220,8 +225,30 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
             Per esempio, il file \path{pagination.py} viene usato per impaginare l'output del programma.
 \end{itemize}
 
+\subsection{Scelte progettuali}
+
+Il progetto è stato svolto usando la versione \texttt{3.11.5} di Python in quanto offre diversi
+miglioramenti e un supporto maggiore alla tipizzazione delle variabili e delle constanti.
+Usare i tipi, infatti, si è rivelato molto utile per rendere la codebase più resiliente, evitando di
+assegnare, erroneamente, valori con tipo non corretto per una variabile. \\
+
+\noindent L'uso del design pattern del Singleton si è rivelato utile in quando permette l'uso di
+una sola istanza globale della classe \texttt{ApplianceOntology}. Questa classe è stata usata per
+rappresentare le informazioni dell'ontologia usata e di manipolarla, tramite operazioni di lettura e
+scrittura. \\
+
+\noindent L'istanza creata, infatti, viene usata in più parti del programma e, creare istanze differenti
+fra i vari moduli, rischieremmo di avere istanze non aggiornate ai cambiamenti fatti in altre parti del
+programma. \\
+
+\noindent Infine per l'argomento del CSP, sono state usate delle versioni leggermente modificate degli
+algoritmi DFS e GAC fornite dal libro di testo AIPython, in quando si è scelto di adattarle al problema del
+imposto dal progetto. Non solo, lo stesso vale per le classi \texttt{Variable} e \texttt{Contraint} dove sono
+stati presi in considerazione solamente le funzionalità essenziali.
 
 
+
+\section{Argomenti trattati}
 
 % \section{CSP}
 
