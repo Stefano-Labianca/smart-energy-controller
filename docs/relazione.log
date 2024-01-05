@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  5 JAN 2024 17:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  5 JAN 2024 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -410,7 +410,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 275--277
 
  []
 
-<images/powershell-error.png, id=137, 403.5075pt x 79.04532pt>
+<images/powershell-error.png, id=139, 403.5075pt x 79.04532pt>
 File: images/powershell-error.png Graphic file (type png)
 <use images/powershell-error.png>
 Package pdftex.def Info: images/powershell-error.png  used on input line 280.
@@ -435,7 +435,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 299--300
 
  []
 
-<images/terminal-message.png, id=138, 550.30594pt x 154.32657pt>
+<images/terminal-message.png, id=140, 550.30594pt x 154.32657pt>
 File: images/terminal-message.png Graphic file (type png)
 <use images/terminal-message.png>
 Package pdftex.def Info: images/terminal-message.png  used on input line 303.
@@ -464,7 +464,7 @@ Overfull \hbox (7.63208pt too wide) in paragraph at lines 320--322
  []
 
 [9 <./images/terminal-message.png>]
-<images/errore-python.png, id=155, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=157, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
 Package pdftex.def Info: images/errore-python.png  used on input line 325.
@@ -500,18 +500,18 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D17297DA6A0EB4CC7E96626234FA8B46;2658.
  ) 
 Here is how much of TeX's memory you used:
- 11794 strings out of 474174
- 186608 string characters out of 5745652
+ 11796 strings out of 474174
+ 186641 string characters out of 5745652
  1933460 words of memory out of 5000000
- 33945 multiletter control sequences out of 15000+600000
+ 33946 multiletter control sequences out of 15000+600000
  564697 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,8n,79p,456b,1203s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (11 pages, 715636 bytes).
+Output written on relazione.pdf (11 pages, 715853 bytes).
 PDF statistics:
- 219 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
- 46 named destinations out of 1000 (max. 500000)
+ 222 PDF objects out of 1000 (max. 8388607)
+ 181 compressed objects within 2 object streams
+ 47 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
