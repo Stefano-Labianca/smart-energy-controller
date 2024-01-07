@@ -1,32 +1,152 @@
-from rich.console import Console
+import re
+from pickletools import read_uint1
 
+from rich.console import Console
+from rich.table import Table
+
+from appliance.Appliance import Appliance
 from ontology.appliance_ontology import ApplianceOntology
 from utils.pagination import Pagination
-
-# TODO: Rendere la classe ApplianceOntology un Singleton
 
 console = Console()
 ontology = ApplianceOntology()
 
 
 class UserCLI:
-
-    # TODO: Fase di input da parte dell'utente in cui prende:
-    #   1. Uno o più dispositivi
-    #   2. Per ogni dispositivo scelto, prende anche il suo consumo
-    #   energetico solamente se ne ha più di 1
+    """Classe di supporto per raccogliere gli input dell'utente
+    """
 
     @classmethod
-    def choose_appliances(cls):
-        # appliances = ontology.create_appliances()
+    def choose_appliances(cls) -> list[dict[str, list[int]]]:
+        appliances = ontology.create_appliances()
+        cls.create_appliance_table(appliances)
 
-        # for a in appliances:
-        #     console.print(a)
+        console.print(
+            "\n\nSeleziona i dispositivi elettronici da avviare"
+        )
 
-        return [
-            {"computer": [400]}, {"3D_printer": [700]},
-            {"oven": [100]},
-        ]
+        while True:
+            console.print(
+                "\n\nSeleziona l'indice di uno o piu' dispositivi, separati da uno spazio (Es. 1 2 6): "
+            )
+
+            choosen_appliances = input().strip(" ")
+
+            if cls.is_valid_input(choosen_appliances, appliances):
+                objs = cls.take_appliances(choosen_appliances, appliances)
+
+                return cls.take_energy_consumption(objs)
+
+            console.print("Attenzione! Input non corretto.", style="red")
+
+    @classmethod
+    def take_appliances(cls, user_input: str, appliances: list[Appliance]) -> list[dict[str, list[int]]]:
+        indexs = user_input.split(" ")
+        choosen_appliances = []
+
+        for index in indexs:
+            a = appliances[int(index) - 1]
+            obj = {a._name: a._energy_consumption}
+
+            choosen_appliances.append(obj)
+
+        return choosen_appliances
+
+    @classmethod
+    def take_energy_consumption(cls, objs: list[dict[str, list[int]]]) -> list[dict[str, list[int]]]:
+        console.print(
+            "\n\nPer ogni tipo di dispositivo elettronico, scegli quale prendere in base al suo consumo\n"
+        )
+
+        for i in range(len(objs)):
+            obj = objs[i]
+            energy = list(obj.values())[0]
+            name = list(obj.keys())[0]
+
+            if len(energy) > 1:
+                cls.create_energy_consumption_table(name, energy)
+
+                while True:
+                    console.print(
+                        "Seleziona l'indice di uno o piu' consumi energetici, separati da uno spazio (Es. 1 5): "
+                    )
+
+                    choosen_consumption = input().strip(" ")
+
+                    if cls.is_valid_input(choosen_consumption, energy):
+                        indexs = choosen_consumption.split(" ")
+                        selected_consumption: list[int] = [
+                            energy[int(index) - 1] for index in indexs
+                        ]
+
+                        obj[name] = selected_consumption
+                        objs[i] = obj
+
+                        break
+
+                    console.print(
+                        "\nAttenzione! Input non corretto.\n", style="red"
+                    )
+
+        return objs
+
+    @classmethod
+    def is_valid_input(cls, user_input: str, content: list) -> bool:
+        if not bool(re.search(r'^(\d+\s)*\d+$', user_input)):
+            return False
+
+        indexs = user_input.split(" ")
+        max_len = len(content)
+
+        if len(indexs) > max_len:
+            return False
+
+        if not all(int(index) - 1 >= 0 and int(index) - 1 <= max_len - 1 for index in indexs):
+            return False
+
+        unique_indexs = set(indexs)
+
+        if len(unique_indexs) < len(indexs):
+            return False
+
+        return True
+
+    @classmethod
+    def create_energy_consumption_table(cls, appliance_name: str, energy: list[int]) -> None:
+        table = Table(title=f'{appliance_name}')
+
+        table.add_column("Indice", style="green")
+        table.add_column("Consumo energetico")
+
+        for index in range(len(energy)):
+            table.add_row(
+                str(index + 1), str(energy[index])
+            )
+
+            table.add_section()
+
+        console.print(table, "\n")
+
+    @classmethod
+    def create_appliance_table(cls, appliances: list[Appliance]) -> None:
+        table = Table(title="Elettrodomestici disponibili")
+
+        table.add_column("Indice", style="green")
+        table.add_column("Nome")
+        table.add_column("Categoria")
+        table.add_column("Dimensioni")
+        table.add_column("Consumi Energetici")
+
+        for index in range(len(appliances)):
+            a = appliances[index]
+
+            table.add_row(
+                str(index + 1), a._name, a._category, a._size,
+                a._energy_consumption.__str__()
+            )
+            table.add_section()
+
+        console.print(table)
 
     @classmethod
     def paginated_partial(cls, pagination: Pagination, names: list[str]) -> None:
