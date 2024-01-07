@@ -18,6 +18,13 @@ class UserCLI:
 
     @classmethod
     def choose_appliances(cls) -> list[dict[str, list[int]]]:
+        """Permette di scegliere i dispositivi elettronici da acendere.
+
+        Returns:
+            list[dict[str, list[int]]]: Lista di dizionari dove ogni dizionario associa il nome 
+            del dispositivo elettronico, ai suoi consumi.
+        """
+
         appliances = ontology.create_appliances()
         cls.create_appliance_table(appliances)
 
@@ -41,6 +48,17 @@ class UserCLI:
 
     @classmethod
     def take_appliances(cls, user_input: str, appliances: list[Appliance]) -> list[dict[str, list[int]]]:
+        """Prende i dispositivi elettronici scelti dall'utente
+
+        Args:
+            user_input (str): Sequenza di indici dell'utente
+            appliances (list[Appliance]): Lista di dispotivi elettronici
+
+        Returns:
+            list[dict[str, list[int]]]: Lista di dizionari dove ogni dizionario associa il nome 
+            del dispositivo elettronico, ai suoi consumi.
+        """
+
         indexs = user_input.split(" ")
         choosen_appliances = []
 
@@ -54,6 +72,16 @@ class UserCLI:
 
     @classmethod
     def take_energy_consumption(cls, objs: list[dict[str, list[int]]]) -> list[dict[str, list[int]]]:
+        """Prende i consumi elettrici dei dispositivi elettronici scelti dall'utente
+
+        Args:
+            objs (list[dict[str, list[int]]]): Contiene tutti i dispositivi presi dall'utente.
+
+        Returns:
+            list[dict[str, list[int]]]: Lista di dizionari dove ogni dizionario associa il nome 
+            del dispositivo elettronico, ai suoi consumi.
+        """
+
         console.print(
             "\n\nPer ogni tipo di dispositivo elettronico, scegli quale prendere in base al suo consumo\n"
         )
@@ -92,6 +120,17 @@ class UserCLI:
 
     @classmethod
     def is_valid_input(cls, user_input: str, content: list) -> bool:
+        """Verifica se la sequequenza di indici presa in input dall'utente 
+        è valida.
+
+        Args:
+            user_input (str): Sequenza di indici presa in input dall'utente
+            content (list): Lista contenente i dati con cui l'utente deve lavorare
+
+        Returns:
+            bool: True se `user_input` è una sequenza valida di indici, altrimenti False.
+        """
+
         if not bool(re.search(r'^(\d+\s)*\d+$', user_input)):
             return False
 
@@ -113,6 +152,13 @@ class UserCLI:
 
     @classmethod
     def create_energy_consumption_table(cls, appliance_name: str, energy: list[int]) -> None:
+        """Mostra una tabella da cui prendere i consumi elettronici.
+
+        Args:
+            appliance_name (str): Nome del dispositivo elettronico, che sara' il nome della tabella
+            energy (list[int]): Consumi energetici.
+        """
+
         table = Table(title=f'{appliance_name}')
 
         table.add_column("Indice", style="green")
@@ -129,6 +175,12 @@ class UserCLI:
 
     @classmethod
     def create_appliance_table(cls, appliances: list[Appliance]) -> None:
+        """Mostra tutti i dispositivi elettronici.
+
+        Args:
+            appliances (list[Appliance]): Dispositivi elettronici.
+        """
+
         table = Table(title="Elettrodomestici disponibili")
 
         table.add_column("Indice", style="green")
@@ -150,6 +202,14 @@ class UserCLI:
 
     @classmethod
     def paginated_partial(cls, pagination: Pagination, names: list[str]) -> None:
+        """Mostra in formato tabellare gli assegnamenti parziali che 
+        verificano i vincoli del CSP.
+
+        Args:
+            pagination (Pagination): Istanza di Pagination
+            names (list[str]): Nomi delle variabili presenti nell'assegnamento parziale
+        """
+
         while True:
             pagination.show_partial(names)
             user_input = input("\n> ")
@@ -161,6 +221,13 @@ class UserCLI:
 
     @classmethod
     def paginated_total(cls, pagination: Pagination) -> None:
+        """Mostra in formato tabellare gli assegnamenti totali che 
+        verificano i vincoli del CSP.
+
+        Args:
+            pagination (Pagination): Istanza di Pagination
+        """
+
         while True:
             pagination.show_total()
             user_input = input("\n> ")
