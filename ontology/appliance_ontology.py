@@ -1,10 +1,8 @@
 
 import re
 from enum import StrEnum
-from importlib import metadata
-from unicodedata import category
 
-from rdflib import Graph, Literal, URIRef
+from rdflib import RDF, Graph, Literal, URIRef
 from rich.console import Console
 from rich.table import Table
 
@@ -142,7 +140,7 @@ class ApplianceOntology(metaclass=SingletonMeta):
 
         p_energy_consumption = Literal(URIEnum.URI_BASE + 'energy_consumption')
         p_size = Literal(URIEnum.URI_BASE + 'size')
-        p_name = Literal(URIEnum.URI_BASE + 'name')
+        p_name = Literal(URIEnum.URI_BASE + 'appliance_name')
 
         energy_consumption_list = list(
             map(
@@ -156,22 +154,27 @@ class ApplianceOntology(metaclass=SingletonMeta):
         )
         obj_size = Literal(individual._size)
         obj_name = Literal(individual._name)
+        obj_subclass = Literal(URIEnum.URI_BASE + individual._category)
 
         self.g.add((subject, p_energy_consumption, obj_energy_consumption))
         self.g.add((subject, p_size, obj_size))
         self.g.add((subject, p_name, obj_name))
 
-        obj_subclass = Literal(URIEnum.URI_BASE + individual._category)
-
         self.g.add(
             (
                 subject,
-                Literal(URIEnum.URI_TYPE),
+                RDF.type,
                 Literal(URIEnum.OBJECT_INDIVIDUA_TYPE)
             )
         )
 
-        self.g.add((subject, Literal(URIEnum.URI_TYPE), obj_subclass))
+        self.g.add(
+            (
+                subject,
+                RDF.type,
+                obj_subclass
+            )
+        )
 
     def remove(self, uri: URIRef) -> None:
         """Rimuove un individuo dall'ontologia.
