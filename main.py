@@ -1,5 +1,6 @@
 from appliance.Appliance import Appliance
 from appliance.appliances_controller import create_variables
+from cli.ontology_cli import OntologyCLI
 from cli.user_cli import UserCLI
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.Constraint import Constraint
@@ -24,7 +25,7 @@ from utils.pagination import Pagination
 #     return accumulator < 15_000
 
 
-ontology = ApplianceOntology()
+# ontology = ApplianceOntology()
 
 # appliances = ontology.create_appliances()
 
@@ -49,9 +50,15 @@ ontology = ApplianceOntology()
 #     "air_conditioner", "fan", "air_purifier"
 # ]
 
-run_expert_system(1.5)
+# run_expert_system(1.5)
 # pagination = Pagination(solutions)
 
 
 # UserCLI.paginated_partial(pagination, names)
 # UserCLI.paginated_total(pagination)
+
+# OntologyCLI.show()
+OntologyCLI.add()
+OntologyCLI.save()
+
+# OntologyCLI.find()
