@@ -2,7 +2,7 @@ from typing import Self
 
 
 class Appliance:
-    """Rappresenta un elettrodomestico
+    """Rappresenta un dispositivo elettronico
     """
 
     def __init__(self) -> None:
@@ -12,10 +12,10 @@ class Appliance:
         self._category: str = ""
 
     def name(self, name: str) -> Self:
-        """Imposta il nome dell'elettrodomestico
+        """Imposta il nome del dispositivo elettronico
 
         Args:
-            name (str): Nome dell'elettrodomestico
+            name (str): Nome del dispositivo elettronico
 
         Returns:
             Self: Istanza della classe con nome aggiornato
@@ -40,10 +40,10 @@ class Appliance:
         return self
 
     def size(self, size: str) -> Self:
-        """Imposta le dimensioni dell'elettrodomestico
+        """Imposta le dimensioni del dispositivo elettronico
 
         Args:
-            size (str): Dimensioni dell'elettrodomestico
+            size (str): Dimensioni del dispositivo elettronico
 
         Returns:
             Self: Istanza della classe con le dimensioni aggiornate
@@ -53,10 +53,10 @@ class Appliance:
         return self
 
     def category(self, category: str) -> Self:
-        """Imposta la categoria dell'elettrodomestio
+        """Imposta la categoria del dispositivo elettronico
 
         Args:
-            category (str): Categoria dell'elettrodomestio
+            category (str): Categoria del dispositivo elettronico
 
         Returns:
             Self: Istanza della classe con la categoria aggiornata
