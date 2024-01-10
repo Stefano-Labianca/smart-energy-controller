@@ -1,5 +1,4 @@
 import re
-from pickletools import read_uint1
 
 from rich.console import Console
 from rich.table import Table
