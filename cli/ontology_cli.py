@@ -26,10 +26,16 @@ class OntologyCLI:
 
     @classmethod
     def show(cls) -> None:
+        """L'utente ha scelto di visualizzare le 
+        informazioni dell'ontologia
+        """
         ontology.show()
 
     @classmethod
     def add(cls) -> None:
+        """L'utente ha scelto di aggiungere 
+        un individuo all'ontologia
+        """
         appliance = cls.__get_appliance()
         ontology.add(appliance)
 
@@ -37,12 +43,17 @@ class OntologyCLI:
 
     @classmethod
     def remove(cls) -> None:
+        """L'utente ha scelto di rimuovere 
+        un individuo dall'ontologia
+        """
         individual_uri = cls.__get_uri()
-
         ontology.remove(individual_uri)
 
     @classmethod
     def save(cls) -> None:
+        """L'utente vuole salvare le modifiche applicate 
+        all'ontologia permanentemente
+        """
         if cls.loaded_info > 0:
             ontology.save()
 
@@ -55,6 +66,9 @@ class OntologyCLI:
 
     @classmethod
     def contains(cls) -> None:
+        """L'utente vuole sapere se un individuo è 
+        presente nell'ontologia
+        """
         individual_uri = cls.__get_uri()
         found = ontology.contains(individual_uri)
 
@@ -65,6 +79,9 @@ class OntologyCLI:
 
     @classmethod
     def find(cls) -> None:
+        """L'utente vuole trovare un individuo 
+        nell'ontologia
+        """
         individual_uri = cls.__get_uri()
         triples = ontology.find(individual_uri)
 
@@ -72,6 +89,12 @@ class OntologyCLI:
 
     @classmethod
     def __get_uri(cls) -> URIRef:
+        """Permette all'utente di creare l'URI di un individuo
+        partendo dal suo nome, preso in input.
+
+        Returns:
+            URIRef: URI dell'individuo.
+        """
         while True:
             console.print(
                 "\n\nInserire il nome dell'individuo da cercare: "
@@ -86,6 +109,14 @@ class OntologyCLI:
 
     @classmethod
     def __get_appliance(cls) -> Appliance:
+        """Permette la raccolta delle informazioni di un dispositivo
+        elettronico, da parte dell'utente, che vengono restituite come
+        istanza della classe Appliance.
+
+        Returns:
+            Appliance: Dispositivo elettronico dell'utente.
+        """
+
         # TODO: Validazione input
         appliance = Appliance()
 
@@ -129,6 +160,15 @@ class OntologyCLI:
 
     @classmethod
     def __check_uri(cls, user_input: str) -> bool:
+        """Verifica la correttezza dell'URI di un individuo, andando
+        a controllare prima se il nome fornito è valido.
+
+        Args:
+            user_input (str): Nome dell'individuo
+
+        Returns:
+            bool: True se ho un URI valido, altrimenti False.
+        """
         if len(user_input) == 0:
             return False
 
