@@ -58,7 +58,7 @@ class OntologyCLI:
             ontology.save()
 
             console.print(
-                f"Sono stati salvati {cls.loaded_info} dispositivi.",
+                f"\n\nDispositivi salvati: {cls.loaded_info}\n\n",
                 style="green"
             )
 
