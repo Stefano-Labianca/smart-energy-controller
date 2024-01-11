@@ -99,6 +99,9 @@ class UserCLI:
                     )
 
                     choosen_consumption = input().strip(" ")
+                    choosen_consumption = re.sub(
+                        r'\s+', " ", choosen_consumption
+                    )
 
                     if cls.is_valid_input(choosen_consumption, energy):
                         indexs = choosen_consumption.split(" ")
