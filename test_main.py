@@ -3,7 +3,7 @@ from time import perf_counter_ns
 from rich.console import Console
 from rich.table import Table
 
-from appliance.appliances_controller import create_variables
+from appliance.appliances_controller import create_appliances, create_variables
 from cli.user_cli import UserCLI
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
@@ -12,11 +12,6 @@ from csp_problem.csp import CSP
 from ontology.appliance_ontology import ApplianceOntology
 from utils.pagination import Pagination
 
-console = Console()
-# table = Table(title="Performace DFS")
-table = Table(title="Performace GAC")
-
-
 """ Nella documentazione mostrare un grafico finale dove sulle x trovo i test fatti
 e sulle y i tempi di ogni test.
 
@@ -24,26 +19,31 @@ Per ogni test ho test 3 barre verticali dove mostrano il tempo di 10, 100 e 1000
 """
 
 
-def limit_multimedia(assignment: dict[str, int]) -> bool:
-    return all(assignment[v] < 450 for v in assignment)
+def limit_consumption(assignment: dict[str, int]) -> bool:
+    return sum(assignment[v] for v in assignment) < 3_000
 
 
-ontology = ApplianceOntology()
-appliances = ontology.create_appliances()
+appliances = create_appliances("./appliance/home.csv")
 
 v_names = [
-    "computer", "3D_printer", "internet_router", "laptop",
-    "phone_charger", "printer", "monitor", "tv", "sound_system",
+    "computer",
+    "internet_router",
+    "phone_charger",
+    "monitor",
+    "tv",
+    "sound_system",
+    "freezer",
+    "fridge",
+    "oven",
+    "fryer",
+    "vacuum_cleaner"
 ]
 
 
 variables = create_variables(appliances, v_names)
 
 constraints = [
-    Constraint(limit_multimedia, [
-        "computer", "3D_printer", "internet_router", "laptop",
-        "phone_charger", "printer", "monitor", "tv", "sound_system"
-    ]),
+    Constraint(limit_consumption, v_names),
 ]
 
 csp = CSP(variables, constraints)
@@ -51,8 +51,13 @@ dfs = DFS(csp)
 gac = GAC(csp)
 
 
-iterations = [10, 100, 1_000]
+iterations = [1_000]
 times = []
+
+console = Console()
+# table = Table(title="Performace DFS")
+table = Table(title="Performace GAC")
+
 
 for it_amount in iterations:
     it_times = []
