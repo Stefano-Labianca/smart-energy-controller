@@ -344,7 +344,8 @@ categoria Multimedia, non vanno a consumare più di $450W$.
 
 \break
 
-L'esempio mostrato si trova nel file nel \path{/test/csp/test_1.py}. \\ \break
+\noindent Le informazioni sul test sono contenute nel file \path{/appliance/appliance.csv} e
+l'esempio mostrato si trova nel file nel \path{/test/csp/test_1.py}. \\
 
 \noindent Adesso diamo uno sguardo ai loro tempi di esecuzione. Per farlo vado ad esecuire
 entrambi gli algoritmi 10, 100 e 1000 volte, per poi salvare i tempi medi di esecuzione, tramite
@@ -355,7 +356,35 @@ la funzione \lstinline|perf_counter_ns()| \cite{perf_counter_ns_docs}. \\
 \noindent Possiamo notare come, nel primo caso di test, l'uso della DFS impiega, in media, molto meno
 tempo rispetto al Generalized Arc Consistency.
 
+\subsubsection{Test 2}
+
+Prendiamo adesso una situazione di un ambiente casalingo, dove possiamo troviamo accesa una
+friggitrice, il forno, la televisione, insieme al suo impianto audio, il router, un computer
+fisso con il suo monitor, un caricatore del telefono, un frigo, il freezer e l'aspirapolvere.
+In questo situazione, non possiamo andare oltre i $3kW$. \\
+
+\noindent Le informazioni sul test sono contenute nel file \path{/appliance/home.csv} e il test dentro
+\path{/test/csp/test_2.py}. \\
+
+\includegraphics[scale=0.8]{test-2-performance.png}
+
+
 \subsection{Conclusioni}
+
+\noindent Si può evidenziare da questi due test, come l'uso del GAC sia meno conveniente, in termini
+di tempo di esecuzione media, rispetto alla DFS. Le motivazioni sono legate alle modalità di ricerca delle soluzioni. \\
+
+\noindent La DFS crea un albero con profondità massima pari al numero delle variabili del problema e, in
+caso dovesse trovare un assegnamento parziale che non soddisfa uno o più vincoli, allora usa il
+backtraking e inizia a creare una nuova diramazione. \\
+
+\noindent Il Generalized Arc Consistency, invece, va a rimuovere dai domini di ogni variabile, tutti quei valori
+che rendono la rete inconsistente. Questo viene fatto andando a dividere il dominio di una variabile in due suoi
+sottodomini e, per entrambi, cerca quali valori rendono inconsistente l'arco.
+Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegnamenti che risolvono il problema.
+
+
+
 
 % \section{Ontologie}
 
