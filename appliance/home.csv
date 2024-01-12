@@ -1,0 +1,12 @@
+name,category,energy_consumption,size
+computer,multimedia,"400, 500",large
+internet_router,multimedia,"10, 30, 50",small
+phone_charger,multimedia,"6, 4",small
+monitor,multimedia,"70, 105",medium
+tv,multimedia,"150, 300",large
+sound_system,multimedia,"200, 470",large
+freezer,kitchen,"250, 300",large
+fridge,kitchen,400,large
+oven,kitchen,"250, 300",medium
+fryer,kitchen,"200, 140",medium
+vacuum_cleaner,other,"40, 60",medium

@@ -6,7 +6,7 @@ from csp_problem.Variable import Variable
 MOCK_CSV_PATH = "./appliance/appliances.csv"
 
 
-def create_appliances() -> list[Appliance]:
+def create_appliances(csv_path=MOCK_CSV_PATH) -> list[Appliance]:
     """Legge da un file csv tutte le informazioni di un elettrodomestico,
     restituendo una lista di istanze della classe Appliance
 
@@ -16,7 +16,7 @@ def create_appliances() -> list[Appliance]:
 
     appliances = []
 
-    with open(MOCK_CSV_PATH, newline='') as file:
+    with open(csv_path, newline='') as file:
         iterator = DictReader(file, delimiter=',')
 
         for row in iterator:
