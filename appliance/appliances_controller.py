@@ -35,12 +35,12 @@ def create_appliances() -> list[Appliance]:
     return appliances
 
 
-def create_variables(appliances: list[Appliance]) -> list[Variable]:
-    variables: list[Variable] = []
-
-    for a in appliances:
-        variable = Variable(a._name, a._energy_consumption)
-        variables.append(variable)
+def create_variables(appliances: list[Appliance], v_names: list[str]) -> list[Variable]:
+    variables: list[Variable] = [
+        Variable(a._name, a._energy_consumption)
+        for a in appliances
+        if a._name in v_names
+    ]
 
     return variables
 
