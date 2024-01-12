@@ -4,7 +4,6 @@ from csp_problem.Variable import Variable
 
 
 class DFS:
-
     def __init__(self, csp: CSP) -> None:
         self.variables = csp.variables
         self.constraints = csp.constraints
