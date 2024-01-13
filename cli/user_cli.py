@@ -213,14 +213,17 @@ class UserCLI:
             names (list[str]): Nomi delle variabili presenti nell'assegnamento parziale
         """
 
-        while True:
-            pagination.show_partial(names)
-            user_input = input("\n> ")
+        if len(pagination.content) > 0:
+            while True:
+                pagination.show_partial(names)
+                user_input = input("\n> ")
 
-            match user_input:
-                case '1': pagination.next_page()
-                case '0': pagination.previous_page()
-                case _: break
+                match user_input:
+                    case '1': pagination.next_page()
+                    case '0': pagination.previous_page()
+                    case _: break
+        else:
+            console.print("Non ci sono soluzioni", style="yellow")
 
     @classmethod
     def paginated_total(cls, pagination: Pagination) -> None:
@@ -231,11 +234,14 @@ class UserCLI:
             pagination (Pagination): Istanza di Pagination
         """
 
-        while True:
-            pagination.show_total()
-            user_input = input("\n> ")
+        if len(pagination.content) > 0:
+            while True:
+                pagination.show_total()
+                user_input = input("\n> ")
 
-            match user_input:
-                case '1': pagination.next_page()
-                case '0': pagination.previous_page()
-                case _: break
+                match user_input:
+                    case '1': pagination.next_page()
+                    case '0': pagination.previous_page()
+                    case _: break
+        else:
+            console.print("Non ci sono soluzioni", style="yellow")
