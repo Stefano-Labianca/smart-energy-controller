@@ -20,7 +20,7 @@ def limit_multimedia(assignment: dict[str, int]) -> bool:
 
 
 console = Console()
-table = Table(title="Provola")
+table = Table(title="Test sul CSP")
 
 
 def run_csp():
