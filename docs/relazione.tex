@@ -389,6 +389,80 @@ Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegn
 
 \subsubsection{Descrizione generale}
 
+In informatica, un'ontologia è una rappresentazione formale, condivisa che esplicita
+una concettualizzazione di un dominio di interesse. In particolare, nell'ampito dell'AI,
+è una specifica dei significati dei simboli di un sistema informativo. \\
+
+\noindent Quindi specifica quali individui e relazioni esistono, e quale
+terminologia è usata per descriverli.
+
+\subsubsection{Protégé}
+
+Lo strumento utilizzato per creare l'ontologia è Protégé \cite{protege} usando la versione
+\texttt{5.6.3}.
+
+\pagebreak
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.4]{protege-home.png}
+      \caption{Schermata del tool Protégé}
+\end{figure}
+
+\noindent L'ontologia è organizzata prendendo in considerazione la classe
+principale \texttt{Appliance}, usata per rappresentare un generico dispositivo elettronico.
+All'interno di essa, sono presenti le seguenti data property:
+
+\begin{itemize}
+      \item \path{appliance_name}: Nome del dispositivo;
+      \item \path{energy_consumption}: insieme di possibili consumi elettrici per uno stesso
+            dispositivo;
+      \item \path{size}: Dimensioni del dispositivo. Queste possono
+            essere: \texttt{small, medium} oppure \texttt{large};
+\end{itemize}
+
+\noindent Le data property sono utilizzate per contenere valori primitivi, come stringhe o interi. \\
+
+\noindent La classe \texttt{Appliance} possiede le seguenti sottoclassi, che andranno ad ereditare i
+data property della classe genitore.
+
+\begin{itemize}
+      \item \path{Multimedia}: Contiene tutti gli individui che fanno parte della categoria dei dispositivi multimediali.
+      \item \path{Kitchen}: Contiene tutti gli individui che fanno parte della categoria dei dispositivi per la cucina.
+      \item \path{Cooling}: Contiene tutti gli individui che fanno parte della categoria dei dispositivi legati a rinfrescare
+            le strutture abitative.
+      \item \path{Washing}: Contiene tutti gli individui che fanno parte della categoria dei dispositivi per la pulizia.
+      \item \path{Other}: Contiene tutti gli individui che non fanno parte delle sottoclassi precedenti.
+\end{itemize}
+
+\noindent L'uso di queste sottoclassi, ci permette di distinguere meglio la categoria degli individui sfruttando
+la proprietà \texttt{rdfs:subClassOf(C1,C2)}, questa infatti mi dice che la
+classe \texttt{C1} è sottoclasse di \texttt{C2}. \\
+
+\noindent Tra gli individui, infatti, oltre ad assegnare dei valori alle data property, assegno come tipo la sua
+sottoclasse di appartenenza.
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.6]{individui-protege.png}
+      \caption{Schermata degli invidui, con assegnamento dei valori alle sue proprietà e tipo.}
+\end{figure}
+
+\subsubsection{Lavorare sull'ontologia}
+
+Per lavorare sull'ontologia, ho usato la libreria \texttt{rdflib}. Grazie ad essa, è stato possibile
+caricare il file \path{/ontology/appliace_ontology.rdf} e di applicare su di esso una serie di operazioni, come:
+
+\begin{itemize}
+      \item Lettura dell'ontologia;
+      \item Ricerca di un individuo;
+      \item Verificare la presenza di un individuo;
+      \item Rimuovere un individuo;
+      \item Aggiungere un individuo;
+\end{itemize}
+
+\noindent I dati contenuti nell'ontologia, vengono usati per strutturare i dispositivi elettronici e, una volta
+letti, vi è possibile applicare gli algoritmi di CSP o usare il Sistema Esperto.
 
 % \section{Sistema esperto}
 
@@ -530,10 +604,15 @@ e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. 
             Risoluzione problema legato alle dipendenze datate.
       }
 
+      \bibitem{protege}
+      Protégé: \href{https://protege.stanford.edu/}{Sito ufficiale di Protégé.}
+
       \bibitem{perf_counter_ns_docs}
       \lstinline|perf_counter_ns()|: \href{https://docs.python.org/3/library/time.html#time.perf_counter_ns}{
             Documentazione ufficiale per la funzione \lstinline|perf_counter_ns()|.
       }
+
+
 \end{thebibliography}
 
 \end{document}

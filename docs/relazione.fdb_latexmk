@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1705142332.69332 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1705142334.37834 0
-  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1705142329 21492 2656f0076e5e49dd7e470750700582ac ""
+["pdflatex"] 1705148725.95454 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1705148728.13084 0
+  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1705148724 25085 1e77410fd6b1876b0e4af23108e0b8d6 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1704034504 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704036583 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1704035784 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -86,8 +86,10 @@
   "images/assegnamenti-gac.png" 1704973269 15248 c2d3f132e49f7b6079d093c444339f04 ""
   "images/assegnmanenti-dfs.png" 1704973157 15853 e53c6ceda8eba65abea5beb210c1903f ""
   "images/errore-python.png" 1704386862 44889 db3894439a5f997d71632c76cfc3e91d ""
+  "images/individui-protege.png" 1705145447 33711 dbd3dc8e0689d9a49c8cb69a956bc3f0 ""
   "images/interruttore-diff.jpg" 1704299086 121888 f31abd578a7c1db19290ec6039e8bc25 ""
   "images/powershell-error.png" 1704385027 12641 0667522bbf80dd46cb7d6c054c9c5505 ""
+  "images/protege-home.png" 1705143856 70954 3a42e8abf16145aeee8dd78b18b89d79 ""
   "images/terminal-message.png" 1704385902 29583 cc98d768ca3b0ec6d1f84b777797fea6 ""
   "images/terminale-bash.png" 1704380879 3653 fb7092107a7169a8263d5745aeec8565 ""
   "images/terminale-cmd.png" 1704381450 10438 0d01ccbb0e0411f68f60502a7ae186ae ""
@@ -95,10 +97,10 @@
   "images/test-1-performance.png" 1705079992 13743 40c79807336f2ff625f485be5d04488d ""
   "images/test-2-performance.png" 1705087165 13183 6f5d4ba0708964fc106f2328f7174e1a ""
   "images/unibalogo.jpg" 1704298313 437618 8f995df018e1da495cd4abc02fc6c46e ""
-  "relazione.aux" 1705142334 5037 b6e594e559989d51c9d247c7b1d110c5 "pdflatex"
-  "relazione.out" 1705142334 4016 bbb5da91629c573bfe4ede067d38c13b "pdflatex"
-  "relazione.tex" 1705142329 21492 2656f0076e5e49dd7e470750700582ac ""
-  "relazione.toc" 1705142334 2125 79e421d427851de80de0f2fa5fa53f74 "pdflatex"
+  "relazione.aux" 1705148727 5694 f04852f5c1019d0600b3c6fe1733bb09 "pdflatex"
+  "relazione.out" 1705148727 4311 f82163456770c89a47c990050c90f90d "pdflatex"
+  "relazione.tex" 1705148724 25085 1e77410fd6b1876b0e4af23108e0b8d6 ""
+  "relazione.toc" 1705148727 2311 1b3c03f7578810d3f71940f24290db96 "pdflatex"
   (generated)
   "relazione.aux"
   "relazione.log"
