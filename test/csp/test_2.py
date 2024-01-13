@@ -51,7 +51,7 @@ dfs = DFS(csp)
 gac = GAC(csp)
 
 
-iterations = [10]
+iterations = [10, 100, 1_000]
 times = []
 
 console = Console()
