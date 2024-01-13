@@ -1,4 +1,3 @@
-from time import time
 
 from rich.console import Console
 
@@ -9,7 +8,7 @@ from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
-from utils.printer import assignments_printer, partial_assignments_printer
+from utils.printer import assignments_printer
 
 
 def limit_multimedia(assignment: dict[str, int]) -> bool:
@@ -59,11 +58,7 @@ gac = GAC(csp_problem)
 
 solutions = []
 
-start = time()
 # solutions = dfs.solve()
 solutions = gac.solve()
-end = time()
 
-partial_assignments_printer(solutions, names)
-# assignments_printer(solutions)
-console.print(f"Time: {round((end - start) * 1000, 3)}ms", style="i")
+assignments_printer(solutions)

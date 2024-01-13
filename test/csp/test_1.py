@@ -4,13 +4,11 @@ from rich.console import Console
 from rich.table import Table
 
 from appliance.appliances_controller import create_variables
-from cli.user_cli import UserCLI
 from csp_problem.algorithm.dfs import DFS
 from csp_problem.algorithm.gac import GAC
 from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
 from ontology.appliance_ontology import ApplianceOntology
-from utils.pagination import Pagination
 
 """ Nella documentazione mostrare un grafico finale dove sulle x trovo i test fatti
 e sulle y i tempi di ogni test.
@@ -56,7 +54,7 @@ for it_amount in iterations:
 
     for _ in range(it_amount):
         start = perf_counter_ns()
-        # solutions = dfs.solve()
+        solutions = dfs.solve()
         # solutions = gac.solve()
         end = perf_counter_ns()
 
