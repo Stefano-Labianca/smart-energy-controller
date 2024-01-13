@@ -44,7 +44,6 @@ class Pagination:
         """Mostra gli elementi della pagina corrente, in termini di 
         assegnamenti parziali
         """
-
         partial_assignments_printer(
             list(self.content[self.current_page]),
             variables_names
