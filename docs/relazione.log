@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  13 JAN 2024 21:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  13 JAN 2024 21:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -661,8 +661,7 @@ Overfull \hbox (7.63208pt too wide) in paragraph at lines 661--663
 \OT1/cmr/m/n/12 E' pos-si-bile che, du-rante l'esecuzione del pro-gramma, possa ap-parire il seguente
  []
 
-[22 <./images/powershell-error.png> <./images/terminal-message.png>] [23]
-<images/errore-python.png, id=336, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=323, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
 Package pdftex.def Info: images/errore-python.png  used on input line 666.
@@ -672,7 +671,7 @@ Overfull \hbox (42.81834pt too wide) in paragraph at lines 666--667
  [][] 
  []
 
-
+[22 <./images/powershell-error.png> <./images/terminal-message.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 670--672
 
  []
@@ -692,12 +691,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 695--698
 
  []
 
-[24 <./images/errore-python.png>]
+[23 <./images/errore-python.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 742--745
 [][][][][]\OT1/cmr/m/n/12 : [][]Doc-u-men-tazione uf-fi-ciale per la fun-zione
  []
 
-[25] (./relazione.aux)
+[24] [25] (./relazione.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
@@ -714,7 +713,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  75i,9n,79p,456b,1233s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (25 pages, 931291 bytes).
+Output written on relazione.pdf (25 pages, 931252 bytes).
 PDF statistics:
  432 PDF objects out of 1000 (max. 8388607)
  345 compressed objects within 4 object streams
