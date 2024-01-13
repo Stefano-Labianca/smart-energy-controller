@@ -316,7 +316,7 @@ andare a trovare una soluzione. \\
 la tecnica del Domain Splitting. In questo modo, il dominio di una variabile viene diviso in due sottodomini
 per poi eliminare, in entrambi i domini, quei valori che rendono inconsistente un arco $\langle X, c \rangle$.
 
-\subsection{Analisi delle performance}
+\subsubsection{Analisi delle performance}
 
 I due algoritmi sono in grado di trovare le soluzioni ad una serie di problemi dati. Adesso vogliamo sapere quale
 dei due riesce a trovare delle soluzioni in tempi minori medi. \\
@@ -325,9 +325,9 @@ dei due riesce a trovare delle soluzioni in tempi minori medi. \\
 versione di Python \texttt{3.12.0}. \pagebreak
 
 
-\subsubsection{Test 1}
+\noindent \textbf{Test 1} \\
 
-Voglio trovare degli assegnamenti in cui i dispositivi, della
+\noindent Voglio trovare degli assegnamenti in cui i dispositivi, della
 categoria Multimedia, non vanno a consumare più di $450W$.
 
 \begin{figure}[h]
@@ -355,11 +355,11 @@ la funzione \lstinline|perf_counter_ns()| \cite{perf_counter_ns_docs}. \\
 \includegraphics[scale=0.8]{test-1-performance.png}
 
 \noindent Possiamo notare come, nel primo caso di test, l'uso della DFS impiega, in media, molto meno
-tempo rispetto al Generalized Arc Consistency.
+tempo rispetto al Generalized Arc Consistency. \\ \break
 
-\subsubsection{Test 2}
+\noindent \textbf{Test 2} \\
 
-Prendiamo adesso una situazione di un ambiente casalingo, dove possiamo troviamo accesa una
+\noindent Prendiamo adesso una situazione di un ambiente casalingo, dove possiamo troviamo accesa una
 friggitrice, il forno, la televisione, insieme al suo impianto audio, il router, un computer
 fisso con il suo monitor, un caricatore del telefono, un frigo, il freezer e l'aspirapolvere.
 In questo situazione, non possiamo andare oltre i $3kW$. \\
@@ -370,7 +370,7 @@ In questo situazione, non possiamo andare oltre i $3kW$. \\
 \includegraphics[scale=0.8]{test-2-performance.png}
 
 
-\subsection{Conclusioni}
+\subsubsection{Conclusioni}
 
 \noindent Si può evidenziare da questi due test, come l'uso del GAC sia meno conveniente, in termini
 di tempo di esecuzione media, rispetto alla DFS. Le motivazioni sono legate alle modalità di ricerca delle soluzioni. \\
@@ -385,7 +385,9 @@ sottodomini e, per entrambi, cerca quali valori rendono inconsistente l'arco.
 Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegnamenti che risolvono il problema.
 
 
-\section{Ontologie}
+\subsection{Ontologie}
+
+\subsubsection{Descrizione generale}
 
 
 % \section{Sistema esperto}
