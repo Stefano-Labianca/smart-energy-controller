@@ -97,7 +97,8 @@ class OntologyCLI:
         """
         while True:
             console.print(
-                "\n\nInserire il nome dell'individuo da cercare: "
+                "\n\nInserire il nome dell'individuo da cercare: ",
+                style="green"
             )
 
             name = input().strip(" ")
