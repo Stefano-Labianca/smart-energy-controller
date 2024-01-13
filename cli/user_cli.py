@@ -183,7 +183,8 @@ class UserCLI:
             appliances (list[Appliance]): Dispositivi elettronici.
         """
 
-        table = Table(title="Elettrodomestici disponibili")
+        console.print("\n")
+        table = Table(title="Dispositivi elettronici disponibili")
 
         table.add_column("Indice", style="green")
         table.add_column("Nome")

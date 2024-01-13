@@ -25,6 +25,12 @@ class ExpertSystem(KnowledgeEngine):
     """
 
     def __init__(self, max_usage: float) -> None:
+        """Costruttore del sistema esperto
+
+        Args:
+            max_usage (float): Capacità massima, espressa in kWh
+        """
+
         super().__init__()
 
         self.ontology = ApplianceOntology()
@@ -72,7 +78,7 @@ class ExpertSystem(KnowledgeEngine):
         """
 
         console.print(
-            "\nAttenzione!, accendendo i dispositivi scelti rischi di far saltare il salvavita!\n",
+            "\nAttenzione!, accendendo i dispositivi scelti rischi di far saltare il salvavita!",
             style="red"
         )
 
@@ -90,7 +96,8 @@ class ExpertSystem(KnowledgeEngine):
 
         console.print(
             f"Consiglio di spegenere il seguente dispositivo: "
-            f"{name}, in quando consuma {max_w} Wh\n"
+            f"{name}, in quando consuma {max_w} Wh\n",
+            style="red"
         )
 
     @Rule(Fact(status="warning"))
@@ -114,10 +121,10 @@ class ExpertSystem(KnowledgeEngine):
 
         console.print(
             (
-                f"\nUn uso prolungato dell seguente dispositivo {name}, "
-                f"con consumo di {max_w} W, "
-                f"potrebbe far scattare il salvavita, a causa ad un improvviso "
-                f"aumento dei consumi.\n"
+                f"\nUn uso prolungato dell seguente dispositivo: {name}, "
+                f"con consumo di {max_w} Wh, "
+                f"potrebbe far scattare il salvavita, causato da un improvviso "
+                f"aumento dei suoi consumi.\n"
             ),
             style="yellow"
         )
@@ -155,6 +162,9 @@ class ExpertSystem(KnowledgeEngine):
 
 def run_expert_system(max_usage: float):
     """Permette l'avvio del sistema esperto dall'esterno
+
+    Args:
+        max_usage (float): Capacità massima, espressa in kWh
     """
 
     expert_system = ExpertSystem(max_usage)
