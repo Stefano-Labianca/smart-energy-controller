@@ -10,12 +10,6 @@ from csp_problem.Constraint import Constraint
 from csp_problem.csp import CSP
 from ontology.appliance_ontology import ApplianceOntology
 
-""" Nella documentazione mostrare un grafico finale dove sulle x trovo i test fatti
-e sulle y i tempi di ogni test.
-
-Per ogni test ho test 3 barre verticali dove mostrano il tempo di 10, 100 e 1000 iterazioni.
-"""
-
 
 def limit_multimedia(assignment: dict[str, int]) -> bool:
     return all(assignment[v] < 450 for v in assignment)
