@@ -103,9 +103,7 @@ class GAC:
         new_domains = self.make_arc_consistent(domains, to_do)
 
         if any(len(new_domains[var]) == 0 for var in new_domains):
-            print("Nessuna soluzione")
-
-            return False
+            return []  # Non ci sono soluzioni
 
         if all(len(new_domains[var]) == 1 for var in new_domains):
             assigment = {}
