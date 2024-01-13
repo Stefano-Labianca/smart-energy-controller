@@ -1,73 +1,149 @@
-from appliance.Appliance import Appliance
-from appliance.appliances_controller import create_variables
+from rich.console import Console
+
 from cli.ontology_cli import OntologyCLI
-from cli.user_cli import UserCLI
-from csp_problem.algorithm.dfs import DFS
-from csp_problem.algorithm.gac import GAC
-from csp_problem.Constraint import Constraint
-from csp_problem.csp import CSP
 from knowledge_base.expert_system import run_expert_system
-from ontology.appliance_ontology import ApplianceOntology
-from utils.pagination import Pagination
-
-# def limit_multimedia(assignment: dict[str, int]) -> bool:
-#     accumulator = 0
-
-#     for v in assignment:
-#         accumulator = accumulator + (assignment[v] * 24)
-#     return accumulator < 35_000
+from project_test.test_csp import execute_csp_problem
 
 
-def limit_cooling(assignment: dict[str, int]) -> bool:
-    accumulator = 0
+def execute_expert_system():
+    retry: bool = True
 
-    for v in assignment:
-        accumulator = accumulator + (assignment[v] * 24)
-    return accumulator < 15_000
+    while True:
+        try:
+            if retry:
+                console.print(
+                    "\n\n\n\nInserire il limite massimo del salvavita, espresso in kWh",
+                    style="blue"
+                )
 
+                max_capacity: float = float(input("> "))
+                run_expert_system(max_capacity)
 
-def limit_multimedia(assignment: dict[str, int]) -> bool:
-    return all(assignment[v] < 450 for v in assignment)
+            retry = False
+            console.print(
+                "\n\n\n\nVuole continuare a testare? (Y/n)",
+                style="blue"
+            )
 
+            choose: str = input("> ").lower().strip(" ")
 
-ontology = ApplianceOntology()
-appliances = ontology.create_appliances()
+            match choose:
+                case "y":
+                    retry = True
+                case "n":
+                    break
+                case _:
+                    console.print("Scelta non valida, riprovare", style="red")
 
-v_names = [
-    "computer", "3D_printer", "internet_router", "laptop",
-    "phone_charger", "printer", "monitor", "tv", "sound_system",
-    # "air_conditioner", "fan", "air_purifier"
-]
-
-
-variables = create_variables(appliances, v_names)
-
-constraints = [
-    Constraint(limit_multimedia, [
-        "computer", "3D_printer", "internet_router", "laptop",
-        "phone_charger", "printer", "monitor", "tv", "sound_system"
-    ]),
-    # Constraint(limit_cooling, [
-    #     "air_conditioner", "fan", "air_purifier"
-    # ]),
-]
-
-csp = CSP(variables, constraints)
-# dfs = DFS(csp)
-# solutions = dfs.solve()
-
-gac = GAC(csp)
-solutions = gac.solve()
+        except ValueError:
+            console.print("Valore non corretto, riprovare", style="red")
 
 
-# run_expert_system(1.5)
-pagination = Pagination(solutions)
-UserCLI.paginated_total(pagination)
+def execute_ontology():
+    while True:
+        console.print(
+            "Premi 1 mostrare il contenuto dell'ontologia",
+            style="blue"
+        )
+        console.print(
+            "Premi 2 per aggiungere un nuovo individuo",
+            style="blue"
+        )
+        console.print(
+            "Premi 3 per eliminare un individuo",
+            style="blue"
+        )
+
+        console.print(
+            "Premi 4 per salvare permanentemente gli individui aggiunti",
+            style="blue"
+        )
+
+        console.print(
+            "Premi 5 per cercacre un individuio dal nome",
+            style="blue"
+        )
+
+        console.print(
+            "Premi 6 per verificare la presenza di un individuio dal nome",
+            style="blue"
+        )
+
+        console.print(
+            "\nPer uscire premi 7\n",
+            style="blue"
+        )
+
+        try:
+            choose: int = int(input("> "))
+
+            match choose:
+                case 1:
+                    OntologyCLI.show()
+                    console.print("\n\n\n\n\n\n")
+                case 2:
+                    OntologyCLI.add()
+                    console.print("\n\n\n\n\n\n")
+                case 3:
+                    OntologyCLI.remove()
+                    console.print("\n\n\n\n\n\n")
+                case 4:
+                    OntologyCLI.save()
+                    console.print("\n\n\n\n\n\n")
+                case 5:
+                    OntologyCLI.find()
+                    console.print("\n\n\n\n\n\n")
+                case 6:
+                    OntologyCLI.contains()
+                    console.print("\n\n\n\n\n\n")
+                case 7:
+                    break
+        except ValueError:
+            console.print("Valore non corretto, riprovare", style="red")
 
 
-# UserCLI.paginated_total(pagination)
+console = Console()
+show_instruction = True
 
-# OntologyCLI.show()
-# OntologyCLI.add()
-# OntologyCLI.save()
-# OntologyCLI.find()
+while True:
+    if show_instruction:
+        console.print("Premi 1 per avviare il CSP", style="blue")
+        console.print(
+            "Premi 2 per lavorare sull'ontologia",
+            style="blue"
+        )
+        console.print(
+            "Premi 3 per avviare il sistema esperto",
+            style="blue"
+        )
+        console.print(
+            "\nPer uscire premi 4\n",
+            style="blue"
+        )
+
+    show_instruction = False
+
+    try:
+        choose: int = int(input("> "))
+
+        match choose:
+            case 1:
+                execute_csp_problem()
+
+                show_instruction = True
+                console.print("\n\n\n\n\n\n")
+            case 2:
+                execute_ontology()
+
+                show_instruction = True
+                console.print("\n\n\n\n\n\n")
+            case 3:
+                execute_expert_system()
+
+                show_instruction = True
+                console.print("\n\n\n\n\n\n")
+            case 4:
+                break
+
+    except ValueError:
+        console.print("Valore non corretto, riprovare", style="red")
