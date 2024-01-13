@@ -227,7 +227,7 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
       \item \path{/docs}: In questa cartella è possibile trovare la relazione, in formato PDF, del
             progetto.
 
-      \item \path{/knowledge_base}: Contiene una classe usata per rappresentare il Sistema Esperto
+      \item \path{/knowledge_base}: Contiene una classe usata per rappresentare il sistema esperto
             realizzato.
 
       \item \path{/ontology}: Questa cartella contiene una classe che permette di manipolare
@@ -462,9 +462,140 @@ caricare il file \path{/ontology/appliace_ontology.rdf} e di applicare su di ess
 \end{itemize}
 
 \noindent I dati contenuti nell'ontologia, vengono usati per strutturare i dispositivi elettronici e, una volta
-letti, vi è possibile applicare gli algoritmi di CSP o usare il Sistema Esperto.
+letti, vi è possibile applicare gli algoritmi di CSP o usare il sistema esperto.
 
-% \section{Sistema esperto}
+\subsection{Sistema esperto}
+
+\subsubsection{Descrizione generale}
+
+\noindent Un sistema esperto è un programma che cerca di riprodurre le prestazioni di una o più
+persone esperte in un determinato campo. \\
+
+\noindent Un sistema esperto si basa sull'uso di una base di conoscenza, ovvero un insieme
+di assiomi veri. Ogni assioma della base di conoscenza è una clausole definite del tipo:
+
+\[ h \leftarrow a_1 \land  a_2 \land \dots \land a_m \]
+
+\noindent dove sia $h$ che ogni $a_i$ sono atomi.
+
+\noindent $h$ viene detta testa della clausola, mentre
+$a_1 \land  a_2 \land \dots \land a_m$ è il corpo della clausola. \\
+
+\noindent In base al numero di atomi presenti nel corpo della clausola, possiamo dividerle in due categorie:
+\begin{itemize}
+      \item Se $m > 0$, allora la clausola viene chiamata \textit{regola};
+      \item Se $m = 0$, allora la clausola viene chiamata \textit{fatto};
+\end{itemize}
+
+\noindent Il sistema esperto sviluppato, si pone l'obiettivo di segnalare all'utente
+se i dispositivi che vuole usare, possono portare a far scattare il salvavita. \\
+
+
+\subsubsection{Realizzazione del sistema esperto}
+
+Il sistema esperto possiede una serie di fatti, ovvero il consumo elettrico di tutti dei dispositivi
+presenti nell'ontologia. Per realizzarli, è stata usata la libreria Experta, una libreria Python, dove le regole
+si basano su due idee:
+
+\begin{itemize}
+      \item LHS (Left Hand Side): Definisce le condizioni che devono essere verificate affinché la regola
+            sia verificata;
+      \item RHS (Right Hand Side): Le operazioni eseguite quando la regola viene applicata;
+            sia verificata;
+\end{itemize}
+
+\noindent Un esempio di regola è la seguente:
+
+\begin{lstlisting}[language=Python]
+    @Rule(Fact(action="start")) # LHS
+    def start_system(self):
+        # RHS
+
+
+\end{lstlisting}
+
+\noindent In altri termini: LHS è il decoratore \texttt{@Rule()}, che si trova
+sopra la definizione di un metodo, mentre l'RHS sono le istruzioni che quel metodo
+eseguirà quando la regola sarà applicata. \\
+
+\noindent Le regole utilizzate sono le seguenti, che si differenziano in base allo stato
+del sistema:
+
+\begin{itemize}
+      \item \path{status_up}: Il salvavita non salterà;
+      \item \path{status_warning}: Il salvavita potrebbe salterare a causa di improvvisi
+            picchi nell'uso del dispositivo elettronico che consuma di più;
+      \item \path{status_down}: Il salvavita scatterà;
+\end{itemize}
+
+\noindent Ad ognuno di esse è stata assegnata un metodo Python della classe \\
+\texttt{ExpertSystem} e, in caso si ritrovi nello stato \path{status_warning} o \path{status_down}, il sistema esperto avviserà l'utente
+dello stato, andandoli a consigliare quale dispositivo deve essere spento oppure quale va limitato l'uso.
+
+\subsubsection{Funzionamento}
+
+\noindent Per avviare il sistema esperto, viene richiamata la funzione \\
+\path{run_expert_system(max_usage: float)}, dove il parametro richiesto è il limite del salvavita espresso in $kWh$. \\
+
+\noindent Il sistema esperto, una volta avviato, andrà a chiedere all'utente quali dispositivi elettronici vuole
+accendere.
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.8]{dispositivi-tabella.png}
+      \caption{Alcuni dispositivi disponibili.}
+\end{figure}
+
+\noindent Una volta selezionati i dispositivi da controllare, se un dispositivo ha più consumi energetici,
+verrà chiesto quale deve prendere in considerazione.
+
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.8]{printer-choose.png}
+      \caption{Esempio di scelta di un dispositivo}
+\end{figure}
+
+\noindent Infine, una volta scelti, il sistema esperto determina se non faranno saltare il
+contatore, andando a simulare per un'ora l'uso dei dispositiv scelti. \\ \\
+Mostriamo alcuni esempi, realizzati considerando come soglia massima \\ $1.7kWh$. \\
+
+\noindent \textbf{Esempio 1}
+
+\noindent Seleziono solamente una stampate da $70W$
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.70]{sistema-esperto-esempio-1.png}
+      \caption{Primo esempio di uso del sistema esperto}
+\end{figure}
+
+\noindent \textbf{Esempio 2}
+
+\noindent Adesso scegliamo una TV da $150W$, il suo impianto audio da $137W$, condizionatore da $500W$ e una
+stampate 3D da $780W$.
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.70]{sistema-esperto-esempio-2.png}
+      \caption{Secondo esempio di uso del sistema esperto}
+\end{figure}
+
+\noindent La soglia per cui viene mostrato questo messaggio è di $150W$, infatti se la differenza del
+consumo massimo consentito e la somma dei dispositi scelti, non supera i $150W$ allora il salvavita potrebbe
+saltare. \\
+
+\noindent \textbf{Esempio 3}
+
+\noindent Adesso scegliamo un condizionatore da $500W$, una stampate 3D da $780W$, una
+lavatrice da $300$ e il frigo da $400W$.
+
+\begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.8]{sistema-esperto-esempio-3.png}
+      \caption{Terzo esempio di uso del sistema esperto}
+\end{figure}
+
 
 \section{Troubleshooting}
 
@@ -482,7 +613,7 @@ Una volta aperta la PowerShell, digitare il comando:
 \end{verbatim}
 
 \noindent Grazie a questo comando, possiamo sapere quale execution policy è impostata per la PowerShell.
-In figura 3, è mostrato una possibile execution policy impostata nella PowerShell. \\
+Nella figura seguente, è mostrato una possibile execution policy impostata nella PowerShell. \\
 
 \begin{figure}[h]
       \centering
