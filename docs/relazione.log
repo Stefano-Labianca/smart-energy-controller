@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  13 JAN 2024 21:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  14 JAN 2024 00:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -448,7 +448,7 @@ File: images/test-1-performance.png Graphic file (type png)
 <use images/test-1-performance.png>
 Package pdftex.def Info: images/test-1-performance.png  used on input line 355.
 (pdftex.def)             Requested size: 355.93022pt x 217.41254pt.
-
+[12 <./images/assegnamenti-gac.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 357--359
 
  []
@@ -458,7 +458,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 357--359
 
  []
 
-[12 <./images/assegnamenti-gac.png> <./images/test-1-performance.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
@@ -473,12 +473,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 367--369
 
  []
 
-<images/test-2-performance.png, id=250, 447.17062pt x 271.76532pt>
+<images/test-2-performance.png, id=249, 447.17062pt x 271.76532pt>
 File: images/test-2-performance.png Graphic file (type png)
 <use images/test-2-performance.png>
 Package pdftex.def Info: images/test-2-performance.png  used on input line 370.
 (pdftex.def)             Requested size: 357.73698pt x 217.41254pt.
-
+[13 <./images/test-1-performance.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 375--377
 
  []
@@ -488,13 +488,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 378--381
 
  []
 
-[13 <./images/test-2-performance.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 392--395
 
  []
 
-[14]
-<images/protege-home.png, id=263, 889.82437pt x 609.77812pt>
+[14 <./images/test-2-performance.png>] [15]
+<images/protege-home.png, id=267, 889.82437pt x 609.77812pt>
 File: images/protege-home.png Graphic file (type png)
 <use images/protege-home.png>
 Package pdftex.def Info: images/protege-home.png  used on input line 408.
@@ -509,12 +509,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
-[15 <./images/protege-home.png>]
+[16 <./images/protege-home.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 438--441
 
  []
 
-<images/individui-protege.png, id=270, 673.76718pt x 287.57437pt>
+<images/individui-protege.png, id=274, 673.76718pt x 287.57437pt>
 File: images/individui-protege.png Graphic file (type png)
 <use images/individui-protege.png>
 Package pdftex.def Info: images/individui-protege.png  used on input line 447.
@@ -524,7 +524,7 @@ Overfull \hbox (14.26343pt too wide) in paragraph at lines 447--448
  [][] 
  []
 
-[16 <./images/individui-protege.png>]
+[17 <./images/individui-protege.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 471--473
 
  []
@@ -539,7 +539,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 490--492
 
  []
 
-[17] (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+[18] (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
 Underfull \hbox (badness 10000) in paragraph at lines 517--520
@@ -551,13 +551,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 537--539
 
  []
 
-<images/dispositivi-tabella.png, id=281, 414.04688pt x 493.845pt>
+<images/dispositivi-tabella.png, id=285, 414.04688pt x 493.845pt>
 File: images/dispositivi-tabella.png Graphic file (type png)
 <use images/dispositivi-tabella.png>
 Package pdftex.def Info: images/dispositivi-tabella.png  used on input line 545.
 (pdftex.def)             Requested size: 331.23795pt x 395.07652pt.
-[18] [19 <./images/dispositivi-tabella.png>]
-<images/printer-choose.png, id=297, 467.49657pt x 140.02313pt>
+[19] [20 <./images/dispositivi-tabella.png>]
+<images/printer-choose.png, id=302, 467.49657pt x 140.02313pt>
 File: images/printer-choose.png Graphic file (type png)
 <use images/printer-choose.png>
 Package pdftex.def Info: images/printer-choose.png  used on input line 555.
@@ -572,12 +572,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 559--562
 
  []
 
-<images/sistema-esperto-esempio-1.png, id=298, 488.57532pt x 212.29312pt>
+<images/sistema-esperto-esempio-1.png, id=303, 488.57532pt x 212.29312pt>
 File: images/sistema-esperto-esempio-1.png Graphic file (type png)
 <use images/sistema-esperto-esempio-1.png>
 Package pdftex.def Info: images/sistema-esperto-esempio-1.png  used on input line 569.
 (pdftex.def)             Requested size: 342.0004pt x 148.60417pt.
-<images/sistema-esperto-esempio-2.png, id=299, 476.53032pt x 72.27pt>
+<images/sistema-esperto-esempio-2.png, id=304, 476.53032pt x 72.27pt>
 File: images/sistema-esperto-esempio-2.png Graphic file (type png)
 <use images/sistema-esperto-esempio-2.png>
 Package pdftex.def Info: images/sistema-esperto-esempio-2.png  used on input line 580.
@@ -590,8 +590,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 584--587
 
  []
 
-[20 <./images/printer-choose.png> <./images/sistema-esperto-esempio-1.png>]
-<images/sistema-esperto-esempio-3.png, id=309, 475.02469pt x 82.80937pt>
+[21 <./images/printer-choose.png> <./images/sistema-esperto-esempio-1.png>]
+<images/sistema-esperto-esempio-3.png, id=313, 475.02469pt x 82.80937pt>
 File: images/sistema-esperto-esempio-3.png Graphic file (type png)
 <use images/sistema-esperto-esempio-3.png>
 Package pdftex.def Info: images/sistema-esperto-esempio-3.png  used on input line 595.
@@ -611,7 +611,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 615--617
 
  []
 
-<images/powershell-error.png, id=311, 403.5075pt x 79.04532pt>
+<images/powershell-error.png, id=315, 403.5075pt x 79.04532pt>
 File: images/powershell-error.png Graphic file (type png)
 <use images/powershell-error.png>
 Package pdftex.def Info: images/powershell-error.png  used on input line 620.
@@ -621,7 +621,7 @@ Overfull \hbox (13.50652pt too wide) in paragraph at lines 620--621
  [][] 
  []
 
-[21 <./images/sistema-esperto-esempio-2.png> <./images/sistema-esperto-esempio-3.png>]
+[22 <./images/sistema-esperto-esempio-2.png> <./images/sistema-esperto-esempio-3.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 624--627
 
  []
@@ -636,7 +636,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 639--640
 
  []
 
-<images/terminal-message.png, id=321, 550.30594pt x 154.32657pt>
+<images/terminal-message.png, id=325, 550.30594pt x 154.32657pt>
 File: images/terminal-message.png Graphic file (type png)
 <use images/terminal-message.png>
 Package pdftex.def Info: images/terminal-message.png  used on input line 643.
@@ -661,7 +661,7 @@ Overfull \hbox (7.63208pt too wide) in paragraph at lines 661--663
 \OT1/cmr/m/n/12 E' pos-si-bile che, du-rante l'esecuzione del pro-gramma, possa ap-parire il seguente
  []
 
-<images/errore-python.png, id=323, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=327, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
 Package pdftex.def Info: images/errore-python.png  used on input line 666.
@@ -671,7 +671,7 @@ Overfull \hbox (42.81834pt too wide) in paragraph at lines 666--667
  [][] 
  []
 
-[22 <./images/powershell-error.png> <./images/terminal-message.png>]
+[23 <./images/powershell-error.png> <./images/terminal-message.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 670--672
 
  []
@@ -691,12 +691,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 695--698
 
  []
 
-[23 <./images/errore-python.png>]
+[24 <./images/errore-python.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 742--745
 [][][][][]\OT1/cmr/m/n/12 : [][]Doc-u-men-tazione uf-fi-ciale per la fun-zione
  []
 
-[24] [25] (./relazione.aux)
+[25] [26] (./relazione.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
@@ -705,18 +705,18 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: C88DECDAA8E01D9E3E5DE3476D6EB988;4993.
  ) 
 Here is how much of TeX's memory you used:
- 11967 strings out of 474174
- 191149 string characters out of 5745652
+ 11968 strings out of 474174
+ 191156 string characters out of 5745652
  1936460 words of memory out of 5000000
  34072 multiletter control sequences out of 15000+600000
  564697 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,9n,79p,456b,1233s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (25 pages, 931252 bytes).
+Output written on relazione.pdf (26 pages, 931681 bytes).
 PDF statistics:
- 432 PDF objects out of 1000 (max. 8388607)
- 345 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 436 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
+ 93 named destinations out of 1000 (max. 500000)
  336 words of extra memory for PDF output out of 10000 (max. 10000000)
 
