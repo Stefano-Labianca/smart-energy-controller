@@ -30,6 +30,10 @@
 \renewcommand{\figurename}{Figura}
 \renewcommand*\refname{}
 
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{2.5}
+
 \begin{document}
 
 \maketitle
@@ -41,7 +45,8 @@
 \hfill \\
 \begin{center}
       \textit{Università degli studi di Bari Aldo Moro} \\
-      \textit{Caso di Studio per l'esame di Ingegneria della Conoscenza.}
+      \textit{Caso di Studio per l'esame di Ingegneria della Conoscenza.} \\[0.25cm]
+      \url{https://github.com/Stefano-Labianca/smart-energy-controller}
 \end{center}
 
 
@@ -288,33 +293,39 @@ contemporaneamente senza superare una certa soglia di consumi, limitare i dispos
 
 \subsubsection{Algoritmi utilizzati}
 
-Tra gli algoritmi presi in considerazione, sono:
+Sono stati presi in considerazione i seguenti algoritmi:
 
 \begin{itemize}
       \item DFS;
       \item Generalized Arc Consistency;
 \end{itemize}
 
-\noindent I due algoritmi, prendono i seguenti approcci. \\
+\noindent I due algoritmi, prevedono i seguenti approcci: \\
 
-\noindent Il primo vuole rappresentare ogni assegnamento come un albero, dove: la sua altezza è
-pari al numeri di variabili che si stanno considerando e ogni nodo viene rappresentato come un
-assegnamento ad una variabile. \\
+\begin{itemize}
+      \item DFS: Vuole rappresentare ogni assegnamento come un albero, dove: la sua altezza è
+            pari al numeri di variabili che si stanno considerando e ogni nodo viene rappresentato come un
+            assegnamento ad una variabile.
 
-\noindent Il secondo invece, prima di trovare delle soluzioni, crea una rete di archi consistenti.
-Un arco $\langle X, c \rangle$, con $X$ una variabile e $c$ un vincolo che ha
-scope $\{X, Y_1, Y_2, \dots, Y_n\}$, si dice consistente se: per ogni valore $x$ appartenente al dominio
-della variabile $X$, esistono dei valori $y_1, y_2, \dots, y_n$, che appartengono ai domini delle loro
-corrispettive variabili $Y_i$, tali che, l'assegnamento \\
-$\{X=x, Y_1=y_1, Y_2=y_2, \dots, Y_n=y_n\}$ mi va a soddisfare il vincolo $c$. \\
+      \item Generalized Arc Consistency: Prima di trovare delle soluzioni, crea una rete di archi consistenti.
+            Un arco $\langle X, c \rangle$, con $X$ una variabile e $c$ un vincolo che ha
+            scope $\{X, Y_1, Y_2, \dots, Y_n\}$, si dice consistente se: per ogni valore $x$ appartenente al dominio
+            della variabile $X$, esistono dei valori $y_1, y_2, \dots, y_n$, che appartengono ai domini delle loro
+            corrispettive variabili $Y_i$, tali che, l'assegnamento \\
+            $\{X=x, Y_1=y_1, Y_2=y_2, \dots, Y_n=y_n\}$ mi va a soddisfare il vincolo $c$. \\
 
-\noindent Per creare archi consistenti, l'algoritmo andrà ad eliminare, per ogni dominio delle variabili, tutti
-quei valori che non soddisfano il vincolo $c$. In altri termini va a ridurre lo spazio di ricerca, prima di
-andare a trovare una soluzione. \\
+            Per creare archi consistenti, l'algoritmo andrà ad eliminare, per ogni dominio delle variabili, tutti
+            quei valori che non soddisfano il vincolo $c$. In altri termini va a ridurre lo spazio di ricerca, prima di
+            andare a trovare una soluzione. \\
 
-\noindent Inoltre, per aiutare maggiormente la riduzione dello spazio di ricerca, è stato scelto di usare
-la tecnica del Domain Splitting. In questo modo, il dominio di una variabile viene diviso in due sottodomini
-per poi eliminare, in entrambi i domini, quei valori che rendono inconsistente un arco $\langle X, c \rangle$.
+            Inoltre, per aiutare maggiormente la riduzione dello spazio di ricerca, è stato scelto di usare
+            la tecnica del \textit{Domain Splitting}. In questo modo, il dominio di una variabile viene diviso in due sottodomini
+            per poi eliminare, in entrambi i domini, quei valori che rendono inconsistente un arco $\langle X, c \rangle$.
+
+\end{itemize}
+
+
+
 
 \subsubsection{Analisi delle performance}
 
@@ -342,13 +353,12 @@ categoria Multimedia, non vanno a consumare più di $450W$.
       \caption{Esempio di assegnamenti trovati dal GAC}
 \end{figure}
 
-
 \break
 
 \noindent Le informazioni sul test sono contenute nel file \path{/appliance/appliance.csv} e
 l'esempio mostrato si trova nel file nel \path{/project_test/performance/test_1.py}. \\
 
-\noindent Adesso diamo uno sguardo ai loro tempi di esecuzione. Per farlo vado ad esecuire
+\noindent Adesso diamo uno sguardo ai loro tempi di esecuzione. Per farlo vado ad eseguire
 entrambi gli algoritmi 10, 100 e 1000 volte, per poi salvare i tempi medi di esecuzione, tramite
 la funzione \lstinline|perf_counter_ns()| \cite{perf_counter_ns_docs}. \\
 
@@ -356,6 +366,19 @@ la funzione \lstinline|perf_counter_ns()| \cite{perf_counter_ns_docs}. \\
 
 \noindent Possiamo notare come, nel primo caso di test, l'uso della DFS impiega, in media, molto meno
 tempo rispetto al Generalized Arc Consistency. \\ \break
+
+\begin{table}[h!]
+      \centering
+      \begin{tabular}{| c | c | c |}
+            \hline
+            Algoritmo & $\mu$      & $\sigma^2$ \\
+            \hline
+            DFS       & $15.984ms$ & $0.119ms$  \\
+            GAC       & $91.737ms$ & $1.556ms$  \\
+            \hline
+      \end{tabular}
+      \caption{Media ($\mu$) e Varianza ($\sigma^2$) dei tempi di esecuzione per il test 1}
+\end{table}
 
 \noindent \textbf{Test 2} \\
 
@@ -370,6 +393,20 @@ In questo situazione, non possiamo andare oltre i $3kW$. \\
 \includegraphics[scale=0.8]{test-2-performance.png}
 
 
+\begin{table}[h!]
+      \centering
+      \begin{tabular}{| c | c | c |}
+            \hline
+            Algoritmo & $\mu$    & $\sigma^2$                \\
+            \hline
+            DFS       & $0.438s$ & $8.633 \cdot 10^{-5} \ s$ \\
+            GAC       & $5.750s$ & $0.011s$                  \\
+            \hline
+      \end{tabular}
+      \caption{Media ($\mu$) e Varianza ($\sigma^2$) dei tempi di esecuzione per il test 2}
+\end{table}
+
+
 \subsubsection{Conclusioni}
 
 \noindent Si può evidenziare da questi due test, come l'uso del GAC sia meno conveniente, in termini
@@ -382,7 +419,12 @@ backtraking e inizia a creare una nuova diramazione. \\
 \noindent Il Generalized Arc Consistency, invece, va a rimuovere dai domini di ogni variabile, tutti quei valori
 che rendono la rete inconsistente. Questo viene fatto andando a dividere il dominio di una variabile in due suoi
 sottodomini e, per entrambi, cerca quali valori rendono inconsistente l'arco.
-Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegnamenti che risolvono il problema.
+Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegnamenti che risolvono il problema. \\
+
+\noindent A causa della lentezza del Generalized Arc Consistency non si è
+potuto condurre altr test più sofisticati. Come nel caso del secondo
+test, per ottenere il tempo di esecuzione media su 1000 iterazioni, ci ha impiegato
+$\sim96$ minuti.
 
 
 \subsection{Ontologie}
