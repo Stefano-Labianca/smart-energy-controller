@@ -52,7 +52,9 @@
 
 \par\noindent\rule{\textwidth}{0.4pt}~\\[5cm]
 
-\tableofcontents ~\\[5cm]
+\tableofcontents
+
+\newpage
 
 \section{Introduzione}
 
@@ -67,13 +69,15 @@ possiedono una classe energetica bassa, fa scattare il salvavita.
 
 Il "salvavita", o più propriamente detto interruttore differenziale, è un dispositivo
 che arresta il flusso di energia elettrica dal contatore di
-un'abitazione, proteggendo persone e animali. \\ \break
-Questi interruttori, monitorano la differenza di corrente in entrata
+un'abitazione, proteggendo persone e animali. \\
+
+\noindent Questi interruttori, monitorano la differenza di corrente in entrata
 e in uscita dal dispositivo e, quando la differenza di corrente in entrata e in
 uscita supera una certa soglia, allora l'interruttore scatta togliendo l'alimentazione
 al circuito.
 
-\begin{figure}
+
+\begin{figure}[h]
       \centering
       \includegraphics[scale=0.2]{interruttore-diff.jpg}
       \caption{Esempio di contatore differenziale}
@@ -87,138 +91,27 @@ i seguenti task:
 
 \begin{enumerate}
       \item Determinare da una lista di dispositivi, quali possono tenere accesi contemporaneamente
-            senza che salti il salvavita.
-      \item Tenere traccia dei dispositivi elettronici e del loro consumo in Watt.
-      \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico.
+            senza che salti il salvavita;
+      \item Tenere traccia dei dispositivi elettronici e del loro consumo in Watt;
+      \item Ottenere tutti quei dispositivi che rispettano certi vincoli di consumo energetico;
 \end{enumerate}
 
 \section{Il progetto}
-
-\subsection{Inizializzare il progetto}
-
-\subsubsection{Scaricare da GitHub}
-
-Il primo passaggio è quello di clonare la repository cliccando al seguente link:
-\url{https://github.com/Stefano-Labianca/smart-energy-controller}. \\
-
-\subsubsection{Impostare l'ambiente virtuale}
-
-\noindent Va creato successivamente un ambiente virtuale \cite{create-venv}. In questo modo l'interprete Python,
-le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
-virtuali e da qualsiasi libreria installata sul proprio sistema. \\
-
-\noindent Per creare l'ambiente virtuale, entrate nella cartella del progetto e
-digitate il seguente comando:
-
-\begin{verbatim}
-      python -m venv .venv
-\end{verbatim}
-
-% Mettere citazione nella bibbliografia
-
-\noindent Grazie a questo comando, verrà creata una cartella \path{/.venv} che conterrà tutto il
-necessario per lavorare con l'ambiente virtuale. \\
-
-\noindent Una volta creato, è necessario attivare l'ambiente virtuale.
-Se siente in ambiente MacOS o Linux, digitate il comando
-
-\begin{verbatim}
-      source .venv/bin/activate
-\end{verbatim}
-
-\noindent Il file \path{activate} serve per "accendere" l'ambiente virtuale. \\
-
-\noindent Se invece siete in ambiente Windows, allora posizionatevi prima dentro la cartella
-\path{./venv/Scripts/} per poi  digitare uno dei seguenti comandi, in base al tipo di terminale in uso:
-
-\begin{verbatim}
-      activate.bat // Se usi il CMD
-      .\Activate.ps1 // Se usi la PowerShell
-\end{verbatim}
-
-\noindent Se invece si sta usando il GitBash, in ambiente Windows, allora il comando da appliace è il seguente:
-
-\begin{verbatim}
-      source .venv/Scripts/activate
-\end{verbatim}
-
-\noindent L'ambiente virtuale sarà attivato con successo quando sul vostro terminale avrete
-qualcosa di simile alla figura 2.
-
-\begin{figure}[h]
-      \centering
-
-      \vspace{0.2cm}
-
-      \begin{subfigure}{1\textwidth}
-            \centering
-            \includegraphics{terminale-bash.png}
-            \caption{Uso di GitBash}
-      \end{subfigure}
-
-      \vspace{0.3cm}
-
-      \begin{subfigure}{1\textwidth}
-            \centering
-            \includegraphics[scale=0.8]{terminale-cmd.png}
-            \caption{Uso del CMD}
-      \end{subfigure}
-
-      \vspace{0.3cm}
-
-      \begin{subfigure}{1\textwidth}
-            \centering
-            \includegraphics[scale=0.8]{terminale-powershell.png}
-            \caption{Uso della PowerShell}
-      \end{subfigure}
-
-      \caption{
-            Risultato dell'attivazione dell'ambiente virtuale. In figura (a) abbiamo
-            l'uso del GitBash, in figura (b) del CMD mentre infine, nella figura
-            (c), abbiamo l'uso della PowerShell.
-      }
-\end{figure} \break
-
-\noindent In caso di problemi nell'uso della PowerShell, è possibile andare alla
-sezione: \hyperref[sec:powershell-error]{Risolvere il problema di esecuzione con la PowerShell}. \\
-
-\subsubsection{Avviare il progetto}
-
-Per avviare il progetto, bisogna tornare alla directory principale del progetto e installare
-le dipendenze con il comando: \\
-
-\begin{verbatim}
-      pip install -r requirements.txt
-\end{verbatim}
-
-\noindent Una volta installate, digitare il seguente comando per avviare il programma
-
-\begin{verbatim}
-      python main.py
-\end{verbatim}
-
-\noindent In caso di errore, vedere la sezione:
-\hyperref[sec:python-error]{Errore di esecuzione del programma Python}.
-
-\subsubsection{Avviare un test}
-
-I test svolti sul programma si trovano tutti nella cartella \path{/project_test}. Se si vuole eseguire un
-test, basta aprire un file, contenuto in una delle sotto-cartelle, prendere il suo contenuto e spostarlo
-dentro il file \path{test_main.py}, presente nella root del progetto, dove si potrà eseguire il testo scelto.
 
 \subsection{Struttura del progetto}
 
 All'intero del progetto, possiamo trovare le seguenti cartelle:
 \begin{itemize}
       \item \path{/.vevn}: Cartella contenente tutto il necessario per lavorare con
-            l'ambientevirtuale.
+            l'ambiente virtuale;
+
       \item \path{/appliance}: Qui è possibile trovare la classe Appliance, che definisce
             un elettrodomestico, insieme ad una serie di metodi di suppporto,
             contenuti in \path{appliances_controller.py}. Insieme ad essi, si trovano dei file csv
-            usati per i test del programma.
+            usati per i test del programma;
 
       \item \path{/cli}: Troviamo una classe che incapsula tutta la logica legata agli input
-            e all'output del terminale.
+            e all'output del terminale;
 
       \item \path{/csp_problem}: Questa cartella contiene tutti i file legati all'argomento del
             CSP. \\
@@ -227,48 +120,46 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
             Inoltre è presente anche la classe CSP usata come wrapper per rappresentare un generico
             problema di questa categoria. \\
             Infine è presenta la cartella \path{/algorithm} che contiene le realizzazioni degli
-            algoritmi DFS e GAC usati per risolvere i problemi legati al CSP.
+            algoritmi DFS e GAC usati per risolvere i problemi legati al CSP;
 
       \item \path{/docs}: In questa cartella è possibile trovare la relazione, in formato PDF, del
-            progetto.
+            progetto;
 
       \item \path{/knowledge_base}: Contiene una classe usata per rappresentare il sistema esperto
-            realizzato.
+            realizzato;
 
       \item \path{/ontology}: Questa cartella contiene una classe che permette di manipolare
-            l'ontologia contenuta all'intero del file \path{appliance_ontology.rdf}.
+            l'ontologia contenuta all'intero del file \path{appliance_ontology.rdf};
 
       \item \path{/project_test}: Contiene tutti quei file contenente vari test fatti al programma.
+            Nella cartella \path{/project_test/performace} sono contenuti i file usati per misurare le
+            performance degli algoritmi del CSP utilizzati;
 
       \item \path{/utils}: Contiene file di utilità che facilitano alcune operazioni interne al programma.
-            Per esempio, il file \path{pagination.py} viene usato per impaginare l'output del programma.
+            Il file \path{pagination.py} viene usato per impaginare l'output del programma, mentre il file
+            \path{printer.py} contiene una serie di funzioni utili per la stampa di liste di variabili, di vincoli
+            e per gli assegnamenti, che siano parziali o totali;
 \end{itemize}
 
-\subsection{Scelte progettuali}
+\subsection{Scelte progettuali generali}
 
-Il progetto è stato svolto usando le versioni \texttt{3.11.5} e \texttt{3.12.0} di Python in quanto offre diversi
+Il progetto è stato svolto usando le versioni \texttt{3.11.5} e \texttt{3.12.0} di Python in quanto offrono diversi
 miglioramenti e un supporto maggiore alla tipizzazione delle variabili e delle constanti.
 Usare i tipi, infatti, si è rivelato molto utile per rendere la codebase più resiliente, evitando di
 assegnare, erroneamente, valori con tipo non corretto per una variabile. \\
 
-\noindent L'uso del design pattern del Singleton si è rivelato utile in quando permette l'uso di
-una sola istanza globale della classe \texttt{ApplianceOntology}. Questa classe è stata usata per
-rappresentare le informazioni dell'ontologia usata e di manipolarla, tramite operazioni di lettura e
-scrittura. \\
+\noindent L'interazione con il progetto avviene attraverso l'uso del seguente menù:
 
-\noindent L'istanza creata, infatti, viene usata in più parti del programma e, creare istanze differenti
-fra i vari moduli, rischieremmo di avere istanze non aggiornate ai cambiamenti fatti in altre parti del
-programma. \\
+\begin{figure}[h]
+      \centering
+      \includegraphics{menu-iniziale.png}
+      \caption{Menù di avvio del programma}
+\end{figure}
 
-\noindent Un'altra scelta è stata quella di impaginare \cite{pagination} i risultati dati dagli algoritmi del CSP.
-Grazie ad essa, è possibile  dividere grandi quantità di dati in blocchi di dimensioni più piccoli e maneggevoli,
-permettendo anche di scorrere una pagina alla volta. \\
+\noindent In questo modo, è possibile utilizzare le parti del pogramma principale in modo più rapido. \\
 
-\noindent Infine per l'argomento del CSP \cite{ai-python-csp}, sono state usate delle versioni leggermente modificate degli
-algoritmi DFS e GAC fornite dal libro di testo AIPython, in quando si è scelto di adattarle al problema
-imposto dal progetto. Non solo, lo stesso vale per le classi \texttt{Variable} e \texttt{Contraint} dove sono
-stati presi in considerazione solamente le funzionalità essenziali.
-
+\noindent Il pogramma lavora intorno all'uso delle ontologie in quando permettono di salvare, sottoforma di triple,
+le informazioni sugli apparecchi elettronici che saranno usate dal sistema esperto e dagli algoritmi di CSP.
 
 \section{Argomenti trattati}
 
@@ -287,9 +178,38 @@ una soluzione al problema. \\
       \item Insieme di vincoli;
 \end{itemize}
 
-\noindent I problemi che voglio risolveri sono: trovare quali dispositivi possono accendere
-contemporaneamente senza superare una certa soglia di consumi, limitare i dispositivi da usare, ...
-% TODO Trovare altri impieghi
+\noindent I problemi che voglio risolvere sono: trovare quali dispositivi possono accendere
+contemporaneamente senza superare una certa soglia di consumi oppure limitare i
+dispositivi da usare.
+
+\subsubsection{Scelte progettuali}
+
+\noindent Per l'argomento del CSP \cite{ai-python-csp}, sono state usate delle versioni leggermente modificate degli
+algoritmi DFS e GAC fornite dal libro di testo AIPython, in quando si è scelto di adattarle al problema
+imposto dal progetto. Non solo, lo stesso vale per le classi \texttt{Variable} e \texttt{Contraint} dove sono
+stati presi in considerazione solamente le funzionalità essenziali. \\
+
+\noindent Un'altra scelta è stata quella di impaginare \cite{pagination} i risultati dati dagli algoritmi del CSP.
+Grazie ad essa, è possibile  dividere grandi quantità di dati in blocchi di dimensioni più piccoli e maneggevoli,
+permettendo anche di scorrere una pagina alla volta. \\
+
+\noindent La paginazione è possibile grazie all'uso della class \texttt{Pagination} che permette
+di spezzare le soluzioni date dagli algoritmi usati, in blocchi più piccoli. \\
+
+\noindent L'algoritmo del Generalized Arc Consistency, per aiutarlo maggiormente a ridurre lo spazio
+di ricerca e a trovare le soluzioni, è stato scelto di usare la tecnica del \textit{Domain Splitting}.
+In questo modo, il dominio di una variabile viene diviso in due sottodomini per poi
+eliminare, in entrambi i domini, quei valori che rendono inconsistente un arco. Non è stato scelta la
+variante in cui avviene la \textit{Variable Elimination}, in quanto l'efficienza di questo
+approccio dipendono molto dall'ordine con cui le variabili vengono eliminate. \\
+
+\noindent Con il \textit{Domain Splitting}, inoltre, possiamo migliorarlo ulteriormente quando
+vogliamo contare il numero di soluzioni. Ogni componente disconnessa dal grafo, può essere risolta
+separatamente rendendo così l'algoritmo più efficiente e, il numero di soluzioni al problema completo è uguale
+al prodotto del numero di soluzioni trovate nelle componenti separate. \\
+
+\noindent Infine sono stati scelti gli algoritmi di ricerca sistematici in quando vogliamo la garanzia di
+trovare delle soluzioni ottimali.
 
 \subsubsection{Algoritmi utilizzati}
 
@@ -303,25 +223,23 @@ Sono stati presi in considerazione i seguenti algoritmi:
 \noindent I due algoritmi, prevedono i seguenti approcci: \\
 
 \begin{itemize}
-      \item DFS: Vuole rappresentare ogni assegnamento come un albero, dove: la sua altezza è
-            pari al numero di variabili che si stanno considerando e ogni nodo viene rappresentato come un
-            assegnamento ad una variabile.
+      \item DFS: va a rappresentare ogni assegnamento come un albero, dove la sua altezza è
+            pari al numero di variabili che si stanno considerando e, ogni nodo, viene
+            rappresentato come un assegnamento ad una variabile.
 
-      \item Generalized Arc Consistency: Prima di trovare delle soluzioni, crea una rete di archi consistenti.
+            Un assegnamento totale, quindi, viene visto come il cammino che va dal nodo radice ad
+            un nodo foglia.
+
+      \item Generalized Arc Consistency: prima di trovare delle soluzioni, crea una rete di archi consistenti.
             Un arco $\langle X, c \rangle$, con $X$ una variabile e $c$ un vincolo che ha
-            scope $\{X, Y_1, Y_2, \dots, Y_n\}$, si dice consistente se: per ogni valore $x$ appartenente al dominio
+            scope $\{X, Y_1, Y_2, \dots, Y_n\}$, si dice consistente se per ogni valore $x$ appartenente al dominio
             della variabile $X$, esistono dei valori $y_1, y_2, \dots, y_n$, che appartengono ai domini delle loro
-            corrispettive variabili $Y_i$, tali che, l'assegnamento \\
-            $\{X=x, Y_1=y_1, Y_2=y_2, \dots, Y_n=y_n\}$ mi va a soddisfare il vincolo $c$. \\
+            corrispettive variabili $Y_i$, tali che, l'assegnamento $\{X=x, Y_1=y_1, Y_2=y_2, \dots, Y_n=y_n\}$ \\
+            mi va a soddisfare il vincolo $c$. \\
 
             Per creare archi consistenti, l'algoritmo andrà ad eliminare, per ogni dominio delle variabili, tutti
             quei valori che non soddisfano il vincolo $c$. In altri termini va a ridurre lo spazio di ricerca, prima di
             andare a trovare una soluzione. \\
-
-            Inoltre, per aiutare maggiormente la riduzione dello spazio di ricerca, è stato scelto di usare
-            la tecnica del \textit{Domain Splitting}. In questo modo, il dominio di una variabile viene diviso in due sottodomini
-            per poi eliminare, in entrambi i domini, quei valori che rendono inconsistente un arco $\langle X, c \rangle$.
-
 \end{itemize}
 
 
@@ -339,7 +257,10 @@ versione di Python \texttt{3.12.0}. \pagebreak
 \noindent \textbf{Test 1} \\
 
 \noindent Voglio trovare degli assegnamenti in cui i dispositivi, della
-categoria Multimedia, non vanno a consumare più di $450W$.
+categoria Multimedia, non vanno a consumare più di $450W$. \\
+
+\noindent Le informazioni sul test sono contenute nel file \path{/appliance/appliance.csv} e
+l'esempio mostrato si trova nel file nel \path{/project_test/performance/test_1.py}. \\
 
 \begin{figure}[h]
       \centering
@@ -355,17 +276,18 @@ categoria Multimedia, non vanno a consumare più di $450W$.
 
 \break
 
-\noindent Le informazioni sul test sono contenute nel file \path{/appliance/appliance.csv} e
-l'esempio mostrato si trova nel file nel \path{/project_test/performance/test_1.py}. \\
+\begin{quote}
+      In entrambe le figure, possiamo osservare delle tabelle dove una riga di una tabella, rappresenta un assegnamento
+      di variabili e, le variabili presenti nell'assegnamento, sono indicate con i nomi delle colonne.
+      Nella prima riga della tabella in figura 3, per esempio, alla variabile \textit{computer} andiamo ad assegnare
+      il valore 400.
+\end{quote}
 
 \noindent Adesso diamo uno sguardo ai loro tempi di esecuzione. Per farlo vado ad eseguire
 entrambi gli algoritmi 10, 100 e 1000 volte, per poi salvare i tempi medi di esecuzione, tramite
 la funzione \lstinline|perf_counter_ns()| \cite{perf_counter_ns_docs}. \\
 
 \includegraphics[scale=0.8]{test-1-performance.png}
-
-\noindent Possiamo notare come, nel primo caso di test, l'uso della DFS impiega, in media, molto meno
-tempo rispetto al Generalized Arc Consistency. \\ \break
 
 \begin{table}[h!]
       \centering
@@ -379,6 +301,12 @@ tempo rispetto al Generalized Arc Consistency. \\ \break
       \end{tabular}
       \caption{Media ($\mu$) e Varianza ($\sigma^2$) dei tempi di esecuzione per il test 1}
 \end{table}
+
+\noindent Possiamo notare come, nel primo caso di test, l'uso della DFS impiega, in media, molto meno
+tempo rispetto al Generalized Arc Consistency.
+Inoltre, per il GAC i tempi di esecuzione medi possono variare maggiormente, rispetto ai
+tempi medi della DFS. \\ \break
+
 
 \noindent \textbf{Test 2} \\
 
@@ -406,6 +334,8 @@ In questo situazione, non possiamo andare oltre i $3kW$. \\
       \caption{Media ($\mu$) e Varianza ($\sigma^2$) dei tempi di esecuzione per il test 2}
 \end{table}
 
+\noindent Anche in questo esempio, possiamo vedere come la DFS sia più costante e la variazione dei tempi
+medi è nettamente inferiore a quella del GAC.
 
 \subsubsection{Conclusioni}
 
@@ -414,7 +344,7 @@ di tempo di esecuzione media, rispetto alla DFS. Le motivazioni sono legate alle
 
 \noindent La DFS crea un albero con profondità massima pari al numero delle variabili del problema e, in
 caso dovesse trovare un assegnamento parziale che non soddisfa uno o più vincoli, allora usa il
-backtraking e inizia a creare una nuova diramazione. \\
+backtracking e inizia a creare una nuova diramazione. \\
 
 \noindent Il Generalized Arc Consistency, invece, va a rimuovere dai domini di ogni variabile, tutti quei valori
 che rendono la rete inconsistente. Questo viene fatto andando a dividere il dominio di una variabile in due suoi
@@ -422,7 +352,7 @@ sottodomini e, per entrambi, cerca quali valori rendono inconsistente l'arco.
 Infine, dopo aver eliminato i valori indesiderati, mi determina tutti gli assegnamenti che risolvono il problema. \\
 
 \noindent A causa della lentezza del Generalized Arc Consistency non si è
-potuto condurre altr test più sofisticati. Come nel caso del secondo
+potuto condurre altri test più sofisticati. Come nel caso del secondo
 test, per ottenere il tempo di esecuzione media su 1000 iterazioni, ci ha impiegato
 $\sim96$ minuti.
 
@@ -433,17 +363,38 @@ $\sim96$ minuti.
 
 In informatica, un'ontologia è una rappresentazione formale, condivisa che esplicita
 una concettualizzazione di un dominio di interesse. In particolare, nell'ampito dell'AI,
-è una specifica dei significati dei simboli di un sistema informativo. \\
+mi specifica dei significati a dei simboli di un sistema informativo. \\
 
 \noindent Quindi specifica quali individui e relazioni esistono, e quale
-terminologia è usata per descriverli.
+terminologia è stata usata per descriverli.
+
+
+\subsubsection{Scelte progettuali}
+
+\noindent L'uso del design pattern del Singleton si è rivelato utile in quando permette l'uso di
+una sola istanza globale della classe \texttt{ApplianceOntology}. Questa classe è stata usata per
+rappresentare le informazioni dell'ontologia usata e di manipolarla, tramite operazioni di lettura e
+scrittura. \\
+
+\noindent L'istanza creata, infatti, viene usata in più parti del programma e, creare istanze differenti
+fra i vari moduli, rischieremmo di avere istanze non aggiornate ai cambiamenti fatti in altre parti del
+programma. \\
+
+\noindent Per progettare e strutturare l'ontologia, è stato scelto il software Protégé, in quanto
+consigliato dal libro di testo. \\
+
+\noindent Inoltre, per permettere a Python di lavorare con l'ontologia, è stata usata la libreria \texttt{rdflib}
+in quanto fornisce un organizzazione e un supporto migliore rispetto alla libreria \texttt{owlready2}. \\
+
+\noindent Infine, per rappresentare i dispositiv ho scelto di considerare solamente le categorie dedicate al
+multimedia, alla cucina, alla pulizia e al raffreddamento della casa, in quanto sono tra i dispositivi più
+utilizzati. Tutti quei dispositivi che non ricadono in queste categorie, allora andranno nella
+categoria \textit{altro}.
 
 \subsubsection{Protégé}
 
-Lo strumento utilizzato per creare l'ontologia è Protégé \cite{protege} usando la versione
+Lo strumento utilizzato per creare l'ontologia è Protégé \cite{protege} con la versione
 \texttt{5.6.3}.
-
-\pagebreak
 
 \begin{figure}[h]
       \centering
@@ -487,13 +438,16 @@ sottoclasse di appartenenza.
 \begin{figure}[h]
       \centering
       \includegraphics[scale=0.6]{individui-protege.png}
-      \caption{Schermata degli invidui, con assegnamento dei valori alle sue proprietà e tipo.}
+      \caption{Schermata degli individui, con assegnamento dei valori alle sue proprietà e tipo.}
 \end{figure}
 
 \subsubsection{Lavorare sull'ontologia}
 
-Per lavorare sull'ontologia, ho usato la libreria \texttt{rdflib}. Grazie ad essa, è stato possibile
-caricare il file \path{/ontology/appliace_ontology.rdf} e di applicare su di esso una serie di operazioni, come:
+Tutti i dati contenuti nell'ontologia, vengono usati per strutturare i dispositivi elettronici e, una volta
+letti, vi è possibile applicare gli algoritmi di CSP o usare il sistema esperto. \\
+
+\noindent Per lavorare sull'ontologia, ho usato la libreria \texttt{rdflib}. Grazie ad essa, è stato possibile
+caricare il file \path{/ontology/appliance_ontology.rdf} e di applicare su di esso una serie di operazioni, come:
 
 \begin{itemize}
       \item Lettura dell'ontologia;
@@ -503,8 +457,27 @@ caricare il file \path{/ontology/appliace_ontology.rdf} e di applicare su di ess
       \item Aggiungere un individuo;
 \end{itemize}
 
-\noindent I dati contenuti nell'ontologia, vengono usati per strutturare i dispositivi elettronici e, una volta
-letti, vi è possibile applicare gli algoritmi di CSP o usare il sistema esperto.
+\noindent Quando si avvia il programma, all'utente sarà chiesto se vuole avviare il CSP, il sistema
+esperto, o l'ontologia. Se sceglie di avviare quest'ultima, li apparirà a schermo il seguente menù: \\
+
+\begin{figure}[h]
+      \centering
+      \includegraphics{ontologia-menu.png}
+      \caption{Menù di scelta delle operazioni dell'ontologia}
+\end{figure}
+
+\noindent Tramite questo menù, potrà scegliere se aggiungere, rimuovere, cercare degli indiviui o visualizzarli
+tutti quanti. In questo modo, non sarà limitato ai soli dispositivi elettronici già presenti al suo interno.
+
+\subsubsection{Conclusioni}
+
+\noindent L'uso dell'ontologia si è rivelato utile e soprattuto è stato uno strumento importante per la rappresentazione
+delle informazioni sui relativi dispositivi elettronici. \\
+
+\noindent La libreria \texttt{rdflib} ha accelerato di molto lo sviluppo in quanto, rispetto
+a \texttt{owlready2}, fornisce funzionalità molto più intuitive e in particolare, il motivo che mi
+ha spinto spostarmi da \texttt{owlready2} verso \texttt{rdflib} è stato il maggiore supporto da parte
+della community della libreria e, infine, una documentazione molto più esplicativa e intuitiva. \\
 
 \subsection{Sistema esperto}
 
@@ -532,6 +505,10 @@ $a_1 \land  a_2 \land \dots \land a_m$ è il corpo della clausola. \\
 \noindent Il sistema esperto sviluppato, si pone l'obiettivo di segnalare all'utente
 se i dispositivi che vuole usare, possono portare a far scattare il salvavita. \\
 
+\subsubsection{Scelte progettuali}
+
+Il sistema esperto è stato realizzato tramite l'uso della libreria Python \texttt{experta}, in
+quanto permette di creare un sistema basato su regole in modo rapido e semplice.
 
 \subsubsection{Realizzazione del sistema esperto}
 
@@ -552,13 +529,11 @@ si basano su due idee:
     @Rule(Fact(action="start")) # LHS
     def start_system(self):
         # RHS
-
-
 \end{lstlisting}
 
 \noindent In altri termini: LHS è il decoratore \texttt{@Rule()}, che si trova
 sopra la definizione di un metodo, mentre l'RHS sono le istruzioni che quel metodo
-eseguirà quando la regola sarà applicata. \\
+eseguirà quando la regola sarà applicata.
 
 \noindent Le regole utilizzate sono le seguenti, che si differenziano in base allo stato
 del sistema:
@@ -577,29 +552,30 @@ dello stato, andandoli a consigliare quale dispositivo deve essere spento oppure
 \subsubsection{Funzionamento}
 
 \noindent Per avviare il sistema esperto, viene richiamata la funzione \\
-\path{run_expert_system(max_usage: float)}, dove il parametro richiesto è il limite del salvavita espresso in $kWh$. \\
+\path{run_expert_system(max_usage: float)}, dove il parametro richiesto è il
+limite del salvavita espresso in $kWh$. \\
 
-\noindent Il sistema esperto, una volta avviato, andrà a chiedere all'utente quali dispositivi elettronici vuole
-accendere.
+\noindent Il sistema esperto, una volta avviato, andrà a chiedere all'utente quali
+dispositivi elettronici vuole accendere. \pagebreak
 
 \begin{figure}[h]
       \centering
-      \includegraphics[scale=0.8]{dispositivi-tabella.png}
+      \includegraphics[scale=0.7]{dispositivi-tabella.png}
       \caption{Alcuni dispositivi disponibili.}
 \end{figure}
 
-\noindent Una volta selezionati i dispositivi da controllare, se un dispositivo ha più consumi energetici,
-verrà chiesto quale deve prendere in considerazione.
 
+\noindent Una volta selezionati i dispositivi da controllare, se un dispositivo ha più consumi energetici,
+verrà chiesto quale, o quali, vuole prendere in considerazione. \\ \pagebreak
 
 \begin{figure}[h]
       \centering
-      \includegraphics[scale=0.8]{printer-choose.png}
+      \includegraphics[scale=0.7]{printer-choose.png}
       \caption{Esempio di scelta di un dispositivo}
 \end{figure}
 
 \noindent Infine, una volta scelti, il sistema esperto determina se non faranno saltare il
-contatore, andando a simulare per un'ora l'uso dei dispositiv scelti. \\ \\
+contatore, andando a simulare per un'ora l'uso dei dispositivi scelti. \\ \\
 Mostriamo alcuni esempi, realizzati considerando come soglia massima \\ $1.7kWh$. \\
 
 \noindent \textbf{Esempio 1}
@@ -638,24 +614,195 @@ lavatrice da $300$ e il frigo da $400W$.
       \caption{Terzo esempio di uso del sistema esperto}
 \end{figure}
 
+\subsubsection{Conclusioni}
 
-\section{Troubleshooting}
+Grazie all'uso della libreria Python \texttt{experta}, è stato possibile sviluppare facilmente. \\
 
-\subsection{Risolvere il problema di esecuzione con la PowerShell}
+\noindent Naturalmente, si può estendere ulteriormente mettendo in considerazione anche situazioni in cui
+l'impianto elettrico sia datato o meno e di prendere in considerazione anche
+eventuali fattori atmosferici, come la presenza di venti forti o di ondate di calore, che
+possono compromettere l'efficienza del impianto.
+
+
+\section{Conclusioni e Sviluppi Futuri}
+
+L'applicativo realizzato, è riuscito nell'intendo di poter tenere traccia degli elettrodomestici
+presenti, di poter fornire feedback all'utente su quale dispositivo rischia di far saltare il salvavita
+e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. \\
+
+\noindent Possiamo estendere e migliorare l'applicativo in vari modi:
+\begin{itemize}
+      \item Migliorare l'interazione con l'utente tramite una GUI;
+      \item Avviare una simulazione dell'uso di un sottogruppo di elettrodomestici
+            nell'arco di una giornata per un individuo;
+      \item Poter considerare, insieme al consumo energetico, anche i costi della bolletta;
+      \item Uso di dataset che prendano in considerazione consumi e tempi di utilizzo reali;
+      \item Espandere la base di conoscenza, con il costo energetico di ogni dispositivo elettronico;
+\end{itemize}
+
+\section{Riferimenti Bibliografici}
+
+
+\begin{thebibliography}{100}
+      \bibitem{create-venv}
+      freeCodeCamp (2022):  \href{https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/}{
+            Creazione di un ambiente virtuale in Python.
+      }
+
+      \bibitem{ai-python-csp}
+      AIPython (2023): \href{https://artint.info/AIPython/aipython/aipython.pdf}{
+            Ragionamento con i vincoli, capitolo 4 pagina 69.
+      }
+
+      \bibitem{pagination}
+      Paginazione: \href{https://www.educative.io/answers/what-is-pagination}{
+            Funzionamento della paginazione.
+      }
+
+
+      \bibitem{perf_counter_ns_docs}
+      \lstinline|perf_counter_ns()|: \href{https://docs.python.org/3/library/time.html#time.perf_counter_ns}{
+            Documentazione ufficiale per la funzione \lstinline|perf_counter_ns()|.
+      }
+
+      \bibitem{protege}
+      Protégé: \href{https://protege.stanford.edu/}{Sito ufficiale di Protégé.}
+
+
+      \bibitem{power-shell-resolution}
+      PowerShell Documentation (2022):
+      \href{https://learn.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4}{
+            Documentazione sul funzionamento delle execution policy della PowerShell Windows.
+      }
+
+      \bibitem{python-mapping-problem}
+      Attribute Error (2023): \href{https://stackoverflow.com/questions/70749690/attributeerror-module-collections-has-no-attribute-mapping}{
+            Risoluzione problema legato alle dipendenze datate.
+      }
+\end{thebibliography}
+
+\section{Appendice}
+
+\subsection{Inizializzare il progetto}
+
+\subsubsection{Scaricare da GitHub}
+
+Il primo passaggio è quello di clonare la repository cliccando al seguente link:
+\url{https://github.com/Stefano-Labianca/smart-energy-controller}. \\
+
+\subsubsection{Impostare l'ambiente virtuale}
+
+\noindent Va creato successivamente un ambiente virtuale \cite{create-venv}. In questo modo l'interprete Python,
+le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
+virtuali e da qualsiasi libreria installata sul proprio sistema. \\
+
+\noindent Per creare l'ambiente virtuale, entrate nella cartella del progetto e
+digitate il seguente comando:
+
+\begin{verbatim}
+      python -m venv .venv
+\end{verbatim}
+
+\noindent Grazie a questo comando, verrà creata una cartella \path{/.venv} che conterrà tutto il
+necessario per lavorare con l'ambiente virtuale. \\
+
+\noindent Una volta creato, è necessario attivare l'ambiente virtuale.
+Se siente in ambiente MacOS o Linux, digitate il comando
+
+\begin{verbatim}
+      source .venv/bin/activate
+\end{verbatim}
+
+\noindent Il file \path{activate} serve per "accendere" l'ambiente virtuale. \\
+
+\noindent Se invece siete in ambiente Windows, allora posizionatevi prima dentro la cartella
+\path{./venv/Scripts/} per poi  digitare uno dei seguenti comandi, in base al tipo di terminale in uso:
+
+\begin{verbatim}
+      activate.bat // Se usi il CMD
+      .\Activate.ps1 // Se usi la PowerShell
+\end{verbatim}
+
+\noindent Se invece si sta usando il GitBash, in ambiente Windows, allora il comando da appliace è il seguente:
+
+\begin{verbatim}
+      source .venv/Scripts/activate
+\end{verbatim}
+
+\noindent L'ambiente virtuale sarà attivato con successo quando sul vostro terminale avrete
+qualcosa di simile alla figura 2.
+
+\begin{figure}[h]
+      \centering
+
+      \vspace{0.2cm}
+
+      \begin{subfigure}{1\textwidth}
+            \centering
+            \includegraphics{terminale-bash.png}
+            \caption{Uso di GitBash}
+      \end{subfigure}
+
+      \vspace{0.3cm}
+
+
+      \begin{subfigure}{1\textwidth}
+            \centering
+            \includegraphics[scale=0.8]{terminale-powershell.png}
+            \caption{Uso della PowerShell}
+      \end{subfigure}
+
+      \caption{
+            Risultato dell'attivazione dell'ambiente virtuale. In figura (a) abbiamo
+            l'uso del GitBash, in figura (b) abbiamo l'uso della PowerShell.
+      }
+\end{figure} \break
+
+\noindent In caso di problemi nell'uso della PowerShell, è possibile andare alla
+sezione: \hyperref[sec:powershell-error]{Risolvere il problema di esecuzione con la PowerShell}. \\
+
+\subsubsection{Avviare il progetto}
+
+Per avviare il progetto, bisogna tornare alla directory principale del progetto e installare
+le dipendenze con il comando: \\
+
+\begin{verbatim}
+      pip install -r requirements.txt
+\end{verbatim}
+
+\noindent Una volta installate, digitare il seguente comando per avviare il programma
+
+\begin{verbatim}
+      python main.py
+\end{verbatim}
+
+\noindent In caso di errore, vedere la sezione:
+\hyperref[sec:python-error]{Errore di esecuzione del programma Python}.
+
+\subsubsection{Avviare un test}
+
+I test svolti sul programma si trovano tutti nella cartella \path{/project_test}. Se si vuole eseguire un
+test, basta aprire un file, contenuto in una delle sotto-cartelle, prendere il suo contenuto e spostarlo
+dentro il file \path{test_main.py}, presente nella root del progetto, dove si potrà eseguire il testo scelto.
+
+\subsection{Troubleshooting}
+
+\subsubsection{Risolvere il problema di esecuzione con la PowerShell}
 \label{sec:powershell-error}
 
 In caso non si riesca ad eseguire con la PowerShell \cite{power-shell-resolution},
 l'attivazione dell'ambiente virtuale, provate a svolgere i seguenti passi. \\
 
 \noindent Aprire innanzitutto la PowerShell come amministratore nella cartella del progetto.
-Una volta aperta la PowerShell, digitare il comando:
+Una volta aperta la PowerShell, digitare il comando: \\
 
 \begin{verbatim}
       Get-ExecutionPolicy
 \end{verbatim}
 
-\noindent Grazie a questo comando, possiamo sapere quale execution policy è impostata per la PowerShell.
-Nella figura seguente, è mostrato una possibile execution policy impostata nella PowerShell. \\
+\noindent Grazie a questo comando, possiamo sapere quale execution policy è \\
+impostata per la PowerShell.Nella figura seguente, è mostrato una
+possibile execution policy impostata nella PowerShell. \\
 
 \begin{figure}[h]
       \centering
@@ -671,14 +818,16 @@ su \texttt{AllSigned} la execution policy. \\
       Set-ExecutionPolicy -ExecutionPolicy AllSigned
 \end{verbatim}
 
-Una volta eseguito questo comando, andare nella cartella \path{/.venv/Scripts/} e digitare il
-comando:
+\noindent Una volta eseguito questo comando, andare nella
+cartella \path{/.venv/Scripts/} e digitare il comando: \\
 
 \begin{verbatim}
       .\Activate.ps1
 \end{verbatim}
 
-Apparirà sul terminale il seguente output: \\
+\break
+
+\noindent Apparirà sul terminale il seguente output:
 
 \begin{figure}[h]
       \centering
@@ -686,8 +835,8 @@ Apparirà sul terminale il seguente output: \\
       \caption{Messaggio di conferma}
 \end{figure}
 
-Per eseguire lo script di attivazione, allora inserite \texttt{V} e
-premete invio. \\ \break
+\noindent Per eseguire lo script di attivazione, allora inserite \texttt{V} e
+premete invio.
 
 \noindent Una volta che avete finito l'esecuzione del programma, potete anche reimpostare
 la execution policy al suo stato precedente, usando il comando:
@@ -697,7 +846,7 @@ la execution policy al suo stato precedente, usando il comando:
 \end{verbatim}
 
 
-\subsection{Errore di esecuzione del programma Python}
+\subsubsection{Errore di esecuzione del programma Python}
 \label{sec:python-error}
 
 E' possibile che, durante l'esecuzione del programma, possa apparire il seguente
@@ -725,68 +874,11 @@ creare dei conflitti di dipendenza tra le due versioni della librerie. \\
             ...
 \end{lstlisting}
 
-Nella seguente:
+\noindent Nella seguente:
 
 \begin{lstlisting}[language=Python]
       class frozendict(collections.abc.Mapping):
             ...
 \end{lstlisting}
-
-\section{Conclusioni e Sviluppi Futuri}
-
-L'applicativo realizzato, è riuscito nell'intendo di poter tenere traccia degli elettrodomestici
-presenti, di poter fornire feedback all'utente su quale dispositivo rischia di far saltare il salvavita
-e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. \\
-
-\noindent Possiamo estendere e migliorare l'applicativo in vari modi:
-\begin{itemize}
-      \item Migliorare l'interazione con l'utente tramite una GUI;
-      \item Avviare una simulazione dell'uso di un sottogruppo di elettrodomestici
-            nell'arco di una giornata per un individuo;
-      \item Poter considerare, insieme al consumo energetico, anche i costi della bolletta;
-      \item Uso di dataset che prendano in considerazione consumi e tempi di utilizzo reali;
-      \item Espandere la base di conoscenza, con il costo energetico di ogni dispositivo elettronico;
-\end{itemize}
-
-\section{Riferimenti Bibliografici}
-
-\begin{thebibliography}{100}
-      \bibitem{create-venv}
-      freeCodeCamp (2022):  \href{https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/}{
-            Creazione di un ambiente virtuale in Python.
-      }
-
-      \bibitem{pagination}
-      Paginazione: \href{https://www.educative.io/answers/what-is-pagination}{
-            Funzionamento della paginazione.
-      }
-
-      \bibitem{ai-python-csp}
-      AIPython (2023): \href{https://artint.info/AIPython/aipython/aipython.pdf}{
-            Ragionamento con i vincoli, capitolo 4 pagina 69.
-      }
-
-      \bibitem{perf_counter_ns_docs}
-      \lstinline|perf_counter_ns()|: \href{https://docs.python.org/3/library/time.html#time.perf_counter_ns}{
-            Documentazione ufficiale per la funzione \lstinline|perf_counter_ns()|.
-      }
-
-      \bibitem{protege}
-      Protégé: \href{https://protege.stanford.edu/}{Sito ufficiale di Protégé.}
-
-
-      \bibitem{power-shell-resolution}
-      PowerShell Documentation (2022):
-      \href{https://learn.microsoft.com/en-gb/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.4}{
-            Documentazione sul funzionamento delle execution policy della PowerShell Windows.
-      }
-
-      \bibitem{python-mapping-problem}
-      Attribute Error (2023): \href{https://stackoverflow.com/questions/70749690/attributeerror-module-collections-has-no-attribute-mapping}{
-            Risoluzione problema legato alle dipendenze datate.
-      }
-
-
-\end{thebibliography}
 
 \end{document}

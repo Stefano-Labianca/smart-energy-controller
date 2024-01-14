@@ -18,6 +18,6 @@ Versioni di Python usate: `3.11.5` e `3.12.0`.
 
 ## Installare requisiti e avvio del progetto
 
-Per installare tutte le dipendenze, è innanzitutto necessario creare un ambiente virtuale. Tutte le istruzioni sono contenute nella sezione 2.1 della documentazione.
+Per installare tutte le dipendenze, è innanzitutto necessario creare un ambiente virtuale. Tutte le istruzioni sono contenute nell'appendice, sezione 6.1.
 
-In caso si dovesse presentare un errore, dopo aver avviato il programma, andare nella sezione 4.2 della documetazione, in cui si trova la soluzione e la spiegazione al problema.
+In caso si dovesse presentare un errore, dopo aver avviato il programma, andare nella sezione 6.2 della documetazione, in cui si trova la soluzione e la spiegazione al problema.
