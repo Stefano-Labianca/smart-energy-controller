@@ -5,7 +5,8 @@
 \usepackage{subcaption}
 \usepackage{listings}
 \usepackage[titletoc, toc,page]{appendix}
-
+\usepackage{fancyhdr}
+\usepackage[a4paper,width=160mm,top=20mm,bottom=20mm,bindingoffset=6mm]{geometry}
 
 \graphicspath{{images/}} %configuring the graphicx package
 
@@ -34,6 +35,7 @@
 \renewcommand{\arraystretch}{2.5}
 \renewcommand*{\appendixtocname}{Appendice}
 
+\pagestyle{fancy}
 \begin{document}
 
 \maketitle
@@ -51,6 +53,8 @@
 
 
 \par\noindent\rule{\textwidth}{0.4pt}~\\[5cm]
+
+\newpage
 
 \tableofcontents
 
@@ -141,6 +145,25 @@ All'intero del progetto, possiamo trovare le seguenti cartelle:
             e per gli assegnamenti, che siano parziali o totali;
 \end{itemize}
 
+\subsection{Elenco argomenti di interesse}
+
+Tra gli argomenti trattati all'intero del progetto, troviamo:
+
+\begin{itemize}
+      \item Ragionare con i Vincoli \cite{cap-4-libro}, dove sono stati presi in considerazione i primi quattro paragrafi del
+            capitolo. Ovvero,  variabili e vincoli, risolvere i CSP con la ricerca, algoritmi
+            di consistenza e divisione del dominio;
+
+      \item Proposizioni e Inferenza \cite{cap-5-libro}, dove sono stati presi in considerazione le clausole
+            proposizionali definite e query da parte dell'utente;
+
+      \item Knowledge Graphs e Ontologie \cite{cap-16-libro}, dove sono stati presi in considerazione i paragrafi
+            riguardante le classi e le proprietà e il paragrafo sulle ontologie e la conoscenza condivisa;
+
+
+\end{itemize}
+
+
 \subsection{Scelte progettuali generali}
 
 Il progetto è stato svolto usando le versioni \texttt{3.11.5} e \texttt{3.12.0} di Python in quanto offrono diversi
@@ -156,9 +179,9 @@ assegnare, erroneamente, valori con tipo non corretto per una variabile. \\
       \caption{Menù di avvio del programma}
 \end{figure}
 
-\noindent In questo modo, è possibile utilizzare le parti del pogramma principale in modo più rapido. \\
+\noindent In questo modo, è possibile utilizzare le parti del programma principale in modo più rapido. \\
 
-\noindent Il pogramma lavora intorno all'uso delle ontologie in quanto permettono di salvare, sottoforma di triple,
+\noindent Il programma lavora intorno all'uso delle ontologie in quanto permettono di salvare, sottoforma di triple,
 le informazioni sugli apparecchi elettronici che saranno usate dal sistema esperto e dagli algoritmi di CSP.
 
 \section{Argomenti trattati}
@@ -251,10 +274,10 @@ I due algoritmi sono in grado di trovare le soluzioni ad una serie di problemi d
 dei due riesce a trovare delle soluzioni in tempi minori medi. \\
 
 \noindent I test sono stati svolti usando un Ryzen 5 3400G, sistema operativo Windows 10 e
-versione di Python \texttt{3.12.0}. \pagebreak
+versione di Python \texttt{3.12.0}. \\
 
 
-\noindent \textbf{Test 1} \\
+\noindent \textbf{Test 1}
 
 \noindent Voglio trovare degli assegnamenti in cui i dispositivi, della
 categoria Multimedia, non vanno a consumare più di $450W$. \\
@@ -308,7 +331,7 @@ Inoltre, per il GAC i tempi di esecuzione medi possono variare maggiormente, ris
 tempi medi della DFS. \\ \break
 
 
-\noindent \textbf{Test 2} \\
+\noindent \textbf{Test 2}
 
 \noindent Prendiamo adesso una situazione di un ambiente casalingo, dove possiamo troviamo accesa una
 friggitrice, il forno, la televisione, insieme al suo impianto audio, il router, un computer
@@ -474,10 +497,15 @@ tutti quanti. In questo modo, non sarà limitato ai soli dispositivi elettronici
 \noindent L'uso dell'ontologia si è rivelato utile e soprattuto è stato uno strumento importante per la rappresentazione
 delle informazioni sui relativi dispositivi elettronici. \\
 
-\noindent La libreria \texttt{rdflib} ha accelerato di molto lo sviluppo in quanto, rispetto
-a \texttt{owlready2}, fornisce funzionalità molto più intuitive e in particolare, il motivo che mi
-ha spinto spostarmi da \texttt{owlready2} verso \texttt{rdflib} è stato il maggiore supporto da parte
-della community della libreria e, infine, una documentazione molto più esplicativa e intuitiva. \\
+\noindent All'inizio dello sviluppo dell'ontologia, è stata scelta la libreria \texttt{owlready2}, in
+quando consigliata da altri colleghi. \\
+
+\noindent A causa di alcune problematiche, mi sono spostato sulla libreria \texttt{rdflib}, che ha
+accelerato di molto lo sviluppo in quanto, rispetto a \texttt{owlready2}, fornisce
+funzionalità molto più intuitive e in particolare, il motivo che mi ha spinto spostarmi da
+\texttt{owlready2} verso \texttt{rdflib} è stato il maggiore supporto da
+parte della community della libreria e, infine, una documentazione
+molto più esplicativa e intuitiva. \\
 
 \subsection{Sistema esperto}
 
@@ -556,7 +584,7 @@ dello stato, andandoli a consigliare quale dispositivo deve essere spento oppure
 limite del salvavita espresso in $kWh$. \\
 
 \noindent Il sistema esperto, una volta avviato, andrà a chiedere all'utente quali
-dispositivi elettronici vuole accendere. \pagebreak
+dispositivi elettronici vuole accendere.
 
 \begin{figure}[h]
       \centering
@@ -566,7 +594,7 @@ dispositivi elettronici vuole accendere. \pagebreak
 
 
 \noindent Una volta selezionati i dispositivi da controllare, se un dispositivo ha più consumi energetici,
-verrà chiesto quale, o quali, vuole prendere in considerazione. \\ \pagebreak
+verrà chiesto quale, o quali, vuole prendere in considerazione. \\
 
 \begin{figure}[h]
       \centering
@@ -644,6 +672,21 @@ e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. 
 
 
 \begin{thebibliography}{100}
+      \bibitem{cap-4-libro}
+      Ragionare con i Vincoli: \href{https://artint.info/3e/html/ArtInt3e.Ch4.html}{
+            Artificial Intelligence 3E, foundations of computational agents - Capitolo 4
+      }
+
+      \bibitem{cap-5-libro}
+      Proposizioni e Inferenza: \href{https://artint.info/3e/html/ArtInt3e.Ch5.html}{
+            Artificial Intelligence 3E, foundations of computational agents - Capitolo 5
+      }
+
+      \bibitem{cap-16-libro}
+      Knowledge Graphs e Ontologie;: \href{https://artint.info/3e/html/ArtInt3e.Ch16.html}{
+            Artificial Intelligence 3E, foundations of computational agents - Capitolo 6
+      }
+
       \bibitem{create-venv}
       freeCodeCamp (2022):  \href{https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/}{
             Creazione di un ambiente virtuale in Python.
@@ -681,6 +724,7 @@ e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. 
       }
 \end{thebibliography}
 
+\newpage
 
 \begin{appendices}
 
@@ -824,9 +868,8 @@ e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. 
 
       \begin{verbatim}
       .\Activate.ps1
-\end{verbatim}
+      \end{verbatim}
 
-      \break
 
       \noindent Apparirà sul terminale il seguente output:
 

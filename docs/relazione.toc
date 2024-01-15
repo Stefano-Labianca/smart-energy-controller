@@ -1,36 +1,37 @@
-\contentsline {section}{\numberline {1}Introduzione}{4}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Dispositivo salvavita}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Obiettivo del progetto}{4}{subsection.1.2}%
-\contentsline {section}{\numberline {2}Il progetto}{5}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Struttura del progetto}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Scelte progettuali generali}{6}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Argomenti trattati}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}CSP}{7}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}Descrizione generale}{7}{subsubsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.2}Scelte progettuali}{7}{subsubsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.3}Algoritmi utilizzati}{8}{subsubsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.4}Analisi delle performance}{9}{subsubsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.5}Conclusioni}{14}{subsubsection.3.1.5}%
-\contentsline {subsection}{\numberline {3.2}Ontologie}{14}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Descrizione generale}{14}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}Scelte progettuali}{14}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Protégé}{15}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}Lavorare sull'ontologia}{17}{subsubsection.3.2.4}%
-\contentsline {subsubsection}{\numberline {3.2.5}Conclusioni}{18}{subsubsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.3}Sistema esperto}{19}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Descrizione generale}{19}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Scelte progettuali}{19}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Realizzazione del sistema esperto}{19}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Funzionamento}{20}{subsubsection.3.3.4}%
-\contentsline {subsubsection}{\numberline {3.3.5}Conclusioni}{23}{subsubsection.3.3.5}%
-\contentsline {section}{\numberline {4}Conclusioni e Sviluppi Futuri}{23}{section.4}%
-\contentsline {section}{\numberline {5}Riferimenti Bibliografici}{24}{section.5}%
-\contentsline {section}{Appendice}{25}{section*.17}%
-\contentsline {subsection}{\numberline {.1}Inizializzare il progetto}{25}{subsection.1..1}%
-\contentsline {subsubsection}{\numberline {.1.1}Scaricare da GitHub}{25}{subsubsection.1..1.1}%
-\contentsline {subsubsection}{\numberline {.1.2}Impostare l'ambiente virtuale}{25}{subsubsection.1..1.2}%
-\contentsline {subsubsection}{\numberline {.1.3}Avviare il progetto}{27}{subsubsection.1..1.3}%
-\contentsline {subsubsection}{\numberline {.1.4}Avviare un test}{27}{subsubsection.1..1.4}%
-\contentsline {subsection}{\numberline {.2}Troubleshooting}{27}{subsection.1..2}%
-\contentsline {subsubsection}{\numberline {.2.1}Risolvere il problema di esecuzione con la PowerShell}{27}{subsubsection.1..2.1}%
-\contentsline {subsubsection}{\numberline {.2.2}Errore di esecuzione del programma Python}{29}{subsubsection.1..2.2}%
+\contentsline {section}{\numberline {1}Introduzione}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Dispositivo salvavita}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Obiettivo del progetto}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Il progetto}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Struttura del progetto}{3}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Elenco argomenti di interesse}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Scelte progettuali generali}{5}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Argomenti trattati}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}CSP}{5}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Descrizione generale}{5}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Scelte progettuali}{5}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Algoritmi utilizzati}{6}{subsubsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.4}Analisi delle performance}{7}{subsubsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.5}Conclusioni}{9}{subsubsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.2}Ontologie}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Descrizione generale}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Scelte progettuali}{10}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Protégé}{10}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Lavorare sull'ontologia}{11}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Conclusioni}{12}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}Sistema esperto}{13}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Descrizione generale}{13}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Scelte progettuali}{13}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Realizzazione del sistema esperto}{13}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Funzionamento}{14}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}Conclusioni}{16}{subsubsection.3.3.5}%
+\contentsline {section}{\numberline {4}Conclusioni e Sviluppi Futuri}{16}{section.4}%
+\contentsline {section}{\numberline {5}Riferimenti Bibliografici}{16}{section.5}%
+\contentsline {section}{Appendice}{18}{section*.17}%
+\contentsline {subsection}{\numberline {.1}Inizializzare il progetto}{18}{subsection.1..1}%
+\contentsline {subsubsection}{\numberline {.1.1}Scaricare da GitHub}{18}{subsubsection.1..1.1}%
+\contentsline {subsubsection}{\numberline {.1.2}Impostare l'ambiente virtuale}{18}{subsubsection.1..1.2}%
+\contentsline {subsubsection}{\numberline {.1.3}Avviare il progetto}{19}{subsubsection.1..1.3}%
+\contentsline {subsubsection}{\numberline {.1.4}Avviare un test}{19}{subsubsection.1..1.4}%
+\contentsline {subsection}{\numberline {.2}Troubleshooting}{19}{subsection.1..2}%
+\contentsline {subsubsection}{\numberline {.2.1}Risolvere il problema di esecuzione con la PowerShell}{19}{subsubsection.1..2.1}%
+\contentsline {subsubsection}{\numberline {.2.2}Errore di esecuzione del programma Python}{20}{subsubsection.1..2.2}%
