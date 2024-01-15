@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1705317174.8819 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1705317177.61576 0
-  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1705317042 36907 5601a515e2db08bf874e83fefdc12dd6 ""
+["pdflatex"] 1705318809.33719 "d:/ICON/smart-energy-controller/docs/relazione.tex" "relazione.pdf" "relazione" 1705318811.45175 0
+  "d:/ICON/smart-energy-controller/docs/relazione.tex" 1705318805 37678 056325ac2b5a02c2239ae1a469d4c5a0 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1704034504 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1704036583 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "d:/TeXLive/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1704035784 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -42,6 +42,7 @@
   "d:/TeXLive/texlive/2023/texmf-dist/tex/generic/pdfescape/pdfescape.sty" 1704041100 19007 15924f7228aca6c6d184b115f4baa231 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty" 1704041174 20089 80423eac55aa175305d35b49e04fe23b ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty" 1704044921 7008 f92eaa0a3872ed622bbf538217cd2ab7 ""
+  "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty" 1704028103 8878 d9f65b39ca82f1d70030390eca653b1c ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/atveryend/atveryend.sty" 1704028365 19336 ce7ae9438967282886b3b036cfad1e4d ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/auxhook/auxhook.sty" 1704028409 3935 57aa3c3e203a5c2effb4d2bd2efbc323 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1704038497 20144 fbcf51733730d8f1a62143512ff5b1fe ""
@@ -62,6 +63,7 @@
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty" 1704037050 2671 7e67d78d9b88c845599a85b2d41f2e39 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx" 1704037050 2885 9c645d672ae17285bba324998918efd8 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/graphics/trig.sty" 1704037050 4023 293ea1c16429fc0c4cf605f4da1791a9 ""
+  "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty" 1704037128 7133 b94bbacbee6e4fdccdc7f810b2aec370 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/hycolor/hycolor.sty" 1704037488 17914 4c28a13fc3d975e6e81c9bea1d697276 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/hyperref/hpdftex.def" 1704037503 48154 77bec99bb3bbdf933bcecb211f7f4038 ""
   "d:/TeXLive/texlive/2023/texmf-dist/tex/latex/hyperref/hyperref.sty" 1704037503 220895 6ca6b57b8bf00b1b056e6f2806b9ff68 ""
@@ -104,10 +106,10 @@
   "images/test-1-performance.png" 1705079992 13743 40c79807336f2ff625f485be5d04488d ""
   "images/test-2-performance.png" 1705087165 13183 6f5d4ba0708964fc106f2328f7174e1a ""
   "images/unibalogo.jpg" 1704298313 437618 8f995df018e1da495cd4abc02fc6c46e ""
-  "relazione.aux" 1705317177 8536 6075fa4e2435918dc59cb9a186b5eb96 "pdflatex"
-  "relazione.out" 1705317177 5893 1c22467dbf338180138a7fbf2ff0d089 "pdflatex"
-  "relazione.tex" 1705317042 36907 5601a515e2db08bf874e83fefdc12dd6 ""
-  "relazione.toc" 1705317177 3259 b38756dbc27af78e03271d41f652bc2e "pdflatex"
+  "relazione.aux" 1705318811 8523 c25c4598fe2f037ffa06249bde24cb1b "pdflatex"
+  "relazione.out" 1705318811 5913 bc2f8715457b46afe5d15b2897ba37b1 "pdflatex"
+  "relazione.tex" 1705318805 37678 056325ac2b5a02c2239ae1a469d4c5a0 ""
+  "relazione.toc" 1705318811 3246 e1fecde15d7abe36cad3c2dc375d8afc "pdflatex"
   (generated)
   "relazione.aux"
   "relazione.log"

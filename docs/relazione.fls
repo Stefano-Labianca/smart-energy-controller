@@ -98,6 +98,8 @@ INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty
+INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/appendix/appendix.sty
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./relazione.aux
@@ -109,6 +111,8 @@ INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/grfext/grfext.sty
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT d:/TeXLive/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -217,6 +221,8 @@ INPUT ./images/sistema-esperto-esempio-3.png
 INPUT ./images/sistema-esperto-esempio-3.png
 INPUT ./images/sistema-esperto-esempio-3.png
 INPUT ./images/sistema-esperto-esempio-3.png
+INPUT d:/TeXLive/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT d:/TeXLive/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./images/terminale-bash.png
 INPUT ./images/terminale-bash.png
 INPUT ./images/terminale-bash.png

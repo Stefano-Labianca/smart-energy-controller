@@ -4,7 +4,7 @@
 \usepackage{hyperref}
 \usepackage{subcaption}
 \usepackage{listings}
-
+\usepackage[titletoc, toc,page]{appendix}
 
 
 \graphicspath{{images/}} %configuring the graphicx package
@@ -29,10 +29,10 @@
 \renewcommand*\contentsname{Tabella dei contenuti}
 \renewcommand{\figurename}{Figura}
 \renewcommand*\refname{}
-
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{18pt}
 \renewcommand{\arraystretch}{2.5}
+\renewcommand*{\appendixtocname}{Appendice}
 
 \begin{document}
 
@@ -681,204 +681,207 @@ e, infine, di poter determinare quali dispositivi rispettino i vincoli forniti. 
       }
 \end{thebibliography}
 
-\section{Appendice}
 
-\subsection{Inizializzare il progetto}
+\begin{appendices}
 
-\subsubsection{Scaricare da GitHub}
+      \subsection{Inizializzare il progetto}
 
-Il primo passaggio è quello di clonare la repository cliccando al seguente link:
-\url{https://github.com/Stefano-Labianca/smart-energy-controller}. \\
+      \subsubsection{Scaricare da GitHub}
 
-\subsubsection{Impostare l'ambiente virtuale}
+      Il primo passaggio è quello di clonare la repository cliccando al seguente link:
+      \url{https://github.com/Stefano-Labianca/smart-energy-controller}. \\
 
-\noindent Va creato successivamente un ambiente virtuale \cite{create-venv}. In questo modo l'interprete Python,
-le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
-virtuali e da qualsiasi libreria installata sul proprio sistema. \\
+      \subsubsection{Impostare l'ambiente virtuale}
 
-\noindent Per creare l'ambiente virtuale, entrate nella cartella del progetto e
-digitate il seguente comando:
+      \noindent Va creato successivamente un ambiente virtuale \cite{create-venv}. In questo modo l'interprete Python,
+      le librerie e gli script installati al suo interno, saranno isolati dagli altri ambienti
+      virtuali e da qualsiasi libreria installata sul proprio sistema. \\
 
-\begin{verbatim}
+      \noindent Per creare l'ambiente virtuale, entrate nella cartella del progetto e
+      digitate il seguente comando:
+
+      \begin{verbatim}
       python -m venv .venv
 \end{verbatim}
 
-\noindent Grazie a questo comando, verrà creata una cartella \path{/.venv} che conterrà tutto il
-necessario per lavorare con l'ambiente virtuale. \\
+      \noindent Grazie a questo comando, verrà creata una cartella \path{/.venv} che conterrà tutto il
+      necessario per lavorare con l'ambiente virtuale. \\
 
-\noindent Una volta creato, è necessario attivare l'ambiente virtuale.
-Se siente in ambiente MacOS o Linux, digitate il comando
+      \noindent Una volta creato, è necessario attivare l'ambiente virtuale.
+      Se siente in ambiente MacOS o Linux, digitate il comando
 
-\begin{verbatim}
+      \begin{verbatim}
       source .venv/bin/activate
 \end{verbatim}
 
-\noindent Il file \path{activate} serve per "accendere" l'ambiente virtuale. \\
+      \noindent Il file \path{activate} serve per "accendere" l'ambiente virtuale. \\
 
-\noindent Se invece siete in ambiente Windows, allora posizionatevi prima dentro la cartella
-\path{./venv/Scripts/} per poi  digitare uno dei seguenti comandi, in base al tipo di terminale in uso:
+      \noindent Se invece siete in ambiente Windows, allora posizionatevi prima dentro la cartella
+      \path{./venv/Scripts/} per poi  digitare uno dei seguenti comandi, in base al tipo di terminale in uso:
 
-\begin{verbatim}
+      \begin{verbatim}
       activate.bat // Se usi il CMD
       .\Activate.ps1 // Se usi la PowerShell
 \end{verbatim}
 
-\noindent Se invece si sta usando il GitBash, in ambiente Windows, allora il comando da appliace è il seguente:
+      \noindent Se invece si sta usando il GitBash, in ambiente Windows, allora il comando da appliace è il seguente:
 
-\begin{verbatim}
+      \begin{verbatim}
       source .venv/Scripts/activate
 \end{verbatim}
 
-\noindent L'ambiente virtuale sarà attivato con successo quando sul vostro terminale avrete
-qualcosa di simile alla figura 2.
+      \noindent L'ambiente virtuale sarà attivato con successo quando sul vostro terminale avrete
+      qualcosa di simile alla figura 2.
 
-\begin{figure}[h]
-      \centering
-
-      \vspace{0.2cm}
-
-      \begin{subfigure}{1\textwidth}
+      \begin{figure}[h]
             \centering
-            \includegraphics{terminale-bash.png}
-            \caption{Uso di GitBash}
-      \end{subfigure}
 
-      \vspace{0.3cm}
+            \vspace{0.2cm}
+
+            \begin{subfigure}{1\textwidth}
+                  \centering
+                  \includegraphics{terminale-bash.png}
+                  \caption{Uso di GitBash}
+            \end{subfigure}
+
+            \vspace{0.3cm}
 
 
-      \begin{subfigure}{1\textwidth}
-            \centering
-            \includegraphics[scale=0.8]{terminale-powershell.png}
-            \caption{Uso della PowerShell}
-      \end{subfigure}
+            \begin{subfigure}{1\textwidth}
+                  \centering
+                  \includegraphics[scale=0.8]{terminale-powershell.png}
+                  \caption{Uso della PowerShell}
+            \end{subfigure}
 
-      \caption{
-            Risultato dell'attivazione dell'ambiente virtuale. In figura (a) abbiamo
-            l'uso del GitBash, in figura (b) abbiamo l'uso della PowerShell.
-      }
-\end{figure} \break
+            \caption{
+                  Risultato dell'attivazione dell'ambiente virtuale. In figura (a) abbiamo
+                  l'uso del GitBash, in figura (b) abbiamo l'uso della PowerShell.
+            }
+      \end{figure} \break
 
-\noindent In caso di problemi nell'uso della PowerShell, è possibile andare alla
-sezione: \hyperref[sec:powershell-error]{Risolvere il problema di esecuzione con la PowerShell}. \\
+      \noindent In caso di problemi nell'uso della PowerShell, è possibile andare alla
+      sezione: \hyperref[sec:powershell-error]{Risolvere il problema di esecuzione con la PowerShell}. \\
 
-\subsubsection{Avviare il progetto}
+      \subsubsection{Avviare il progetto}
 
-Per avviare il progetto, bisogna tornare alla directory principale del progetto e installare
-le dipendenze con il comando: \\
+      Per avviare il progetto, bisogna tornare alla directory principale del progetto e installare
+      le dipendenze con il comando: \\
 
-\begin{verbatim}
+      \begin{verbatim}
       pip install -r requirements.txt
 \end{verbatim}
 
-\noindent Una volta installate, digitare il seguente comando per avviare il programma
+      \noindent Una volta installate, digitare il seguente comando per avviare il programma
 
-\begin{verbatim}
+      \begin{verbatim}
       python main.py
 \end{verbatim}
 
-\noindent In caso di errore, vedere la sezione:
-\hyperref[sec:python-error]{Errore di esecuzione del programma Python}.
+      \noindent In caso di errore, vedere la sezione:
+      \hyperref[sec:python-error]{Errore di esecuzione del programma Python}.
 
-\subsubsection{Avviare un test}
+      \subsubsection{Avviare un test}
 
-I test svolti sul programma si trovano tutti nella cartella \path{/project_test}. Se si vuole eseguire un
-test, basta aprire un file, contenuto in una delle sotto-cartelle, prendere il suo contenuto e spostarlo
-dentro il file \path{test_main.py}, presente nella root del progetto, dove si potrà eseguire il testo scelto.
+      I test svolti sul programma si trovano tutti nella cartella \path{/project_test}. Se si vuole eseguire un
+      test, basta aprire un file, contenuto in una delle sotto-cartelle, prendere il suo contenuto e spostarlo
+      dentro il file \path{test_main.py}, presente nella root del progetto, dove si potrà eseguire il testo scelto.
 
-\subsection{Troubleshooting}
+      \subsection{Troubleshooting}
 
-\subsubsection{Risolvere il problema di esecuzione con la PowerShell}
-\label{sec:powershell-error}
+      \subsubsection{Risolvere il problema di esecuzione con la PowerShell}
+      \label{sec:powershell-error}
 
-In caso non si riesca ad eseguire con la PowerShell \cite{power-shell-resolution},
-l'attivazione dell'ambiente virtuale, provate a svolgere i seguenti passi. \\
+      In caso non si riesca ad eseguire con la PowerShell \cite{power-shell-resolution},
+      l'attivazione dell'ambiente virtuale, provate a svolgere i seguenti passi. \\
 
-\noindent Aprire innanzitutto la PowerShell come amministratore nella cartella del progetto.
-Una volta aperta la PowerShell, digitare il comando: \\
+      \noindent Aprire innanzitutto la PowerShell come amministratore nella cartella del progetto.
+      Una volta aperta la PowerShell, digitare il comando: \\
 
-\begin{verbatim}
+      \begin{verbatim}
       Get-ExecutionPolicy
 \end{verbatim}
 
-\noindent Grazie a questo comando, possiamo sapere quale execution policy è \\
-impostata per la PowerShell.Nella figura seguente, è mostrato una
-possibile execution policy impostata nella PowerShell. \\
+      \noindent Grazie a questo comando, possiamo sapere quale execution policy è \\
+      impostata per la PowerShell.Nella figura seguente, è mostrato una
+      possibile execution policy impostata nella PowerShell. \\
 
-\begin{figure}[h]
-      \centering
-      \includegraphics{powershell-error.png}
-      \caption{Possibile execution policy}
-\end{figure}
+      \begin{figure}[h]
+            \centering
+            \includegraphics{powershell-error.png}
+            \caption{Possibile execution policy}
+      \end{figure}
 
-\noindent Per permettere l'esecuzione degli script \texttt{.ps1}, allora bisogna impostare
-su \texttt{AllSigned} la execution policy. \\
-\noindent Per farlo si usa il comando: \\
+      \noindent Per permettere l'esecuzione degli script \texttt{.ps1}, allora bisogna impostare
+      su \texttt{AllSigned} la execution policy. \\
+      \noindent Per farlo si usa il comando: \\
 
-\begin{verbatim}
+      \begin{verbatim}
       Set-ExecutionPolicy -ExecutionPolicy AllSigned
 \end{verbatim}
 
-\noindent Una volta eseguito questo comando, andare nella
-cartella \path{/.venv/Scripts/} e digitare il comando: \\
+      \noindent Una volta eseguito questo comando, andare nella
+      cartella \path{/.venv/Scripts/} e digitare il comando: \\
 
-\begin{verbatim}
+      \begin{verbatim}
       .\Activate.ps1
 \end{verbatim}
 
-\break
+      \break
 
-\noindent Apparirà sul terminale il seguente output:
+      \noindent Apparirà sul terminale il seguente output:
 
-\begin{figure}[h]
-      \centering
-      \includegraphics[scale=0.6]{terminal-message.png}
-      \caption{Messaggio di conferma}
-\end{figure}
+      \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{terminal-message.png}
+            \caption{Messaggio di conferma}
+      \end{figure}
 
-\noindent Per eseguire lo script di attivazione, allora inserite \texttt{V} e
-premete invio.
+      \noindent Per eseguire lo script di attivazione, allora inserite \texttt{V} e
+      premete invio.
 
-\noindent Una volta che avete finito l'esecuzione del programma, potete anche reimpostare
-la execution policy al suo stato precedente, usando il comando:
+      \noindent Una volta che avete finito l'esecuzione del programma, potete anche reimpostare
+      la execution policy al suo stato precedente, usando il comando:
 
-\begin{verbatim}
+      \begin{verbatim}
       Set-ExecutionPolicy -ExecutionPolicy <PolicyNamePrecedente>
 \end{verbatim}
 
 
-\subsubsection{Errore di esecuzione del programma Python}
-\label{sec:python-error}
+      \subsubsection{Errore di esecuzione del programma Python}
+      \label{sec:python-error}
 
-E' possibile che, durante l'esecuzione del programma, possa apparire il seguente
-messaggio di errore \cite{python-mapping-problem}:
+      E' possibile che, durante l'esecuzione del programma, possa apparire il seguente
+      messaggio di errore \cite{python-mapping-problem}:
 
-\begin{figure}[h]
-      \centering
-      \includegraphics[scale=0.55]{errore-python.png}
-      \caption{Errore di esecuzione}
-\end{figure}
+      \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.55]{errore-python.png}
+            \caption{Errore di esecuzione}
+      \end{figure}
 
-\noindent Questo errore è dovuto ad una versione datata della libreria \texttt{frozendict}
-usata come dipendenza della libreria \texttt{experta}. \\
+      \noindent Questo errore è dovuto ad una versione datata della libreria \texttt{frozendict}
+      usata come dipendenza della libreria \texttt{experta}. \\
 
-\noindent Fare l'upgrade della libreria \texttt{frozendict} alla versione più recente, andrebbe a
-creare dei conflitti di dipendenza tra le due versioni della librerie. \\
+      \noindent Fare l'upgrade della libreria \texttt{frozendict} alla versione più recente, andrebbe a
+      creare dei conflitti di dipendenza tra le due versioni della librerie. \\
 
-\noindent Per risolvere questo problema, bisogna andare nella cartella
-\path{/.venv/Lib/site-packages/frozendict} e aprire il file \path{__init__.py}.
+      \noindent Per risolvere questo problema, bisogna andare nella cartella
+      \path{/.venv/Lib/site-packages/frozendict} e aprire il file \path{__init__.py}.
 
-\noindent Una volta aperto, bisogna cambiare la seguente linea di codice: \\
+      \noindent Una volta aperto, bisogna cambiare la seguente linea di codice: \\
 
-\begin{lstlisting}[language=Python]
+      \begin{lstlisting}[language=Python]
       class frozendict(collections.Mapping):
             ...
 \end{lstlisting}
 
-\noindent Nella seguente:
+      \noindent Nella seguente:
 
-\begin{lstlisting}[language=Python]
+      \begin{lstlisting}[language=Python]
       class frozendict(collections.abc.Mapping):
             ...
 \end{lstlisting}
+
+\end{appendices}
 
 \end{document}
