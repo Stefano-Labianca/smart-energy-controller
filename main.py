@@ -65,7 +65,7 @@ def execute_ontology():
         )
 
         console.print(
-            "Premi 6 per verificare la presenza di un individuio dal nome",
+            "Premi 6 per verificare la presenza di un individuo dal nome",
             style="blue"
         )
 
