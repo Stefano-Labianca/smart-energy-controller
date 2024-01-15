@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  15 JAN 2024 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.31)  15 JAN 2024 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -237,24 +237,24 @@ File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 ) (./relazione.aux)
 \openout1 = `relazione.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count292
@@ -280,7 +280,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: pdftex.def on input line 149.
  (d:/TeXLive/texlive/2023/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 39.
+Package hyperref Info: Link coloring ON on input line 40.
  (./relazione.out) (./relazione.out)
 \@outlinefile=\write3
 \openout3 = `relazione.out'.
@@ -328,25 +328,25 @@ Package caption Info: End \AtBeginDocument code.
 <images/unibalogo.jpg, id=152, 227.4096pt x 227.4096pt>
 File: images/unibalogo.jpg Graphic file (type jpg)
 <use images/unibalogo.jpg>
-Package pdftex.def Info: images/unibalogo.jpg  used on input line 42.
+Package pdftex.def Info: images/unibalogo.jpg  used on input line 43.
 (pdftex.def)             Requested size: 113.70451pt x 113.70451pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 42.
+(Font)              <14.4> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 42.
+(Font)              <7> on input line 43.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--48
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 51.
+(Font)              <12> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 51.
+(Font)              <8> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 51.
+(Font)              <6> on input line 52.
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
@@ -365,39 +365,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 65--71
+Underfull \hbox (badness 10000) in paragraph at lines 66--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
+Underfull \hbox (badness 10000) in paragraph at lines 75--78
 
  []
 
 <images/interruttore-diff.jpg, id=207, 752.8125pt x 752.8125pt>
 File: images/interruttore-diff.jpg Graphic file (type jpg)
 <use images/interruttore-diff.jpg>
-Package pdftex.def Info: images/interruttore-diff.jpg  used on input line 86.
+Package pdftex.def Info: images/interruttore-diff.jpg  used on input line 87.
 (pdftex.def)             Requested size: 150.55983pt x 150.55983pt.
 
-Overfull \hbox (0.88387pt too wide) in paragraph at lines 112--116
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[3 <./images/interruttore-diff.jpg>]
+Overfull \hbox (0.88387pt too wide) in paragraph at lines 115--119
 \OT1/cmr/m/n/12 trodomes-tico, in-sieme ad una se-rie di metodi di supp-porto, con-tenuti in $\OT1/cmtt/m/n/12 appliances _
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[3{d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/interruttore-diff.jpg>]
-Overfull \hbox (7.5295pt too wide) in paragraph at lines 135--137
+Overfull \hbox (7.5295pt too wide) in paragraph at lines 138--140
 []$\OT1/cmtt/m/n/12 /ontology$\OT1/cmr/m/n/12 : Questa cartella con-tiene una classe che per-me-tte di ma-nipo-lare l'ontologia
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--173
+Underfull \hbox (badness 10000) in paragraph at lines 172--176
 
  []
 
@@ -408,29 +408,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4]
+[4{d:/TeXLive/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 <images/menu-iniziale.png, id=227, 210.03468pt x 97.11281pt>
 File: images/menu-iniziale.png Graphic file (type png)
 <use images/menu-iniziale.png>
-Package pdftex.def Info: images/menu-iniziale.png  used on input line 178.
+Package pdftex.def Info: images/menu-iniziale.png  used on input line 181.
 (pdftex.def)             Requested size: 210.03416pt x 97.11256pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 182--183
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 193--196
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 210--214
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--218
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
 
  []
 
@@ -442,37 +427,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [5 <./images/menu-iniziale.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
+Underfull \hbox (badness 10000) in paragraph at lines 199--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 222--228
+Underfull \hbox (badness 10000) in paragraph at lines 216--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 229--233
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--247
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
+Underfull \hbox (badness 10000) in paragraph at lines 228--234
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 273--275
+Underfull \hbox (badness 10000) in paragraph at lines 235--239
 
  []
 
@@ -484,7 +464,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 276--278
+Underfull \hbox (badness 10000) in paragraph at lines 252--253
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 269--272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
 
@@ -494,20 +489,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--284
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--287
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
-<images/assegnmanenti-dfs.png, id=247, 571.38469pt x 283.0575pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
+
+ []
+
+<images/assegnmanenti-dfs.png, id=243, 571.38469pt x 283.0575pt>
 File: images/assegnmanenti-dfs.png Graphic file (type png)
 <use images/assegnmanenti-dfs.png>
-Package pdftex.def Info: images/assegnmanenti-dfs.png  used on input line 290.
+Package pdftex.def Info: images/assegnmanenti-dfs.png  used on input line 296.
 (pdftex.def)             Requested size: 371.39565pt x 183.98518pt.
-<images/assegnamenti-gac.png, id=248, 573.64313pt x 283.81032pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<images/assegnamenti-gac.png, id=244, 573.64313pt x 283.81032pt>
 File: images/assegnamenti-gac.png Graphic file (type png)
 <use images/assegnamenti-gac.png>
-Package pdftex.def Info: images/assegnamenti-gac.png  used on input line 296.
+Package pdftex.def Info: images/assegnamenti-gac.png  used on input line 302.
 (pdftex.def)             Requested size: 372.86362pt x 184.47452pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -515,45 +521,52 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7 <./images/assegnmanenti-dfs.png> <./images/assegnamenti-gac.png>]
-Overfull \hbox (56.4631pt too wide) in paragraph at lines 303--307
+[7]
+Overfull \hbox (56.4631pt too wide) in paragraph at lines 309--313
 \OT1/cmr/m/n/12 tabella, rap-p-re-senta un as-seg-na-mento di vari-abili e, le vari-abili pre-senti nell'assegnamento,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 309--312
+Underfull \hbox (badness 10000) in paragraph at lines 315--318
 
  []
 
-<images/test-1-performance.png, id=259, 444.91219pt x 271.76532pt>
+<images/test-1-performance.png, id=255, 444.91219pt x 271.76532pt>
 File: images/test-1-performance.png Graphic file (type png)
 <use images/test-1-performance.png>
-Package pdftex.def Info: images/test-1-performance.png  used on input line 313.
+Package pdftex.def Info: images/test-1-performance.png  used on input line 319.
 (pdftex.def)             Requested size: 355.93022pt x 217.41254pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[8 <./images/assegnmanenti-dfs.png> <./images/assegnamenti-gac.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--332
+Underfull \hbox (badness 10000) in paragraph at lines 334--338
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 341--343
+Underfull \hbox (badness 10000) in paragraph at lines 347--349
 
  []
 
-<images/test-2-performance.png, id=260, 447.17062pt x 271.76532pt>
+<images/test-2-performance.png, id=265, 447.17062pt x 271.76532pt>
 File: images/test-2-performance.png Graphic file (type png)
 <use images/test-2-performance.png>
-Package pdftex.def Info: images/test-2-performance.png  used on input line 344.
+Package pdftex.def Info: images/test-2-performance.png  used on input line 350.
 (pdftex.def)             Requested size: 357.73698pt x 217.41254pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -562,23 +575,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[8 <./images/test-1-performance.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 365--367
+[9 <./images/test-1-performance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--371
+Underfull \hbox (badness 10000) in paragraph at lines 374--377
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--376
+Underfull \hbox (badness 10000) in paragraph at lines 378--382
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--390
+Underfull \hbox (badness 10000) in paragraph at lines 393--396
 
  []
 
@@ -589,36 +602,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9 <./images/test-2-performance.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 397--401
+[10 <./images/test-2-performance.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 403--407
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--405
+Underfull \hbox (badness 10000) in paragraph at lines 408--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 406--408
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 409--411
+Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
-<images/protege-home.png, id=276, 889.82437pt x 609.77812pt>
+<images/protege-home.png, id=280, 889.82437pt x 609.77812pt>
 File: images/protege-home.png Graphic file (type png)
 <use images/protege-home.png>
-Package pdftex.def Info: images/protege-home.png  used on input line 424.
+Package pdftex.def Info: images/protege-home.png  used on input line 430.
 (pdftex.def)             Requested size: 355.92345pt x 243.90692pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
@@ -629,21 +642,21 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 454--457
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 460--463
 
  []
 
-<images/individui-protege.png, id=282, 673.76718pt x 287.57437pt>
+<images/individui-protege.png, id=286, 673.76718pt x 287.57437pt>
 File: images/individui-protege.png Graphic file (type png)
 <use images/individui-protege.png>
-Package pdftex.def Info: images/individui-protege.png  used on input line 463.
+Package pdftex.def Info: images/individui-protege.png  used on input line 469.
 (pdftex.def)             Requested size: 404.26343pt x 172.54594pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 469--471
+Underfull \hbox (badness 10000) in paragraph at lines 475--477
 
  []
 
@@ -654,28 +667,28 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[11 <./images/protege-home.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 483--485
+[12 <./images/protege-home.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
 
  []
 
-<images/ontologia-menu.png, id=289, 346.29375pt x 138.5175pt>
+<images/ontologia-menu.png, id=293, 346.29375pt x 138.5175pt>
 File: images/ontologia-menu.png Graphic file (type png)
 <use images/ontologia-menu.png>
-Package pdftex.def Info: images/ontologia-menu.png  used on input line 488.
+Package pdftex.def Info: images/ontologia-menu.png  used on input line 494.
 (pdftex.def)             Requested size: 346.2929pt x 138.51715pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--499
+Underfull \hbox (badness 10000) in paragraph at lines 503--505
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--502
+Underfull \hbox (badness 10000) in paragraph at lines 506--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--509
+Underfull \hbox (badness 10000) in paragraph at lines 509--515
 
  []
 
@@ -686,18 +699,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12 <./images/individui-protege.png> <./images/ontologia-menu.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 514--516
+[13 <./images/individui-protege.png> <./images/ontologia-menu.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 520--522
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--526
+Underfull \hbox (badness 10000) in paragraph at lines 530--532
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 533--535
+Underfull \hbox (badness 10000) in paragraph at lines 539--541
 
  []
 
@@ -711,18 +724,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 582--585
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 588--591
 
  []
 
-<images/dispositivi-tabella.png, id=308, 414.04688pt x 493.845pt>
+<images/dispositivi-tabella.png, id=312, 414.04688pt x 493.845pt>
 File: images/dispositivi-tabella.png Graphic file (type png)
 <use images/dispositivi-tabella.png>
-Package pdftex.def Info: images/dispositivi-tabella.png  used on input line 591.
+Package pdftex.def Info: images/dispositivi-tabella.png  used on input line 597.
 (pdftex.def)             Requested size: 289.83083pt x 345.68913pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 596--598
+Underfull \hbox (badness 10000) in paragraph at lines 602--604
 
  []
 
@@ -733,41 +746,41 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14 <./images/dispositivi-tabella.png>]
-<images/printer-choose.png, id=315, 467.49657pt x 140.02313pt>
+[15 <./images/dispositivi-tabella.png>]
+<images/printer-choose.png, id=319, 467.49657pt x 140.02313pt>
 File: images/printer-choose.png Graphic file (type png)
 <use images/printer-choose.png>
-Package pdftex.def Info: images/printer-choose.png  used on input line 601.
+Package pdftex.def Info: images/printer-choose.png  used on input line 607.
 (pdftex.def)             Requested size: 327.24536pt x 98.01552pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--608
+Underfull \hbox (badness 10000) in paragraph at lines 611--614
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 605--608
+Underfull \hbox (badness 10000) in paragraph at lines 611--614
 
  []
 
-<images/sistema-esperto-esempio-1.png, id=316, 488.57532pt x 212.29312pt>
+<images/sistema-esperto-esempio-1.png, id=320, 488.57532pt x 212.29312pt>
 File: images/sistema-esperto-esempio-1.png Graphic file (type png)
 <use images/sistema-esperto-esempio-1.png>
-Package pdftex.def Info: images/sistema-esperto-esempio-1.png  used on input line 615.
+Package pdftex.def Info: images/sistema-esperto-esempio-1.png  used on input line 621.
 (pdftex.def)             Requested size: 342.0004pt x 148.60417pt.
-<images/sistema-esperto-esempio-2.png, id=317, 476.53032pt x 72.27pt>
+<images/sistema-esperto-esempio-2.png, id=321, 476.53032pt x 72.27pt>
 File: images/sistema-esperto-esempio-2.png Graphic file (type png)
 <use images/sistema-esperto-esempio-2.png>
-Package pdftex.def Info: images/sistema-esperto-esempio-2.png  used on input line 626.
+Package pdftex.def Info: images/sistema-esperto-esempio-2.png  used on input line 632.
 (pdftex.def)             Requested size: 333.56895pt x 50.58864pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 630--633
+Underfull \hbox (badness 10000) in paragraph at lines 636--639
 
  []
 
-<images/sistema-esperto-esempio-3.png, id=318, 475.02469pt x 82.80937pt>
+<images/sistema-esperto-esempio-3.png, id=322, 475.02469pt x 82.80937pt>
 File: images/sistema-esperto-esempio-3.png Graphic file (type png)
 <use images/sistema-esperto-esempio-3.png>
-Package pdftex.def Info: images/sistema-esperto-esempio-3.png  used on input line 641.
+Package pdftex.def Info: images/sistema-esperto-esempio-3.png  used on input line 647.
 (pdftex.def)             Requested size: 380.02025pt x 66.24757pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -776,8 +789,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15 <./images/printer-choose.png> <./images/sistema-esperto-esempio-1.png> <./images/sistema-esperto-esempio-2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 647--648
+[16 <./images/printer-choose.png> <./images/sistema-esperto-esempio-1.png> <./images/sistema-esperto-esempio-2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 653--654
 
  []
 
@@ -788,7 +801,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16 <./images/sistema-esperto-esempio-3.png>]
+[17 <./images/sistema-esperto-esempio-3.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -796,35 +809,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 736--738
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 743--745
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 741--744
+Underfull \hbox (badness 10000) in paragraph at lines 748--751
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 752--754
+Underfull \hbox (badness 10000) in paragraph at lines 759--761
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 762--763
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
  []
 
-<images/terminale-bash.png, id=359, 176.15813pt x 66.2475pt>
+<images/terminale-bash.png, id=368, 176.15813pt x 66.2475pt>
 File: images/terminale-bash.png Graphic file (type png)
 <use images/terminale-bash.png>
-Package pdftex.def Info: images/terminale-bash.png  used on input line 788.
+Package pdftex.def Info: images/terminale-bash.png  used on input line 795.
 (pdftex.def)             Requested size: 176.15768pt x 66.24733pt.
-<images/terminale-powershell.png, id=360, 397.485pt x 37.64063pt>
+<images/terminale-powershell.png, id=369, 397.485pt x 37.64063pt>
 File: images/terminale-powershell.png Graphic file (type png)
 <use images/terminale-powershell.png>
-Package pdftex.def Info: images/terminale-powershell.png  used on input line 797.
+Package pdftex.def Info: images/terminale-powershell.png  used on input line 804.
 (pdftex.def)             Requested size: 317.98842pt x 30.11252pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -836,35 +857,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 807--809
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 814--816
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 812--814
+Underfull \hbox (badness 10000) in paragraph at lines 819--821
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 839--841
+Underfull \hbox (badness 10000) in paragraph at lines 846--848
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 842--844
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 849--852
+Underfull \hbox (badness 10000) in paragraph at lines 856--859
 
  []
 
-<images/powershell-error.png, id=369, 403.5075pt x 79.04532pt>
+<images/powershell-error.png, id=378, 403.5075pt x 79.04532pt>
 File: images/powershell-error.png Graphic file (type png)
 <use images/powershell-error.png>
-Package pdftex.def Info: images/powershell-error.png  used on input line 855.
+Package pdftex.def Info: images/powershell-error.png  used on input line 862.
 (pdftex.def)             Requested size: 403.50652pt x 79.0451pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -873,48 +894,36 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[19 <./images/terminale-bash.png> <./images/terminale-powershell.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 859--862
+[21 <./images/terminale-bash.png> <./images/terminale-powershell.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 866--869
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 867--869
+Underfull \hbox (badness 10000) in paragraph at lines 874--876
 
  []
 
-<images/terminal-message.png, id=380, 550.30594pt x 154.32657pt>
+<images/terminal-message.png, id=388, 550.30594pt x 154.32657pt>
 File: images/terminal-message.png Graphic file (type png)
 <use images/terminal-message.png>
-Package pdftex.def Info: images/terminal-message.png  used on input line 879.
+Package pdftex.def Info: images/terminal-message.png  used on input line 886.
 (pdftex.def)             Requested size: 330.18611pt x 92.59663pt.
-<images/errore-python.png, id=382, 786.94pt x 344.28625pt>
+<images/errore-python.png, id=390, 786.94pt x 344.28625pt>
 File: images/errore-python.png Graphic file (type png)
 <use images/errore-python.png>
-Package pdftex.def Info: images/errore-python.png  used on input line 902.
+Package pdftex.def Info: images/errore-python.png  used on input line 909.
 (pdftex.def)             Requested size: 432.81834pt x 189.35802pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 906--908
+Underfull \hbox (badness 10000) in paragraph at lines 913--915
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 909--911
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20 <./images/powershell-error.png> <./images/terminal-message.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 915--916
+Underfull \hbox (badness 10000) in paragraph at lines 916--918
 
  []
 
@@ -925,7 +934,19 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[21 <./images/errore-python.png>] (./relazione.aux)
+[22 <./images/powershell-error.png> <./images/terminal-message.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 922--923
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[23 <./images/errore-python.png>] (./relazione.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-12-11>
@@ -934,18 +955,18 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 081996E593C08780065DD4DC89D609E3;6125.
  ) 
 Here is how much of TeX's memory you used:
- 12785 strings out of 474174
- 203877 string characters out of 5745652
+ 12787 strings out of 474174
+ 203891 string characters out of 5745652
  1940460 words of memory out of 5000000
  34866 multiletter control sequences out of 15000+600000
  565655 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,12n,79p,456b,1233s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><d:/TeXLive/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on relazione.pdf (21 pages, 966892 bytes).
+Output written on relazione.pdf (23 pages, 967531 bytes).
 PDF statistics:
- 479 PDF objects out of 1000 (max. 8388607)
- 390 compressed objects within 4 object streams
- 102 named destinations out of 1000 (max. 500000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 397 compressed objects within 4 object streams
+ 104 named destinations out of 1000 (max. 500000)
  397 words of extra memory for PDF output out of 10000 (max. 10000000)
 
