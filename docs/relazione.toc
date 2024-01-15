@@ -25,7 +25,7 @@
 \contentsline {subsubsection}{\numberline {3.3.4}Funzionamento}{14}{subsubsection.3.3.4}%
 \contentsline {subsubsection}{\numberline {3.3.5}Conclusioni}{16}{subsubsection.3.3.5}%
 \contentsline {section}{\numberline {4}Conclusioni e Sviluppi Futuri}{16}{section.4}%
-\contentsline {section}{\numberline {5}Riferimenti Bibliografici}{16}{section.5}%
+\contentsline {section}{\numberline {5}Riferimenti Bibliografici}{17}{section.5}%
 \contentsline {section}{Appendice}{18}{section*.17}%
 \contentsline {subsection}{\numberline {.1}Inizializzare il progetto}{18}{subsection.1..1}%
 \contentsline {subsubsection}{\numberline {.1.1}Scaricare da GitHub}{18}{subsubsection.1..1.1}%
